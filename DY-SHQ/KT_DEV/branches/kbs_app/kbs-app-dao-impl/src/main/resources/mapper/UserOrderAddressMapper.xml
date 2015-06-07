@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="UserOrderAddress">
+
+	<resultMap id="userOrderAddressMap" type="com.kingteller.bs.domain.order.UserOrderAddress">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="updatetime" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="userid" property="userId" jdbcType="BIGINT" />
+		<result column="addresstype" property="addressType" jdbcType="CHAR"/>
+		<result column="status" property="status" jdbcType="CHAR"/>
+	</resultMap>
+
+	<insert id="insertUserOrderAddress" parameterType="com.kingteller.bs.domain.order.UserOrderAddress"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into userorderaddress(
+			name, 
+			address, 
+			phone, 
+			updatetime, 
+			userid,
+			addresstype,
+			status
+		)values(
+			#{name,jdbcType=VARCHAR},
+			#{address,jdbcType=VARCHAR},
+			#{phone,jdbcType=VARCHAR},
+			#{updateTime, jdbcType=TIMESTAMP},
+			#{userId,jdbcType=BIGINT},
+			#{addressType, jdbcType=CHAR},
+			#{status, jdbcType=CHAR}
+		)
+	</insert>
+	
+	<select id="queryAddressByUserId" parameterType="com.kingteller.bs.domain.order.UserOrderAddress" resultMap="userOrderAddressMap">
+		select * from userorderaddress where userid = #{userId, jdbcType=BIGINT} and addresstype=#{addressType, jdbcType=CHAR} and status=#{status, jdbcType=CHAR}
+	</select>
+
+</mapper>

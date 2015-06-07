@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbox>
+
+	<tool>
+		<key>cookie</key>
+		<scope>request</scope>
+		<class>org.apache.velocity.tools.view.CookieTool</class>
+	</tool>
+	<tool>
+		<key>math</key><!-- 可选默认为 shiro -->
+		<scope>application</scope>
+		<class>org.apache.velocity.tools.generic.MathTool</class>
+	</tool>
+	<tool>
+		<key>util</key>
+		<scope>application</scope>
+		<class>com.kingteller.bs.mvc.velocity.VelocityUtil</class>
+	</tool>
+	<!-- application end -->
+</toolbox>

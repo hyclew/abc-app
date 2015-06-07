@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color"
+    android:orientation="horizontal" >
+
+    <CheckBox
+        android:id="@+id/iv_shopping_cb"
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:button="@drawable/register_box"
+        android:checked="false"
+        android:focusable="false" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="15dp"
+        android:padding="3dp"
+        android:src="@drawable/im_waterlist_xiao" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tv_shopping_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/typeface_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_shopping_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_shopping_name"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="3dp"
+            android:textColor="@color/typeface_color"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_shopping_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tv_shopping_introduction"
+            android:textColor="@color/theme_color"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_shopping_money"
+            android:orientation="horizontal" 
+            >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/im_waterlist_card" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imageView1" >
+
+                <ImageView
+                    android:id="@+id/im_shopping_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/im_shopping_minus" />
+
+                <TextView
+                    android:id="@+id/tv_shopping_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/im_small"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:id="@+id/im_shopping_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/im_shopping_add" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_shopping_deyang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

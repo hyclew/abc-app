@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="TopContactMapper" >
+  <resultMap id="BaseResultMap" type="com.kingteller.bs.domain.TopContact" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="source_type" property="sourceType" jdbcType="INTEGER" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="org_id" property="orgId" jdbcType="BIGINT" />
+    <result column="org_member_id" property="orgMemberId" jdbcType="BIGINT" />
+    <result column="contact_total" property="contactTotal" jdbcType="INTEGER" />
+    <result column="owner_user_id" property="ownerUserId" jdbcType="BIGINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="modify_time" property="modifyTime" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, mobile,source_type, org_id, org_member_id,contact_total, 
+	owner_user_id,create_time, modify_time, status
+  </sql>
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from top_contacts_t
+    where id = #{id,jdbcType=BIGINT} and status=0
+  </select>
+  
+  <update id="deleteById" parameterType="java.lang.Long" >
+    update top_contacts_t  set status = 1
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  
+  <insert id="insert" parameterType="com.kingteller.bs.domain.TopContact" keyProperty="id" useGeneratedKeys="true" >
+    insert into top_contacts_t (
+    	mobile,
+    	source_type, 
+    	org_id, 
+    	org_member_id,
+    	contact_total, 
+    	owner_user_id,
+    	modify_time,
+    	create_time
+    	)
+    values (
+    	#{mobile,jdbcType=VARCHAR},
+    	#{sourceType,jdbcType=INTEGER}, 
+    	#{orgId,jdbcType=BIGINT},
+      	#{orgMemberId,jdbcType=BIGINT},  
+      	#{contactTotal,jdbcType=INTEGER}, 
+      	#{ownerUserId,jdbcType=BIGINT},
+      	#{modifyTime,jdbcType=BIGINT},
+      	#{createTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  
+
+  <update id="updateByParams" parameterType="map" >
+    update top_contacts_t
+    <set >
+
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+       <if test="sourceType != null" >
+        source_type = #{sourceType,jdbcType=INTEGER},
+      </if>
+      <if test="orgId != null" >
+        org_id = #{orgId,jdbcType=BIGINT},
+      </if>
+      <if test="orgMemberId != null" >
+        org_member_id = #{orgMemberId,jdbcType=BIGINT},
+      </if>
+      <if test="contactTotal != null" >
+        contact_total = #{contactTotal,jdbcType=INTEGER},
+      </if>
+      <if test="ownerUserId != null" >
+        owner_user_id=#{ownerUserId,jdbcType=BIGINT},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modifyTime != null" >
+        modify_time = #{modifyTime,jdbcType=BIGINT},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateById" parameterType="com.kingteller.bs.domain.TopContact" >
+    update top_contacts_t
+    set 
+      mobile = #{mobile,jdbcType=VARCHAR},
+      source_type = #{sourceType,jdbcType=INTEGER},
+      org_id = #{orgId,jdbcType=BIGINT},
+      org_member_id = #{orgMemberId,jdbcType=BIGINT},
+      contact_total = #{contactTotal,jdbcType=INTEGER},
+      owner_user_id=#{ownerUserId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      modify_time = #{modifyTime,jdbcType=BIGINT},
+      status = #{status,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  
+   <update id="updateStatusById" parameterType="java.lang.Long" >
+    update top_contacts_t
+    set status = 1 , modify_time=CURRENT_TIME
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  
+  <update id="updateStatusByOrgIdMemberIdOwnerUserId" parameterType="map" >
+    update top_contacts_t
+    set status = 1 , modify_time=CURRENT_TIME
+     where org_id = #{orgId,jdbcType=BIGINT} 
+    	and org_member_id = #{orgMemberId,jdbcType=BIGINT} 
+    	and	owner_user_id = #{ownerUserId,jdbcType=BIGINT} 
+  </update>
+    
+  <select id="queryTopContactListByOwnerUserId" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+   		<include refid="Base_Column_List" />
+    from top_contacts_t
+    where owner_user_id = #{ownerUserId,jdbcType=BIGINT} and status=0
+  </select>
+  
+  <select id="queryByOrgIdMemberIdOwnerUserId" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from top_contacts_t
+    where org_id = #{orgId,jdbcType=BIGINT} 
+    	and org_member_id = #{orgMemberId,jdbcType=BIGINT} 
+    	and	owner_user_id = #{ownerUserId,jdbcType=BIGINT} 
+  </select>
+  
+  <update id="updateByOrgIdMemberIdOwnerUserId" parameterType="map" >
+    update top_contacts_t
+    set 
+      <if test="sourceType != null" >
+        source_type = #{sourceType,jdbcType=INTEGER},
+      </if>
+      <if test="contactTotal != null" >
+        contact_total = contact_total+#{contactTotal,jdbcType=INTEGER},
+      </if>
+        status =0,
+        modify_time=CURRENT_TIME
+     where org_id = #{orgId,jdbcType=BIGINT} 
+    	and org_member_id = #{orgMemberId,jdbcType=BIGINT} 
+    	and	owner_user_id = #{ownerUserId,jdbcType=BIGINT} 
+  </update>
+  
+  <select id="queryByMemberIdsOwnerUserId" resultMap="BaseResultMap" parameterType="map" >
+    select 
+    <include refid="Base_Column_List" />
+   	 from top_contacts_t
+   	 where 
+    	status=0
+    	<if test="ownerUserId">
+     	 	and	owner_user_id = #{ownerUserId,jdbcType=BIGINT} 
+     	 
+     	</if>
+    	<if test="orgMemberIdList">
+     	and org_member_id in 
+     	 <foreach item="item" index="index" collection="orgMemberIdList" open="("
+				separator="," close=")">
+				#{item} 
+		</foreach>
+     </if>
+  </select>
+</mapper>

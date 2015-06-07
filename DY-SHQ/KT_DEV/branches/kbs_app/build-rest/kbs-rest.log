@@ -1,0 +1,588 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.1.8.RELEASE)
+
+2015-06-06 22:13:13.075  INFO 1374 --- [           main] c.kingteller.bs.rest.setup.AppRestSetup  : Starting AppRestSetup on abc with PID 1374 (/Users/fangfangluo/Desktop/Dev/project/DY-SHQ/KT_DEV/branches/kbs_app/build-rest/lib/kbs-app-web-rest-0.0.1-SNAPSHOT.jar started by admin in /Users/fangfangluo/Desktop/Dev/project/DY-SHQ/KT_DEV/branches/kbs_app/build-rest)
+2015-06-06 22:13:13.118  INFO 1374 --- [           main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@564718df: startup date [Sat Jun 06 22:13:13 CST 2015]; root of context hierarchy
+2015-06-06 22:13:13.926  INFO 1374 --- [           main] o.s.b.f.xml.XmlBeanDefinitionReader      : Loading XML bean definitions from class path resource [appdao.xml]
+2015-06-06 22:13:14.488  INFO 1374 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2015-06-06 22:13:15.159  INFO 1374 --- [           main] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'org.springframework.transaction.config.internalTransactionAdvisor': replacing [Root bean: class [org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration; factoryMethodName=transactionAdvisor; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/transaction/annotation/ProxyTransactionManagementConfiguration.class]]
+2015-06-06 22:13:15.667  INFO 1374 --- [           main] o.s.b.f.c.PropertyPlaceholderConfigurer  : Loading properties file from URL [jar:file:/Users/fangfangluo/Desktop/Dev/project/DY-SHQ/KT_DEV/branches/kbs_app/build-rest/lib/kbs-app-dao-impl-0.0.1-SNAPSHOT.jar!/appdao.properties]
+3.850: [GC (Allocation Failure) 
+Desired survivor size 89128960 bytes, new threshold 4 (max 4)
+[PSYoungGen: 350208K->18255K(437248K)] 350208K->18351K(2010112K), 0.0273609 secs] [Times: user=0.06 sys=0.01, real=0.03 secs] 
+2015-06-06 22:13:16.175  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [class org.apache.commons.dbcp.BasicDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+4.147: [GC (Metadata GC Threshold) 
+Desired survivor size 89128960 bytes, new threshold 4 (max 4)
+[PSYoungGen: 35347K->7381K(437248K)] 35443K->7485K(2010112K), 0.0163698 secs] [Times: user=0.04 sys=0.00, real=0.02 secs] 
+4.163: [Full GC (Metadata GC Threshold) [PSYoungGen: 7381K->0K(437248K)] [ParOldGen: 104K->7305K(1572864K)] 7485K->7305K(2010112K), [Metaspace: 20843K->20843K(1069056K)], 0.0515772 secs] [Times: user=0.14 sys=0.01, real=0.05 secs] 
+2015-06-06 22:13:16.737  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [class org.mybatis.spring.SqlSessionFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.737  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [class org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.763  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSession' of type [class org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.778  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'businessProductAduitAtomService' of type [class com.kingteller.bs.service.inner.impl.business.BusinessProductAduitAtomServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.786  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'userSessionDao' of type [class com.kingteller.bs.dao.user.UserSessionDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.798  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'userDetailedDao' of type [class com.kingteller.bs.dao.user.UserDetailedDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.807  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'userBaseDao' of type [class com.kingteller.bs.dao.user.UserBaseDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.815  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'registerCodeDao' of type [class com.kingteller.bs.dao.user.RegisterCodeDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.836  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loginUserDao' of type [class com.kingteller.bs.dao.user.LoginUserDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.844  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'resourcesDao' of type [class com.kingteller.bs.dao.resources.ResourcesDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.857  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'productCatalogueDao' of type [class com.kingteller.bs.dao.product.ProductCatalogueDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.869  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'productBaseDao' of type [class com.kingteller.bs.dao.product.ProductBaseDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.890  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'userPayDao' of type [class com.kingteller.bs.dao.pay.UserPayDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.903  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'userOrderAddressDao' of type [class com.kingteller.bs.dao.order.UserOrderAddressDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.914  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'customerOrderDetailedDao' of type [class com.kingteller.bs.dao.order.CustomerOrderDetailedDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.933  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'customerOrderBaseDao' of type [class com.kingteller.bs.dao.order.CustomerOrderBaseDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.945  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'businessOrderDao' of type [class com.kingteller.bs.dao.order.BusinessOrderDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.954  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'topContactDaoImpl' of type [class com.kingteller.bs.dao.mysql.TopContactDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.961  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'shoppingCartDao' of type [class com.kingteller.bs.dao.cart.ShoppingCartDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.968  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'businessProductDao' of type [class com.kingteller.bs.dao.business.BusinessProductDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.975  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'businessProductCommentDao' of type [class com.kingteller.bs.dao.business.BusinessProductCommentDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:16.988  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'businessProductAdvertDao' of type [class com.kingteller.bs.dao.business.BusinessProductAdvertDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.000  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'businessProductAduitDao' of type [class com.kingteller.bs.dao.business.BusinessProductAduitDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.009  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'businessCatalogueDao' of type [class com.kingteller.bs.dao.business.BusinessCatalogueDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.016  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'businessBaseDao' of type [class com.kingteller.bs.dao.business.BusinessBaseDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.025  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'businessActivityDao' of type [class com.kingteller.bs.dao.business.BusinessActivityDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.044  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'CustomerAppointmentDao' of type [class com.kingteller.bs.dao.appointment.CustomerAppointmentDaoImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.086  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' of type [class org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.161  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2ce3bf4b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.385  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.400  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.403  INFO 1374 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2015-06-06 22:13:17.830  INFO 1374 --- [           main] .t.TomcatEmbeddedServletContainerFactory : Server initialized with port: 8090
+2015-06-06 22:13:18.076  INFO 1374 --- [           main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2015-06-06 22:13:18.078  INFO 1374 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/7.0.55
+2015-06-06 22:13:18.196  INFO 1374 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2015-06-06 22:13:18.196  INFO 1374 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5081 ms
+6.600: [GC (Allocation Failure) 
+Desired survivor size 89128960 bytes, new threshold 4 (max 4)
+[PSYoungGen: 350208K->12018K(437248K)] 357513K->19332K(2010112K), 0.0148782 secs] [Times: user=0.06 sys=0.01, real=0.02 secs] 
+2015-06-06 22:13:19.639  INFO 1374 --- [ost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2015-06-06 22:13:19.642  INFO 1374 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2015-06-06 22:13:19.643  INFO 1374 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2015-06-06 22:13:19.643  INFO 1374 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2015-06-06 22:13:19.643  INFO 1374 --- [ost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+7.776: [GC (Metadata GC Threshold) 
+Desired survivor size 89128960 bytes, new threshold 4 (max 4)
+[PSYoungGen: 155045K->12723K(437248K)] 162358K->20044K(2010112K), 0.0155984 secs] [Times: user=0.05 sys=0.00, real=0.02 secs] 
+7.792: [Full GC (Metadata GC Threshold) [PSYoungGen: 12723K->0K(437248K)] [ParOldGen: 7321K->18876K(1572864K)] 20044K->18876K(2010112K), [Metaspace: 34654K->34654K(1081344K)], 0.1199597 secs] [Times: user=0.36 sys=0.01, real=0.12 secs] 
+2015-06-06 22:13:20.155  INFO 1374 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-06-06 22:13:20.217  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/businessactivity/businessactivitys/{maxId}/{dataCount}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.BusinessActivityController.waterInformationsList(java.lang.Long,int)
+2015-06-06 22:13:20.218  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/productadvert/latestadverts],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.BusinessProductAdvertController.getAllProductCatalogues()
+2015-06-06 22:13:20.219  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/productcomment/productcomments/{productId}/{maxId}/{dataCount}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.BusinessProductCommentController.getAllProductCatalogues(java.lang.Long,java.lang.Long,int)
+2015-06-06 22:13:20.221  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/appointment/addappointment],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.CustomerAppointmentController.addAppointment(java.lang.String)
+2015-06-06 22:13:20.222  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/appointment/getappointments/{sessionId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.CustomerAppointmentController.userUserAppointments(java.lang.String)
+2015-06-06 22:13:20.224  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/appointment/addaddress],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.CustomerAppointmentController.addUserAddress(java.lang.String)
+2015-06-06 22:13:20.224  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/appointment/getaddresses/{sessionId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.CustomerAppointmentController.userOrderAddresses(java.lang.String)
+2015-06-06 22:13:20.227  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/order/addorder],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.CustomerOrderController.addUserOrder(java.lang.String)
+2015-06-06 22:13:20.227  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/order/userorders/{sessionId}/{detailedAduit}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.CustomerOrderController.getUserOrders(java.lang.String,java.lang.String)
+2015-06-06 22:13:20.227  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/order/userorderbases/{sessionId}/{detailedAduit}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.CustomerOrderController.getUserOrderBases(java.lang.String,java.lang.String)
+2015-06-06 22:13:20.228  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/order/userorderdetaileds/{orderBaseId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.CustomerOrderController.getUserOrderDetaileds(java.lang.Long)
+2015-06-06 22:13:20.228  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/order/orderdetaileds/{orderBaseId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.CustomerOrderController.getBusinessAndOrderDetaileds(java.lang.Long)
+2015-06-06 22:13:20.228  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/order/deleteorder],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.CustomerOrderController.deleteUserOrder(java.lang.String)
+2015-06-06 22:13:20.229  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/greeting],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.domain.Greeting com.kingteller.bs.rest.GreetingController.greeting(java.lang.String)
+2015-06-06 22:13:20.231  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/housekeeping/housekeepdetail/{businessProductId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.HouseKeepingController.waterDetailInfo(java.lang.Long)
+2015-06-06 22:13:20.231  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/housekeeping/housekeepinformations/{catalogueid}/{maxId}/{dataCount}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.HouseKeepingController.waterInformationsList(java.lang.Long,java.lang.Long,int)
+2015-06-06 22:13:20.232  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/ordernumbertest/ordernumber/{code}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.OrderNumberTestController.waterInformationsList(java.lang.String) throws java.lang.Exception
+2015-06-06 22:13:20.233  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/productcatalogue/productcatalogues],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.ProductCatalogueController.getAllProductCatalogues()
+2015-06-06 22:13:20.234  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/resources/resource/{resourcesId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.ResourcesController.getResource(java.lang.Long)
+2015-06-06 22:13:20.235  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/water/waterdetail/{businessProductId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.SendingWaterController.waterDetailInfo(java.lang.Long)
+2015-06-06 22:13:20.236  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/water/waterinformations/{catalogueid}/{maxId}/{dataCount}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.SendingWaterController.waterInformationsList(java.lang.Long,java.lang.Long,int)
+2015-06-06 22:13:20.240  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shoppingcart/updatecart],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.ShoppingCartController.updateCart(java.lang.String)
+2015-06-06 22:13:20.240  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shoppingcart/usercarts/{sessionId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.ShoppingCartController.showUserCarts(java.lang.String)
+2015-06-06 22:13:20.240  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shoppingcart/delcart],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public void com.kingteller.bs.rest.ShoppingCartController.deleteUserCart(java.lang.String)
+2015-06-06 22:13:20.240  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shoppingcart/addcart],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.ShoppingCartController.addToShoppingCart(java.lang.String)
+2015-06-06 22:13:20.241  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/shoppingcart/delcartlist],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.ShoppingCartController.deleteUserCarts(java.lang.String)
+2015-06-06 22:13:20.242  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/supermarket/supermarketdetail/{businessProductId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.SupermarketController.waterDetailInfo(java.lang.Long)
+2015-06-06 22:13:20.242  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/supermarket/supermarketinformations/{catalogueid}/{maxId}/{dataCount}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.SupermarketController.waterInformationsList(java.lang.Long,java.lang.Long,int)
+2015-06-06 22:13:20.243  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topcontact],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.domain.Greeting com.kingteller.bs.rest.TopContactController.greeting(java.lang.String)
+2015-06-06 22:13:20.244  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/register],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.UserController.userRegister(java.lang.String)
+2015-06-06 22:13:20.245  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/login],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.UserController.userLogin(java.lang.String)
+2015-06-06 22:13:20.245  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/generatecode],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.UserController.generateCode(java.lang.String)
+2015-06-06 22:13:20.245  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/uploadportrait],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.UserController.uploadPortrait(java.lang.String)
+2015-06-06 22:13:20.246  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orderaddress/addaddress],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.UserOrderAddressController.addUserAddress(java.lang.String)
+2015-06-06 22:13:20.246  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/orderaddress/getaddresses/{sessionId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.UserOrderAddressController.userOrderAddresses(java.lang.String)
+2015-06-06 22:13:20.247  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userpay/addpaytool],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.UserPayController.addPayTool(java.lang.String)
+2015-06-06 22:13:20.247  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/userpay/userpaytools/{sessionId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.UserPayController.userPayToolList(java.lang.String)
+2015-06-06 22:13:20.248  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/washcar/cardetail/{businessProductId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.WashCarController.waterDetailInfo(java.lang.Long)
+2015-06-06 22:13:20.248  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/washcar/washcarinformations/{catalogueid}/{maxId}/{dataCount}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.WashCarController.waterInformationsList(java.lang.Long,java.lang.Long,int)
+2015-06-06 22:13:20.249  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/washclothes/washclothesdetail/{businessProductId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.WashClothesController.waterDetailInfo(java.lang.Long)
+2015-06-06 22:13:20.249  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/washclothes/washclothesinformations/{catalogueid}/{maxId}/{dataCount}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public com.kingteller.bs.framework.rest.RestResponse com.kingteller.bs.rest.WashClothesController.waterInformationsList(java.lang.Long,java.lang.Long,int)
+2015-06-06 22:13:20.250  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2015-06-06 22:13:20.251  INFO 1374 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],methods=[],params=[],headers=[],consumes=[],produces=[text/html],custom=[]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest)
+2015-06-06 22:13:20.282  INFO 1374 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-06-06 22:13:20.283  INFO 1374 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2015-06-06 22:13:20.979  INFO 1374 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2015-06-06 22:13:21.016  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Registering beans for JMX exposure on startup
+2015-06-06 22:13:21.087  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2015-06-06 22:13:21.087  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-06-06 22:13:21.088  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-06-06 22:13:21.088  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-06-06 22:13:21.088  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-06-06 22:13:21.088  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-06-06 22:13:21.089  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-06-06 22:13:21.089  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-06-06 22:13:21.089  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-06-06 22:13:21.090  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke()
+2015-06-06 22:13:21.090  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2015-06-06 22:13:21.090  INFO 1374 --- [           main] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2015-06-06 22:13:21.170  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}],methods=[HEAD],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.data.rest.webmvc.RepositoryEntityController.headCollectionResource(org.springframework.data.rest.webmvc.RootResourceInformation) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2015-06-06 22:13:21.171  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.hateoas.Resources<?> org.springframework.data.rest.webmvc.RepositoryEntityController.getCollectionResource(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.domain.Pageable,org.springframework.data.domain.Sort,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws org.springframework.data.rest.webmvc.ResourceNotFoundException,org.springframework.web.HttpRequestMethodNotSupportedException
+2015-06-06 22:13:21.171  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/x-spring-data-compact+json || text/uri-list],custom=[]}" onto public org.springframework.hateoas.Resources<?> org.springframework.data.rest.webmvc.RepositoryEntityController.getCollectionResourceCompact(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.domain.Pageable,org.springframework.data.domain.Sort,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws org.springframework.data.rest.webmvc.ResourceNotFoundException,org.springframework.web.HttpRequestMethodNotSupportedException
+2015-06-06 22:13:21.171  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryEntityController.postCollectionResource(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.rest.webmvc.PersistentEntityResource<?>,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2015-06-06 22:13:21.172  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[HEAD],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.data.rest.webmvc.RepositoryEntityController.headItemResource(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2015-06-06 22:13:21.172  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.Resource<?>> org.springframework.data.rest.webmvc.RepositoryEntityController.getItemResource(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2015-06-06 22:13:21.172  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[PUT],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<? extends org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryEntityController.putItemResource(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.rest.webmvc.PersistentEntityResource<java.lang.Object>,java.io.Serializable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws org.springframework.web.HttpRequestMethodNotSupportedException
+2015-06-06 22:13:21.172  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[PATCH],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryEntityController.patchItemResource(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.data.rest.webmvc.PersistentEntityResource<java.lang.Object>,java.io.Serializable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws org.springframework.web.HttpRequestMethodNotSupportedException,org.springframework.data.rest.webmvc.ResourceNotFoundException
+2015-06-06 22:13:21.172  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<?> org.springframework.data.rest.webmvc.RepositoryEntityController.deleteItemResource(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable) throws org.springframework.data.rest.webmvc.ResourceNotFoundException,org.springframework.web.HttpRequestMethodNotSupportedException
+2015-06-06 22:13:21.173  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.data.rest.webmvc.RepositoryLinksResource org.springframework.data.rest.webmvc.RepositoryController.listRepositories()
+2015-06-06 22:13:21.174  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.followPropertyReference(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws java.lang.Exception
+2015-06-06 22:13:21.174  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}/{propertyId}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.followPropertyReference(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String,java.lang.String,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws java.lang.Exception
+2015-06-06 22:13:21.174  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<? extends org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.deletePropertyReference(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String) throws java.lang.Exception
+2015-06-06 22:13:21.175  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/x-spring-data-compact+json || text/uri-list],custom=[]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.followPropertyReferenceCompact(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler) throws java.lang.Exception
+2015-06-06 22:13:21.175  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}],methods=[PATCH || PUT],params=[],headers=[],consumes=[application/json || application/x-spring-data-compact+json || text/uri-list],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<? extends org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.createPropertyReference(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.http.HttpMethod,org.springframework.hateoas.Resources<java.lang.Object>,java.io.Serializable,java.lang.String) throws java.lang.Exception
+2015-06-06 22:13:21.175  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/{id}/{property}/{propertyId}],methods=[DELETE],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<org.springframework.hateoas.ResourceSupport> org.springframework.data.rest.webmvc.RepositoryPropertyReferenceController.deletePropertyReferenceId(org.springframework.data.rest.webmvc.RootResourceInformation,java.io.Serializable,java.lang.String,java.lang.String) throws java.lang.Exception
+2015-06-06 22:13:21.176  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/schema],methods=[GET],params=[],headers=[],consumes=[],produces=[application/schema+json],custom=[]}" onto public org.springframework.http.HttpEntity<org.springframework.data.rest.webmvc.json.JsonSchema> org.springframework.data.rest.webmvc.RepositorySchemaController.schema(org.springframework.data.rest.webmvc.RootResourceInformation)
+2015-06-06 22:13:21.176  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.hateoas.ResourceSupport org.springframework.data.rest.webmvc.RepositorySearchController.listSearches(org.springframework.data.rest.webmvc.RootResourceInformation)
+2015-06-06 22:13:21.177  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search/{search}],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> org.springframework.data.rest.webmvc.RepositorySearchController.executeSearch(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.web.context.request.WebRequest,java.lang.String,org.springframework.data.domain.Pageable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler)
+2015-06-06 22:13:21.177  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search/{search}],methods=[GET],params=[],headers=[],consumes=[],produces=[application/x-spring-data-compact+json],custom=[]}" onto public org.springframework.hateoas.ResourceSupport org.springframework.data.rest.webmvc.RepositorySearchController.executeSearchCompact(org.springframework.data.rest.webmvc.RootResourceInformation,org.springframework.web.context.request.WebRequest,java.lang.String,java.lang.String,org.springframework.data.domain.Pageable,org.springframework.data.rest.webmvc.PersistentEntityResourceAssembler)
+2015-06-06 22:13:21.177  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search/{search}],methods=[HEAD],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.ResponseEntity<java.lang.Object> org.springframework.data.rest.webmvc.RepositorySearchController.headForSearch(org.springframework.data.rest.webmvc.RootResourceInformation,java.lang.String)
+2015-06-06 22:13:21.177  INFO 1374 --- [           main] o.s.d.r.w.RepositoryRestHandlerMapping   : Mapped "{[/{repository}/search],methods=[HEAD],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public org.springframework.http.HttpEntity<?> org.springframework.data.rest.webmvc.RepositorySearchController.headForSearches(org.springframework.data.rest.webmvc.RootResourceInformation)
+2015-06-06 22:13:21.259  INFO 1374 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2015-06-06 22:13:21.263  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2015-06-06 22:13:21.298  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2015-06-06 22:13:21.306  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2015-06-06 22:13:21.311  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2015-06-06 22:13:21.316  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2015-06-06 22:13:21.328  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2015-06-06 22:13:21.332  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2015-06-06 22:13:21.337  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2015-06-06 22:13:21.367  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'autoConfigurationAuditEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationAuditEndpoint]
+2015-06-06 22:13:21.372  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'shutdownEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=shutdownEndpoint]
+2015-06-06 22:13:21.381  INFO 1374 --- [           main] o.s.b.a.e.jmx.EndpointMBeanExporter      : Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2015-06-06 22:13:21.512  INFO 1374 --- [           main] c.k.bs.initialize.SystemInitialize       : <------------开始更新商品类别序列------------>
+2015-06-06 22:13:21.923  INFO 1374 --- [           main] c.k.b.d.product.ProductCatalogueDaoImpl  : 开始查询商品类别信息, 查询参数是:ProductCatalogue [code=null, comment=null, status=1, updateTime=null, serialize=null]
+2015-06-06 22:13:22.017  INFO 1374 --- [           main] .s.i.i.p.ProductCatalogueAtomServiceImpl : 更新Code为 1001、 类型为water 的商品类别的条数为: 1 条
+2015-06-06 22:13:22.019  INFO 1374 --- [           main] .s.i.i.p.ProductCatalogueAtomServiceImpl : 更新Code为 1002、 类型为washclothes 的商品类别的条数为: 1 条
+2015-06-06 22:13:22.021  INFO 1374 --- [           main] .s.i.i.p.ProductCatalogueAtomServiceImpl : 更新Code为 1003、 类型为washcar 的商品类别的条数为: 1 条
+2015-06-06 22:13:22.023  INFO 1374 --- [           main] .s.i.i.p.ProductCatalogueAtomServiceImpl : 更新Code为 1004、 类型为housekeeping 的商品类别的条数为: 1 条
+2015-06-06 22:13:22.026  INFO 1374 --- [           main] .s.i.i.p.ProductCatalogueAtomServiceImpl : 更新Code为 1005、 类型为supermarket 的商品类别的条数为: 1 条
+2015-06-06 22:13:22.031  INFO 1374 --- [           main] c.k.bs.initialize.SystemInitialize       : 商品类别序列加载完成{1005=88000, 1004=88000, 1003=88000, 1002=88000, 1001=14000}
+2015-06-06 22:13:22.031  INFO 1374 --- [           main] c.k.bs.initialize.SystemInitialize       : 开始加载系统初始化参数...
+2015-06-06 22:13:22.032  INFO 1374 --- [           main] c.k.bs.initialize.SystemInitialize       : 加载系统初始化参数结束,参数为:{user.portrait=D:/head_portrait}
+2015-06-06 22:13:22.093  INFO 1374 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8090/http
+2015-06-06 22:13:22.096  INFO 1374 --- [           main] c.kingteller.bs.rest.setup.AppRestSetup  : Started AppRestSetup in 9.511 seconds (JVM running for 9.956)
+2015-06-06 22:57:01.925  INFO 1374 --- [nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2015-06-06 22:57:01.926  INFO 1374 --- [nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2015-06-06 22:57:01.966  INFO 1374 --- [nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+2015-06-06 22:57:02.102  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 22:57:02.110  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 22:57:02.152  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 22:57:02.158  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 22:59:14.538  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 22:59:14.545  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 22:59:14.833  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 22:59:14.843  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 22:59:16.422  INFO 1374 --- [nio-8090-exec-8] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-06 22:59:16.445  INFO 1374 --- [nio-8090-exec-7] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-06 22:59:16.450  INFO 1374 --- [nio-8090-exec-8] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-06 22:59:16.462  INFO 1374 --- [nio-8090-exec-7] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-06 22:59:37.263  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 22:59:37.274  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 22:59:37.573  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 22:59:37.579  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:00:58.458  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:00:58.468  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:00:58.754  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:00:58.760  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:01:10.586  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:01:10.591  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:01:13.893  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:01:13.901  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:01:14.990  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:01:14.997  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:01:21.801  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:01:21.813  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:01:27.188  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:01:27.194  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:14:59.539  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:14:59.544  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:14:59.827  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:14:59.832  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:30:28.167  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:30:28.173  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:30:28.477  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:30:28.492  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:30:29.901  INFO 1374 --- [nio-8090-exec-5] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-06 23:30:29.910  INFO 1374 --- [nio-8090-exec-5] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-06 23:30:29.912  INFO 1374 --- [nio-8090-exec-6] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-06 23:30:29.917  INFO 1374 --- [nio-8090-exec-6] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-06 23:30:48.581  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:30:48.590  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:30:48.864  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:30:48.868  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:30:50.183  INFO 1374 --- [io-8090-exec-10] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 147, 查询最大id是 1, 查询条数是 1
+2015-06-06 23:30:50.186  INFO 1374 --- [nio-8090-exec-9] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 147, 查询最大id是 1, 查询条数是 1
+2015-06-06 23:30:50.188  INFO 1374 --- [io-8090-exec-10] .b.s.i.BusinessProductCommentServiceImpl : id为 147 商品没有查询到评价信息
+2015-06-06 23:30:50.190  INFO 1374 --- [nio-8090-exec-9] .b.s.i.BusinessProductCommentServiceImpl : id为 147 商品没有查询到评价信息
+2015-06-06 23:31:03.232  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:31:03.238  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:31:05.605  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:31:05.610  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:32:58.757  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:32:58.761  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:32:59.043  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:32:59.047  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:33:04.344  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:33:04.353  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:154,查询条数是:10
+2015-06-06 23:33:04.357  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:33:04.361  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:33:14.044  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:33:14.056  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:33:14.343  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:33:14.350  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:33:20.322  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:33:20.327  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:154,查询条数是:10
+2015-06-06 23:33:20.331  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:33:20.335  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:39:51.376  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:39:51.382  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:39:51.667  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:39:51.673  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:40:00.181  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:40:00.185  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:40:22.666  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:40:22.672  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:40:22.971  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:40:22.976  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:40:25.386  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:40:25.399  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:41:27.671  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:41:27.677  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:41:33.641  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:41:33.648  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:47:43.840  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:47:43.847  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:47:47.707  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:154,查询条数是:10
+2015-06-06 23:47:47.713  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:48:25.094  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-06 23:48:25.097  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-06 23:48:27.360  INFO 1374 --- [nio-8090-exec-2] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-06 23:48:27.364  INFO 1374 --- [nio-8090-exec-2] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-06 23:48:27.370  INFO 1374 --- [nio-8090-exec-3] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-06 23:48:27.372  INFO 1374 --- [nio-8090-exec-3] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-06 23:48:39.413  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:154,查询条数是:10
+2015-06-06 23:48:39.421  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 00:47:52.286  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 00:47:52.301  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 00:47:52.611  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 00:47:52.616  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 00:47:59.347  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:155,查询条数是:10
+2015-06-07 00:47:59.354  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 00:48:03.639  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:165,查询条数是:10
+2015-06-07 00:48:03.644  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:1
+2015-06-07 00:48:08.481  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 00:48:08.485  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 00:48:10.444  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 00:48:10.449  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 00:48:11.539  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 00:48:11.543  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 00:48:15.403  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 00:48:15.406  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 00:48:16.502  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 00:48:16.505  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 00:52:31.970  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 00:52:31.979  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 00:52:32.269  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 00:52:32.273  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 00:52:37.247  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:155,查询条数是:10
+2015-06-07 00:52:37.253  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 00:52:42.002  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:165,查询条数是:10
+2015-06-07 00:52:42.006  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:1
+2015-06-07 00:52:47.911  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 00:52:47.915  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 00:52:49.868  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 00:52:49.873  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 00:52:51.006  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 00:52:51.010  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 00:53:57.511  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 00:53:57.520  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 00:53:57.794  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 00:53:57.800  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:00:22.577  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 01:00:22.631  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:00:22.902  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 01:00:22.910  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:00:25.686  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 01:00:25.694  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:00:30.967  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:155,查询条数是:10
+2015-06-07 01:00:30.975  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:00:33.908  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:165,查询条数是:10
+2015-06-07 01:00:33.920  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:1
+2015-06-07 01:00:47.283  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 01:00:47.289  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 01:05:55.496  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 01:05:55.502  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:05:55.793  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 01:05:55.799  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:05:59.431  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:155,查询条数是:10
+2015-06-07 01:05:59.444  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:06:02.905  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:165,查询条数是:10
+2015-06-07 01:06:02.917  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:1
+2015-06-07 01:06:07.619  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 01:06:07.622  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 01:06:09.428  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 01:06:09.431  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 01:06:10.530  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 01:06:10.534  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 01:06:17.824  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 01:06:17.828  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 01:07:40.165  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 01:07:40.169  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:07:40.453  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 01:07:40.461  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:07:44.024  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:155,查询条数是:10
+2015-06-07 01:07:44.029  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:07:49.630  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:165,查询条数是:10
+2015-06-07 01:07:49.635  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:1
+2015-06-07 01:08:00.192  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 01:08:00.195  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 01:08:02.023  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 01:08:02.025  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 01:08:03.128  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 01:08:03.131  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 01:10:55.861  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 01:10:55.865  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:10:56.149  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 01:10:56.151  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:11:00.117  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:155,查询条数是:10
+2015-06-07 01:11:00.121  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:11:03.538  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:165,查询条数是:10
+2015-06-07 01:11:03.555  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:1
+2015-06-07 01:11:06.244  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 01:11:06.247  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 01:11:17.605  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 01:11:17.615  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:11:20.479  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 01:11:20.488  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:34:57.560  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 01:34:57.579  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:34:57.869  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 01:34:57.872  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:34:59.351  INFO 1374 --- [nio-8090-exec-2] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-07 01:34:59.367  INFO 1374 --- [nio-8090-exec-3] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-07 01:34:59.368  INFO 1374 --- [nio-8090-exec-2] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-07 01:34:59.412  INFO 1374 --- [nio-8090-exec-3] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-07 01:38:36.471  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 01:38:36.476  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:38:36.795  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 01:38:36.803  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:38:42.054  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:155,查询条数是:10
+2015-06-07 01:38:42.058  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 01:38:48.526  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:165,查询条数是:10
+2015-06-07 01:38:48.537  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:1
+2015-06-07 01:38:51.258  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 01:38:51.263  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 01:39:03.176  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 01:39:03.179  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:35:52.685  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 03:35:52.901  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:35:56.073  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 03:35:56.088  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:39:18.286  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 03:39:18.291  INFO 1374 --- [nio-8090-exec-6] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:39:18.605  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:39:18.608  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:39:24.885  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:39:24.889  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:39:30.508  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:39:30.512  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:40:18.959  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:40:18.975  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:40:58.174  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:155,查询条数是:10
+2015-06-07 03:40:58.184  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:41:01.878  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:165,查询条数是:10
+2015-06-07 03:41:01.882  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:1
+2015-06-07 03:41:07.185  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 03:41:07.187  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 03:41:42.266  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:41:42.272  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:41:44.556  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:41:44.571  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:41:53.089  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:41:53.099  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:44:02.106  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 03:44:02.109  INFO 1374 --- [nio-8090-exec-1] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:46:25.853  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 03:46:25.856  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:47:14.140  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 03:47:14.143  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:49:04.694  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:49:04.699  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:49:59.211  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:49:59.215  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:50:20.244  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:50:20.252  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:50:35.665  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:50:35.670  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:50:42.611  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 03:50:42.615  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:51:14.574  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:155,查询条数是:10
+2015-06-07 03:51:14.580  INFO 1374 --- [nio-8090-exec-2] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 03:51:18.310  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:165,查询条数是:10
+2015-06-07 03:51:18.313  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:1
+2015-06-07 03:51:23.601  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 03:51:23.603  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 03:57:30.934  INFO 1374 --- [nio-8090-exec-6] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 163, 查询最大id是 1, 查询条数是 1
+2015-06-07 03:57:30.939  INFO 1374 --- [nio-8090-exec-6] .b.s.i.BusinessProductCommentServiceImpl : id为 163 商品没有查询到评价信息
+2015-06-07 03:57:30.943  INFO 1374 --- [nio-8090-exec-8] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 163, 查询最大id是 1, 查询条数是 1
+2015-06-07 03:57:30.946  INFO 1374 --- [nio-8090-exec-8] .b.s.i.BusinessProductCommentServiceImpl : id为 163 商品没有查询到评价信息
+2015-06-07 04:01:58.091  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 04:01:58.095  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 04:01:58.428  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 04:01:58.433  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 04:03:38.287  INFO 1374 --- [nio-8090-exec-2] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 145, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:03:38.289  INFO 1374 --- [nio-8090-exec-1] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 145, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:03:38.292  INFO 1374 --- [nio-8090-exec-2] .b.s.i.BusinessProductCommentServiceImpl : id为 145 商品没有查询到评价信息
+2015-06-07 04:03:38.301  INFO 1374 --- [nio-8090-exec-1] .b.s.i.BusinessProductCommentServiceImpl : id为 145 商品没有查询到评价信息
+2015-06-07 04:06:45.583  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 04:06:45.590  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 04:06:45.896  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 04:06:45.900  INFO 1374 --- [nio-8090-exec-4] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 04:07:15.694  INFO 1374 --- [nio-8090-exec-5] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:07:15.697  INFO 1374 --- [nio-8090-exec-5] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-07 04:07:18.043  INFO 1374 --- [nio-8090-exec-6] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:07:18.045  INFO 1374 --- [nio-8090-exec-6] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-07 04:08:18.670  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:0,查询条数是:10
+2015-06-07 04:08:18.680  INFO 1374 --- [nio-8090-exec-7] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 04:08:18.979  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 04:08:18.984  INFO 1374 --- [io-8090-exec-10] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 04:08:26.337  INFO 1374 --- [nio-8090-exec-9] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 147, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:08:26.339  INFO 1374 --- [nio-8090-exec-9] .b.s.i.BusinessProductCommentServiceImpl : id为 147 商品没有查询到评价信息
+2015-06-07 04:08:27.841  INFO 1374 --- [nio-8090-exec-2] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 147, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:08:27.843  INFO 1374 --- [nio-8090-exec-2] .b.s.i.BusinessProductCommentServiceImpl : id为 147 商品没有查询到评价信息
+2015-06-07 04:08:46.599  INFO 1374 --- [nio-8090-exec-1] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 145, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:08:46.601  INFO 1374 --- [nio-8090-exec-1] .b.s.i.BusinessProductCommentServiceImpl : id为 145 商品没有查询到评价信息
+2015-06-07 04:08:48.005  INFO 1374 --- [nio-8090-exec-3] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 145, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:08:48.007  INFO 1374 --- [nio-8090-exec-3] .b.s.i.BusinessProductCommentServiceImpl : id为 145 商品没有查询到评价信息
+2015-06-07 04:08:58.217  INFO 1374 --- [nio-8090-exec-4] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 148, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:08:58.217  INFO 1374 --- [nio-8090-exec-5] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 148, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:08:58.221  INFO 1374 --- [nio-8090-exec-4] .b.s.i.BusinessProductCommentServiceImpl : id为 148 商品没有查询到评价信息
+2015-06-07 04:08:58.227  INFO 1374 --- [nio-8090-exec-5] .b.s.i.BusinessProductCommentServiceImpl : id为 148 商品没有查询到评价信息
+2015-06-07 04:09:01.940  INFO 1374 --- [nio-8090-exec-8] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:01.940  INFO 1374 --- [nio-8090-exec-6] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:01.941  INFO 1374 --- [nio-8090-exec-6] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-07 04:09:01.942  INFO 1374 --- [nio-8090-exec-8] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-07 04:09:04.659  INFO 1374 --- [nio-8090-exec-7] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 145, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:04.663  INFO 1374 --- [io-8090-exec-10] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 145, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:04.664  INFO 1374 --- [nio-8090-exec-7] .b.s.i.BusinessProductCommentServiceImpl : id为 145 商品没有查询到评价信息
+2015-06-07 04:09:04.678  INFO 1374 --- [io-8090-exec-10] .b.s.i.BusinessProductCommentServiceImpl : id为 145 商品没有查询到评价信息
+2015-06-07 04:09:07.501  INFO 1374 --- [nio-8090-exec-9] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 149, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:07.502  INFO 1374 --- [nio-8090-exec-2] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 149, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:07.503  INFO 1374 --- [nio-8090-exec-9] .b.s.i.BusinessProductCommentServiceImpl : id为 149 商品没有查询到评价信息
+2015-06-07 04:09:07.504  INFO 1374 --- [nio-8090-exec-2] .b.s.i.BusinessProductCommentServiceImpl : id为 149 商品没有查询到评价信息
+2015-06-07 04:09:13.108  INFO 1374 --- [nio-8090-exec-1] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 149, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:13.109  INFO 1374 --- [nio-8090-exec-3] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 149, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:13.110  INFO 1374 --- [nio-8090-exec-1] .b.s.i.BusinessProductCommentServiceImpl : id为 149 商品没有查询到评价信息
+2015-06-07 04:09:13.112  INFO 1374 --- [nio-8090-exec-3] .b.s.i.BusinessProductCommentServiceImpl : id为 149 商品没有查询到评价信息
+2015-06-07 04:09:21.351  INFO 1374 --- [nio-8090-exec-4] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 150, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:21.351  INFO 1374 --- [nio-8090-exec-5] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 150, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:21.352  INFO 1374 --- [nio-8090-exec-4] .b.s.i.BusinessProductCommentServiceImpl : id为 150 商品没有查询到评价信息
+2015-06-07 04:09:21.353  INFO 1374 --- [nio-8090-exec-5] .b.s.i.BusinessProductCommentServiceImpl : id为 150 商品没有查询到评价信息
+2015-06-07 04:09:25.534  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:145,查询条数是:10
+2015-06-07 04:09:25.542  INFO 1374 --- [nio-8090-exec-8] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 04:09:29.341  INFO 1374 --- [nio-8090-exec-6] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:29.343  INFO 1374 --- [nio-8090-exec-7] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 146, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:29.343  INFO 1374 --- [nio-8090-exec-6] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-07 04:09:29.346  INFO 1374 --- [nio-8090-exec-7] .b.s.i.BusinessProductCommentServiceImpl : id为 146 商品没有查询到评价信息
+2015-06-07 04:09:32.812  INFO 1374 --- [io-8090-exec-10] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 153, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:32.814  INFO 1374 --- [io-8090-exec-10] .b.s.i.BusinessProductCommentServiceImpl : id为 153 商品没有查询到评价信息
+2015-06-07 04:09:32.815  INFO 1374 --- [nio-8090-exec-9] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 153, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:32.817  INFO 1374 --- [nio-8090-exec-9] .b.s.i.BusinessProductCommentServiceImpl : id为 153 商品没有查询到评价信息
+2015-06-07 04:09:36.182  INFO 1374 --- [nio-8090-exec-2] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 154, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:36.183  INFO 1374 --- [nio-8090-exec-2] .b.s.i.BusinessProductCommentServiceImpl : id为 154 商品没有查询到评价信息
+2015-06-07 04:09:36.183  INFO 1374 --- [nio-8090-exec-1] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 154, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:36.185  INFO 1374 --- [nio-8090-exec-1] .b.s.i.BusinessProductCommentServiceImpl : id为 154 商品没有查询到评价信息
+2015-06-07 04:09:39.113  INFO 1374 --- [nio-8090-exec-3] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 152, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:39.115  INFO 1374 --- [nio-8090-exec-3] .b.s.i.BusinessProductCommentServiceImpl : id为 152 商品没有查询到评价信息
+2015-06-07 04:09:39.115  INFO 1374 --- [nio-8090-exec-4] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 152, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:39.116  INFO 1374 --- [nio-8090-exec-4] .b.s.i.BusinessProductCommentServiceImpl : id为 152 商品没有查询到评价信息
+2015-06-07 04:09:42.584  INFO 1374 --- [nio-8090-exec-5] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 152, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:42.585  INFO 1374 --- [nio-8090-exec-5] .b.s.i.BusinessProductCommentServiceImpl : id为 152 商品没有查询到评价信息
+2015-06-07 04:09:42.586  INFO 1374 --- [nio-8090-exec-8] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 152, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:42.587  INFO 1374 --- [nio-8090-exec-8] .b.s.i.BusinessProductCommentServiceImpl : id为 152 商品没有查询到评价信息
+2015-06-07 04:09:46.718  INFO 1374 --- [nio-8090-exec-6] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 147, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:46.719  INFO 1374 --- [nio-8090-exec-7] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 147, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:46.719  INFO 1374 --- [nio-8090-exec-6] .b.s.i.BusinessProductCommentServiceImpl : id为 147 商品没有查询到评价信息
+2015-06-07 04:09:46.721  INFO 1374 --- [nio-8090-exec-7] .b.s.i.BusinessProductCommentServiceImpl : id为 147 商品没有查询到评价信息
+2015-06-07 04:09:51.067  INFO 1374 --- [io-8090-exec-10] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 148, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:51.070  INFO 1374 --- [io-8090-exec-10] .b.s.i.BusinessProductCommentServiceImpl : id为 148 商品没有查询到评价信息
+2015-06-07 04:09:51.070  INFO 1374 --- [nio-8090-exec-9] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 148, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:09:51.072  INFO 1374 --- [nio-8090-exec-9] .b.s.i.BusinessProductCommentServiceImpl : id为 148 商品没有查询到评价信息
+2015-06-07 04:10:00.132  INFO 1374 --- [nio-8090-exec-2] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 150, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:00.134  INFO 1374 --- [nio-8090-exec-2] .b.s.i.BusinessProductCommentServiceImpl : id为 150 商品没有查询到评价信息
+2015-06-07 04:10:00.136  INFO 1374 --- [nio-8090-exec-1] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 150, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:00.138  INFO 1374 --- [nio-8090-exec-1] .b.s.i.BusinessProductCommentServiceImpl : id为 150 商品没有查询到评价信息
+2015-06-07 04:10:05.205  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:155,查询条数是:10
+2015-06-07 04:10:05.208  INFO 1374 --- [nio-8090-exec-3] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:10
+2015-06-07 04:10:05.798  INFO 1374 --- [nio-8090-exec-4] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 154, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:05.800  INFO 1374 --- [nio-8090-exec-5] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 154, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:05.800  INFO 1374 --- [nio-8090-exec-4] .b.s.i.BusinessProductCommentServiceImpl : id为 154 商品没有查询到评价信息
+2015-06-07 04:10:05.802  INFO 1374 --- [nio-8090-exec-5] .b.s.i.BusinessProductCommentServiceImpl : id为 154 商品没有查询到评价信息
+2015-06-07 04:10:10.003  INFO 1374 --- [nio-8090-exec-8] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 147, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:10.004  INFO 1374 --- [nio-8090-exec-6] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 147, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:10.004  INFO 1374 --- [nio-8090-exec-8] .b.s.i.BusinessProductCommentServiceImpl : id为 147 商品没有查询到评价信息
+2015-06-07 04:10:10.005  INFO 1374 --- [nio-8090-exec-6] .b.s.i.BusinessProductCommentServiceImpl : id为 147 商品没有查询到评价信息
+2015-06-07 04:10:18.120  INFO 1374 --- [nio-8090-exec-7] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 152, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:18.121  INFO 1374 --- [io-8090-exec-10] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 152, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:18.122  INFO 1374 --- [nio-8090-exec-7] .b.s.i.BusinessProductCommentServiceImpl : id为 152 商品没有查询到评价信息
+2015-06-07 04:10:18.123  INFO 1374 --- [io-8090-exec-10] .b.s.i.BusinessProductCommentServiceImpl : id为 152 商品没有查询到评价信息
+2015-06-07 04:10:22.244  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:165,查询条数是:10
+2015-06-07 04:10:22.254  INFO 1374 --- [nio-8090-exec-9] c.k.bs.rest.SendingWaterController       : 查询到送水信息的数量是:1
+2015-06-07 04:10:22.879  INFO 1374 --- [nio-8090-exec-2] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 155, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:22.880  INFO 1374 --- [nio-8090-exec-1] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 155, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:22.881  INFO 1374 --- [nio-8090-exec-2] .b.s.i.BusinessProductCommentServiceImpl : id为 155 商品没有查询到评价信息
+2015-06-07 04:10:22.882  INFO 1374 --- [nio-8090-exec-1] .b.s.i.BusinessProductCommentServiceImpl : id为 155 商品没有查询到评价信息
+2015-06-07 04:10:27.169  INFO 1374 --- [nio-8090-exec-3] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 159, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:27.170  INFO 1374 --- [nio-8090-exec-3] .b.s.i.BusinessProductCommentServiceImpl : id为 159 商品没有查询到评价信息
+2015-06-07 04:10:27.170  INFO 1374 --- [nio-8090-exec-4] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 159, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:27.172  INFO 1374 --- [nio-8090-exec-4] .b.s.i.BusinessProductCommentServiceImpl : id为 159 商品没有查询到评价信息
+2015-06-07 04:10:33.072  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 开始查询送水列表,查询的最大ID是:166,查询条数是:10
+2015-06-07 04:10:33.075  INFO 1374 --- [nio-8090-exec-5] c.k.bs.rest.SendingWaterController       : 未查询到相关数据
+2015-06-07 04:10:34.570  INFO 1374 --- [nio-8090-exec-8] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 166, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:34.571  INFO 1374 --- [nio-8090-exec-6] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 166, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:34.571  INFO 1374 --- [nio-8090-exec-8] .b.s.i.BusinessProductCommentServiceImpl : id为 166 商品没有查询到评价信息
+2015-06-07 04:10:34.573  INFO 1374 --- [nio-8090-exec-6] .b.s.i.BusinessProductCommentServiceImpl : id为 166 商品没有查询到评价信息
+2015-06-07 04:10:37.392  INFO 1374 --- [nio-8090-exec-7] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 165, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:37.394  INFO 1374 --- [io-8090-exec-10] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 165, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:37.394  INFO 1374 --- [nio-8090-exec-7] .b.s.i.BusinessProductCommentServiceImpl : id为 165 商品没有查询到评价信息
+2015-06-07 04:10:37.395  INFO 1374 --- [io-8090-exec-10] .b.s.i.BusinessProductCommentServiceImpl : id为 165 商品没有查询到评价信息
+2015-06-07 04:10:40.498  INFO 1374 --- [nio-8090-exec-9] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 164, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:40.500  INFO 1374 --- [nio-8090-exec-9] .b.s.i.BusinessProductCommentServiceImpl : id为 164 商品没有查询到评价信息
+2015-06-07 04:10:40.501  INFO 1374 --- [nio-8090-exec-2] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 164, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:40.503  INFO 1374 --- [nio-8090-exec-2] .b.s.i.BusinessProductCommentServiceImpl : id为 164 商品没有查询到评价信息
+2015-06-07 04:10:43.560  INFO 1374 --- [nio-8090-exec-1] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 163, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:43.561  INFO 1374 --- [nio-8090-exec-3] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 163, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:43.562  INFO 1374 --- [nio-8090-exec-1] .b.s.i.BusinessProductCommentServiceImpl : id为 163 商品没有查询到评价信息
+2015-06-07 04:10:43.562  INFO 1374 --- [nio-8090-exec-3] .b.s.i.BusinessProductCommentServiceImpl : id为 163 商品没有查询到评价信息
+2015-06-07 04:10:46.215  INFO 1374 --- [nio-8090-exec-4] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 162, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:46.217  INFO 1374 --- [nio-8090-exec-5] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 162, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:46.217  INFO 1374 --- [nio-8090-exec-4] .b.s.i.BusinessProductCommentServiceImpl : id为 162 商品没有查询到评价信息
+2015-06-07 04:10:46.219  INFO 1374 --- [nio-8090-exec-5] .b.s.i.BusinessProductCommentServiceImpl : id为 162 商品没有查询到评价信息
+2015-06-07 04:10:50.409  INFO 1374 --- [nio-8090-exec-8] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 161, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:50.412  INFO 1374 --- [nio-8090-exec-6] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 161, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:50.412  INFO 1374 --- [nio-8090-exec-8] .b.s.i.BusinessProductCommentServiceImpl : id为 161 商品没有查询到评价信息
+2015-06-07 04:10:50.414  INFO 1374 --- [nio-8090-exec-6] .b.s.i.BusinessProductCommentServiceImpl : id为 161 商品没有查询到评价信息
+2015-06-07 04:10:55.244  INFO 1374 --- [nio-8090-exec-7] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 159, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:55.246  INFO 1374 --- [io-8090-exec-10] c.k.b.r.BusinessProductCommentController : 开始查询商品评价信息,商品id是 159, 查询最大id是 1, 查询条数是 1
+2015-06-07 04:10:55.246  INFO 1374 --- [nio-8090-exec-7] .b.s.i.BusinessProductCommentServiceImpl : id为 159 商品没有查询到评价信息
+2015-06-07 04:10:55.248  INFO 1374 --- [io-8090-exec-10] .b.s.i.BusinessProductCommentServiceImpl : id为 159 商品没有查询到评价信息
+2015-06-07 04:31:57.538  INFO 1374 --- [       Thread-1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@564718df: startup date [Sat Jun 06 22:13:13 CST 2015]; root of context hierarchy
+2015-06-07 04:31:57.556  INFO 1374 --- [       Thread-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2015-06-07 04:31:57.565  INFO 1374 --- [       Thread-1] o.s.b.a.e.jmx.EndpointMBeanExporter      : Unregistering JMX-exposed beans on shutdown
+2015-06-07 04:31:57.567  INFO 1374 --- [       Thread-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2015-06-07 04:31:57.580  WARN 1374 --- [       Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method 'close' failed on bean with name 'sqlSession': java.lang.UnsupportedOperationException: Manual close is not allowed over a Spring managed SqlSession

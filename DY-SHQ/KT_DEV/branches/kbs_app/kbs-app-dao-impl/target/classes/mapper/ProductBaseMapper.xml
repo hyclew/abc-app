@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ProductBase">
+
+	<resultMap id="productBaseMap" type="com.kingteller.bs.domain.product.ProductBase">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="introduce" property="introduce" jdbcType="VARCHAR" />
+		<result column="updatetime" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="status" property="status" jdbcType="CHAR" />
+		<result column="unit" property="unit" jdbcType="VARCHAR" />
+		<result column="specification" property="specification" jdbcType="VARCHAR"/>
+		<result column="comment" property="comment" jdbcType="VARCHAR" />
+		<result column="bscatalogueid" property="productCatalogueId" jdbcType="BIGINT" />
+	</resultMap>
+
+	<!-- 商家基础信息录入 -->
+	<insert id="insertProductBase" parameterType="com.kingteller.bs.domain.product.ProductBase"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into productbase(
+			name, 
+			introduce, 
+			updatetime, 
+			unit,
+			specification,
+			comment,
+			bscatalogueid
+		) values(
+			#{name,jdbcType=VARCHAR}, 
+			#{introduce,jdbcType=VARCHAR}, 
+			CURRENT_TIMESTAMP,
+			#{unit,jdbcType=VARCHAR}, 
+			#{specification,jdbcType=VARCHAR}, 
+			#{comment,jdbcType=VARCHAR},
+			#{productCatalogueId,jdbcType=BIGINT}
+		)
+		<selectKey resultType="Long" keyProperty="id">
+			select @@identity as inserted
+		</selectKey>
+	</insert>
+	
+	
+</mapper>

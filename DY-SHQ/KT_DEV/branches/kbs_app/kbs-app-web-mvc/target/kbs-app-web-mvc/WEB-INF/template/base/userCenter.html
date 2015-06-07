@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户首页</title> #parse("common/include.html")
+
+
+<link href="${ctx}/static/css/base/main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="${ctx}/static/js/base/userCenter.js"></script>
+<style type="text/css">
+.w-page-nav{text-align:right}
+.w-page-nav a{display:inline-block;*zoom:1;*display:inline;width:21px;height:21px;border:1px solid #66D27D;line-height:21px;text-align:center;background:#FFFFFF;margin-right:7px;color:#61C8A8;vertical-align:middle}
+.w-page-nav a:hover{background:#61C8A8;color:#fff}
+.w-page-nav a.operate-btn{width:auto;padding:0 7px}
+.w-page-nav .current {background:#61C8A8;color:#fff}
+.w-page-nav .input-text{width:21px;height:21px;border:1px solid #66D27D;line-height:21px;text-align:center;color:#A9A9A9;vertical-align:middle;width:34px;margin-right:7px}
+.w-page-nav .dot{font-size:16px;color:#05BA8D;margin-right:7px;position:relative;top:-3px}
+.black-input{color:#000000!important;}
+</style>
+
+</head>
+
+<body>
+	<a class="index_bottom_a" id="#goTopBtn" href="#"></a>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+
+	<!-- 内容 开始 -->
+	<div class="index_main" nav="base">
+		<div class="index_redd index_redd1 clearfix">
+			<div class="index_redd_p">
+				<p>
+					<a class="index_redd_a guangzhou" href="#">广州赢新网络科技有限公司发布 P2P融资，火热募集中</a><em>2014-01-15</em>
+				</p>
+				<p class="index_border_no">
+					<a class="index_redd_a" href="#">农银通P2P产品正式上线，火热募集中</a><em>2014-03-15</em>
+				</p>
+			</div>
+			<a href="#">显示更多</a>
+		</div>
+		<div class="index_user_menu clearfix">
+			<div class="index_user_menu_l">
+				<h1>盈建红软优先总公司</h1>
+				<div class="index_user_menu_l_con">
+					<div class="user_img_con clearfix">
+						<div class="user_img_con_l">
+							<img src="${ctx}/static/images/base/pic_zy_19.jpg" />
+							<p>AAA级</p>
+						</div>
+						<div class="user_img_con_r">
+							<div class="user_quota">
+								<p class="clearfix">
+									<span class="fl">最大贷款额度</span><span class="fr"><em>200</em>万元</span>
+								</p>
+								<p class="clearfix">
+									<span class="fl">可用贷款额度</span><span class="fr"><em>120</em>万元</span>
+								</p>
+							</div>
+							<div class="user_quota1">
+								<p class="clearfix">
+									<span class="fl">最大P2P额度</span><span class="fr"><em>220</em>万元</span>
+								</p>
+								<p class="clearfix">
+									<span class="fl">可用P2P额度</span><span class="fr"><em>130</em>万元</span>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="user_img_con pt5">
+						<h2>我的账户</h2>
+						<p class="user_img_con_h2 clearfix">
+							<span class="fl">可用金额</span><span class="fr"><em>12</em>万元</span>
+						</p>
+						<p class="user_img_con_h2 clearfix">
+							<span class="fl">冻结金额</span><span class="fr"><em>20</em>万元</span>
+						</p>
+						<p class="user_img_con_h2 clearfix">
+							<span class="fl">农银通币</span><span class="fr"><em>3000</em></span>
+						</p>
+					</div>
+					<div class="user_img_con pt5">
+						<h2>我的借款</h2>
+						<p class="user_img_con_h2 clearfix">
+							<span class="fl">正在还款（3笔）</span><span class="fr"><em>50</em>万元</span>
+						</p>
+						<p class="user_img_con_h2 clearfix">
+							<span class="fl">正在申请（2笔）</span><span class="fr"><em>300</em>万元</span>
+						</p>
+					</div>
+					<div class="user_img_con pt5">
+						<h2>我的投资</h2>
+						<p class="user_img_con_h2 clearfix">
+							<span class="fl">P2P收益（3笔）</span><span class="fr"><em>2</em>万元</span>
+						</p>
+						<p class="user_img_con_h2 clearfix">
+							<span class="fl">理财产品（4份）</span><span class="fr"><em>300</em>万元</span>
+						</p>
+					</div>
+					<div class="user_img_con user_img_con1 pt5">
+						<h2>我的网购</h2>
+						<p class="user_img_con_h2 clearfix">
+							<span class="fl">我的订单（1笔）</span><span class="fr"><em>12</em>万元</span>
+						</p>
+						<p class="user_img_con_h2 clearfix">
+							<span class="fl">我的关注（2件）</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="index_user_menu_r">
+				<div class="nav_menu_con" style="height: 66px;">
+					<ul class="clearfix">
+						<li><a href="#" class="ui-tab nav_menu_con_cur" data-title="accountRemind"> <em class="menu_con_lab">$!{accountRemindCount}</em> <span class="icon_menu1"></span>
+								<p>账户通知</p>
+						</a></li>
+						<li><a href="#" class="ui-tab" data-title="myLoan"> <em class="menu_con_lab">$!{myLoanCount}</em> <span class="icon_menu2"></span>
+								<p>我的借款</p>
+						</a></li>
+						<li><a href="#" class="ui-tab" data-title="myInvestment"> <em class="menu_con_lab">$!{myInvestmentCount}</em> <span class="icon_menu4"></span>
+								<p>我的投资</p>
+						</a></li>
+						<li><a href="#" class="ui-tab" data-title="myNetworkPurchase"> <em class="menu_con_lab">$!{myNetworkPurchaseCount}</em> <span class="icon_menu6"></span>
+								<p>我的网购</p>
+						</a></li>
+						<li><a href="#" class="ui-tab" data-title="overcast"> <em class="menu_con_lab">$!{overcastCount}</em> <span class="icon_menu7"></span>
+								<p>系统广播</p>
+						</a></li>
+						<li><a href="#" class="ui-tab" data-title="doubleCheck"> <em class="menu_con_lab">$!{doubleCheckCount}</em> <span class="icon_menu8"></span>
+								<p>待我复核</p>
+						</a></li>
+					</ul>
+				</div>
+				<div id="pageTable">
+					#parse("base/center/pageTable.html")
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="index-show-hide">
+			<h2 class="fl index-show-hide-h2">我的工具栏</h2>
+			<a class="shouqi zhankai" style="background: none; padding-right: 0;" href="#">展开 &or;</a> <a class="shouqi"
+				style="background: none; padding-right: 0;" href="#">收起 &and;</a> <a class="tianjia" href="#">添加</a>
+		</div>
+
+		<div class="shouqi1">
+			<div class="index_user_bg">
+				<a class="index_icon_delete" href="#"></a>
+				<h2 class="index_tit">我的收藏</h2>
+				<div class="financing_p2p">
+					<div class="financing_p2p1">
+						<ul class="clearfix">
+							<li>
+								<div class="financing_p2p_img"></div>
+								<div class="financing_p2p_con">
+									<h4>某模具制造有限公司</h4>
+									<ul>
+										<li><label>投资项目:</label><span>申请进货</span></li>
+										<li><label>投资金额:</label><span>￥150万</span></li>
+										<li><label>剩余时间:</label><span>3天</span></li>
+										<li><label>预期年利率:</label><span>16%</span></li>
+									</ul>
+									<a class="financing_a3" href="./admin/05P2P/我要理财-P2P投资-我要投资.html"></a>
+								</div>
+							</li>
+							<li>
+								<div class="financing_p2p_img"></div>
+								<div class="financing_p2p_con">
+									<h4>某设备经销有限公司</h4>
+									<ul>
+										<li><label>投资项目:</label><span>申请进货</span></li>
+										<li><label>投资金额:</label><span>￥200万</span></li>
+										<li><label>剩余时间:</label><span>1天</span></li>
+										<li><label>预期年利率:</label><span>45%</span></li>
+									</ul>
+									<a class="financing_a3" href="./admin/05P2P/我要理财-P2P投资-我要投资.html"></a>
+								</div>
+							</li>
+							<li>
+								<div class="financing_p2p_img"></div>
+								<div class="financing_p2p_con">
+									<h4>某农机设备有限公司</h4>
+									<ul>
+										<li><label>投资项目:</label><span>申请进货</span></li>
+										<li><label>投资金额:</label><span>￥100万</span></li>
+										<li><label>剩余时间:</label><span>3小时</span></li>
+										<li><label>预期年利率:</label><span>15%</span></li>
+									</ul>
+									<a class="financing_a3" href="./admin/05P2P/我要理财-P2P投资-我要投资.html"></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="financing_p2p financing_p2p_zy123" style="display: none;">
+					<div class="financing_p2p1">
+						<ul class="clearfix">
+							<li>
+								<div class="financing_p2p_img"></div>
+								<div class="financing_p2p_con">
+									<h4>某模具制造有限公司</h4>
+									<ul>
+										<li><label>投资项目:</label><span>申请进货</span></li>
+										<li><label>投资金额:</label><span>￥150万</span></li>
+										<li><label>剩余时间:</label><span>3天</span></li>
+										<li><label>预期年利率:</label><span>16%</span></li>
+									</ul>
+									<a class="financing_a3" href="#"></a>
+								</div>
+							</li>
+							<li>
+								<div class="financing_p2p_img"></div>
+								<div class="financing_p2p_con">
+									<h4>某设备经销有限公司</h4>
+									<ul>
+										<li><label>投资项目:</label><span>申请进货</span></li>
+										<li><label>投资金额:</label><span>￥200万</span></li>
+										<li><label>剩余时间:</label><span>1天</span></li>
+										<li><label>预期年利率:</label><span>45%</span></li>
+									</ul>
+									<a class="financing_a3" href="#"></a>
+								</div>
+							</li>
+							<li>
+								<div class="financing_p2p_img"></div>
+								<div class="financing_p2p_con">
+									<h4>某农机设备有限公司</h4>
+									<ul>
+										<li><label>投资项目:</label><span>申请进货</span></li>
+										<li><label>投资金额:</label><span>￥100万</span></li>
+										<li><label>剩余时间:</label><span>3小时</span></li>
+										<li><label>预期年利率:</label><span>15%</span></li>
+									</ul>
+									<a class="financing_a3" href="#"></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="index_user_bg">
+				<a class="index_icon_delete" href="#"></a>
+				<h2 class="index_tit">贷款产品推荐</h2>
+				<div class="loan_products_list">
+					<ul>
+						<li style="left: 0; height: 305px; width: 329px;">
+							<h3>经营贷</h3>
+							<div class="loan_products_list_bg">
+								<p>还款期限</p>
+								<p class="loan_products_red">180天</p>
+							</div>
+							<p class="loan_products_list_p1">
+								<label>还款方式：</label><span>随借随还</span>
+							</p>
+							<p class="loan_products_list_p1">
+								<label>贷款利率：</label><span class="loan_products_green">最高9%</span>
+							</p> <a class="loan_products_list_a" href="./admin/我要借款-银行贷款.html"></a>
+						</li>
+						<li style="left: 330px; height: 323px;" class="loan_products_list_center">
+							<h3 class="loan_products_list_h3">备货贷</h3>
+							<div class="loan_products_list_bg">
+								<p>还款期限</p>
+								<p class="loan_products_red">90天</p>
+							</div>
+							<p class="loan_products_list_p1">
+								<label>还款方式：</label><span>随借随还</span>
+							</p>
+							<p class="loan_products_list_p1">
+								<label>贷款利率：</label><span class="loan_products_green">最高9%</span>
+							</p> <a class="loan_products_list_a" href="./admin/我要借款-银行贷款.html"></a>
+						</li>
+						<li style="left: 667px; height: 305px; width: 329px;">
+							<h3>周转贷</h3>
+							<div class="loan_products_list_bg">
+								<p>还款期限</p>
+								<p class="loan_products_red">45天</p>
+							</div>
+							<p class="loan_products_list_p1">
+								<label>还款方式：</label><span>随借随还</span>
+							</p>
+							<p class="loan_products_list_p1">
+								<label>贷款利率：</label><span class="loan_products_green">最高9%</span>
+							</p> <a class="loan_products_list_a" href="./admin/我要借款-银行贷款.html"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="index_user_bg">
+				<a class="index_icon_delete" href="#"></a>
+				<h2 class="index_tit">P2P融资项目推荐</h2>
+				<div class="financing_p2p">
+					<div class="financing_p2p1">
+						<ul class="clearfix">
+							<li>
+								<div class="financing_p2p_img"></div>
+								<div class="financing_p2p_con">
+									<h4>某模具制造有限公司</h4>
+									<ul>
+										<li><label>投资项目:</label><span>申请进货</span></li>
+										<li><label>投资金额:</label><span>￥150万</span></li>
+										<li><label>剩余时间:</label><span>3天</span></li>
+										<li><label>预期年利率:</label><span>16%</span></li>
+									</ul>
+									<a class="financing_a3" href="./admin/05P2P/我要理财-P2P投资-我要投资.html"></a>
+								</div>
+							</li>
+							<li>
+								<div class="financing_p2p_img"></div>
+								<div class="financing_p2p_con">
+									<h4>某设备经销有限公司</h4>
+									<ul>
+										<li><label>投资项目:</label><span>申请进货</span></li>
+										<li><label>投资金额:</label><span>￥200万</span></li>
+										<li><label>剩余时间:</label><span>1天</span></li>
+										<li><label>预期年利率:</label><span>45%</span></li>
+									</ul>
+									<a class="financing_a3" href="./admin/05P2P/我要理财-P2P投资-我要投资.html"></a>
+								</div>
+							</li>
+							<li>
+								<div class="financing_p2p_img"></div>
+								<div class="financing_p2p_con">
+									<h4>某农机设备有限公司</h4>
+									<ul>
+										<li><label>投资项目:</label><span>申请进货</span></li>
+										<li><label>投资金额:</label><span>￥100万</span></li>
+										<li><label>剩余时间:</label><span>3小时</span></li>
+										<li><label>预期年利率:</label><span>15%</span></li>
+									</ul>
+									<a class="financing_a3" href="./admin/05P2P/我要理财-P2P投资-我要投资.html"></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="financing_p2p_list_a">
+						<ul>
+							<li><a class="financing_p2p_list_a_cur" href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="index_bg3 index_user_bg">
+				<a class="index_icon_delete" href="#"></a>
+				<h2 class="index_tit">小理财大保障</h2>
+				<ul>
+					<li><span class="icon_bg3_1"></span>
+						<div class="fl">
+							<a class="btn_financing1_1" href="./admin/03我的投资/我要投资-理财产品-农银理财通.html"></a>
+							<p class="financing_p2p_p">小投入创造稳定收益</p>
+						</div></li>
+					<li><span class="icon_bg3_2"></span>
+						<div class="fl">
+							<a class="btn_financing1_2" href="./admin/03我的投资/我要投资-理财产品-人身意外保险列表.html"></a>
+							<p class="financing_p2p_p">为健康生活提供保障</p>
+						</div></li>
+					<li><span class="icon_bg3_3"></span>
+						<div class="fl">
+							<a class="btn_financing1_3" href="./admin/03我的投资/我要投资-理财产品-农银投资宝.html"></a>
+							<p class="financing_p2p_p">确保融资贷款的安全</p>
+						</div></li>
+				</ul>
+			</div>
+			<div class="index_user_bg">
+				<a class="index_icon_delete" href="#"></a>
+				<h2 class="index_tit">网购专场</h2>
+				<div class="advertisement_link">
+					<div class="ad-1">
+						<img src="${ctx}/static/images/base/ad1-logo_03.jpg" alt="" width="146" height="147" /> <a href="./admin/04网购/我要网购-首页.html" class="more"></a>
+					</div>
+					<div class="ad-2">
+						<p>
+							<em>英国</em>皇室御用品牌源于 1880由Loake家族的三兄弟Thomas，John和William在英国建立至今已有130年的历史。
+						</p>
+					</div>
+					<div class="ad-3">
+						<img src="${ctx}/static/images/base/ad3-logo_06.jpg" alt="" width="159" height="53" /> <a href="./admin/04网购/我要网购-首页.html" class="more"></a>
+
+					</div>
+					<div class="ad-4">
+						<img src="${ctx}/static/images/base/ad4-logo_03.png" alt="" width="133" height="114" />
+					</div>
+					<div class="ad-5">
+						<img src="${ctx}/static/images/base/ad5-logo_15.png" alt="" width="151" height="50" /> <a href="./admin/04网购/我要网购-首页.html" class="more"></a>
+					</div>
+					<div class="ad-6">
+						<p>
+							<em>至尊租车</em>成立于2006年1月19日，是中国首家采用新模式开展全国连锁汽车租赁业务的企业。
+						</p>
+					</div>
+					<div class="ad-7">
+						<p>
+							<em>美年</em>创始于2004年，由原美年健康产业集团和原大健康科技健康管理有限公司合并而成，在全国拥有100余 家体检中心
+						</p>
+					</div>
+					<div class="ad-8">
+						<img src="${ctx}/static/images/base/ad6-logo_14.jpg" alt="" width="33" height="59" />
+						<p>
+							<em>秦</em>战六国一统中国的历史被后人所乐道而今天秦再次复活，它是比亚迪第二代双模电动车秦。凭借303匹马力百公里5.9秒的加速向世人宣告回归，用速度点燃了战争的硝烟。
+						</p>
+						<a href="./admin/04网购/我要网购-首页.html" class="more"></a>
+					</div>
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+	<!-- 内容 结束 -->
+
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+
+	<!-- 弹出层-提示 开始 -->
+
+	<div class="pop div_zy1" style="width: 380px; margin: 0 auto; position: fixed; z-index: 10; display: none;">
+		<h3 class="pop_h3">
+			<a class="icon_pop_close quxiao" href="#"></a>提示
+		</h3>
+		<div class="pop_con">
+			<div class="pop-con-bd clearfix">
+				<h5>广州赢新网络科技有限公司发布 P2P融资</h5>
+				<p class="line-h-24 align-center mt-10">
+					借款金额:<span class="cf7824a">100</span>万<br /> 借款利率:<span class="cf7824a">8%</span><br /> 期限:<span class="cf7824a">6</span>个月
+				</p>
+				<p class="mt-10 align-right pr10 pb-10">
+					剩余募集时间:<span class="cf7824a">23</span>小时
+				</p>
+			</div>
+		</div>
+		<div class="btn-box">
+			<a href="#" class="sure-btn mr-20 quxiao">关注</a> <a href="#" class="cancel-btn quxiao">去投资</a>
+		</div>
+	</div>
+
+	<!-- 弹出层-提示 结束 -->
+
+	<!-- 弹出层-提示 开始 -->
+
+	<div class="pop div_zy2" style="width: 380px; margin: 0 auto; position: fixed; z-index: 10; display: none;">
+		<h3 class="pop_h3">
+			<a class="icon_pop_close quxiao" href="#"></a>提示
+		</h3>
+		<div class="pop_con">
+			<div class="pop-con-bd clearfix">
+				<div class="info-box">
+					<h5 class="pt-0">确定删除所选记录？</h5>
+
+				</div>
+			</div>
+		</div>
+		<div class="btn-box">
+			<a href="#" class="sure-btn mr-20 quxiao" id="deleteBatchBtn">确定</a> <a href="#" class="cancel-btn quxiao">取消</a>
+		</div>
+	</div>
+
+	<!-- 弹出层-提示 结束 -->
+
+	<!-- 弹出层-提示 开始 -->
+
+	<div class="pop div_zy3" style="width: 380px; margin: 0 auto; position: fixed; z-index: 10; display: none;">
+		<h3 class="pop_h3">
+			<a class="icon_pop_close quxiao2" href="#"></a>提示
+		</h3>
+		<div class="pop_con">
+			<div class="pop-con-bd clearfix">
+				<div class="info-box">
+					<h5 class="pt-0">请勾选删除的内容</h5>
+
+				</div>
+			</div>
+		</div>
+		<div class="btn-box">
+			<a href="#" class="sure-btn mr-20 quxiao2">确定</a> <a href="#" class="cancel-btn quxiao2">取消</a>
+		</div>
+	</div>
+
+	<!-- 弹出层-提示 结束 -->
+
+	<!-- 弹出层-提示 开始 -->
+
+	<div class="pop div_zy4" style="width: 380px; margin: 0 auto; position: fixed; z-index: 10; display: none;">
+		<h3 class="pop_h3">
+			<a class="icon_pop_close quxiao" href="#"></a>
+		</h3>
+		<div class="index-suggest-pop">
+			<ul>
+				<li><span class="input-checkbox-s"></span> <label class="label-text">好友产品推荐</label> <img
+					src="${ctx}/static/images/base/index-pic1_03.jpg" alt="" width="199" height="49" /></li>
+				<li><span class="input-checkbox-s"></span> <label class="label-text">贷款产品推荐</label> <img
+					src="${ctx}/static/images/base/index-pic1_03.jpg" alt="" width="199" height="49" /></li>
+				<li><span class="input-checkbox-s"></span> <label class="label-text">投资产品推荐</label> <img
+					src="${ctx}/static/images/base/index-pic1_03.jpg" alt="" width="199" height="49" /></li>
+			</ul>
+			<div class="bottom-nav">
+				<a href="#" class="left-btn"></a> <span class="dot active"></span> <span class="dot"></span> <a href="#" class="right-btn"></a>
+			</div>
+		</div>
+		<div class="btn-box">
+			<a href="#" class="sure-btn mr-20 div_close_ks">确定</a> <a href="#" class="cancel-btn div_close_ks">取消</a>
+		</div>
+	</div>
+
+	<!-- 弹出层-提示 结束 -->
+
+</body>
+</html>

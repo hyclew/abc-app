@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+	default-lazy-init="true">
+	<!-- Dubbo配置 -->
+	<dubbo:application name="ibank-web" /><!-- 应用名称 -->
+	<dubbo:registry address="zookeeper://10.232.98.192:2181" /><!-- 10.232.98.192 zookeeper注册中心 -->
+	<dubbo:monitor protocol="dubbo" /><!-- 监控配置 -->
+	<dubbo:consumer timeout="1000000" filter="ReferenceFilter" /><!-- 为方便调试增加服务调用超时时间为1000s -->
+	<!--（一）、基本模块开始 -->
+	<dubbo:reference id="userAccountService" interface="com.abchina.ibank.base.service.IUserAccountService" />
+	
+	<dubbo:reference id="blockService" interface="com.abchina.ibank.shopping.block.service.IBlockService" />
+	<!--（六）、网购模块 结束 -->
+</beans>

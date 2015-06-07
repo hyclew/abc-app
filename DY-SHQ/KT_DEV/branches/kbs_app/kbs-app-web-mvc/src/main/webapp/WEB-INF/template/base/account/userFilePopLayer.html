@@ -1,0 +1,83 @@
+<script type="text/javascript" src="${ctx}/static/js/pub/common/ajaxfileupload.js"></script>
+<script type="text/javascript" src="${ctx}/static/js/pub/common/ibank-common.js"></script>
+<script type="text/javascript" src="${ctx}/static/js/base/account/userFilePopLayer.js"></script>
+
+<!-- 弹出层-新增信息 开始 -->
+<div class="pop hr_pop_2 popup" style="width:750px; margin:0 auto; z-index:10; position:fixed;">
+	<h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>新增信息</h3>
+	<div class="pop_con">
+	<form id="uploadForm" class="form-horizontal" method="post" action="${ctx}/base/account/userFile/upload">
+		<input type="hidden" name="entNo" value="$!{entNo}" />
+		<div class="form-field-box clearfix mt-30">
+		<ul>
+			<li>
+				<label class="label-text">档案类别：</label>
+				<span id="fileTypeSpan" class="span-text"></span>
+				<input id="fileTypeInput" type="hidden" name="fileType" value="" />
+			</li>
+			<li>
+				<label class="label-text">档案名称：</label>
+				<input type="text" class="input-text cleardata" name="fileName"></input>
+			</li>
+			<li>
+				<label class="label-text">文件年份：</label>
+				<input type="text" class="input-text cleardata" name="fileYear"></input>
+			</li>
+			<li>
+				<label class="label-text vt line-h-24">内容摘要：</label>
+				<textarea style="width:470px;height:60px" class="cleardata" name="description"></textarea>
+				<p class="describe-text">(最多可输入120个英文字符或60个中文字符)</p>
+			</li>
+			<li>
+				<label class="label-text">档案路径：</label><span id="fileUpload" type="file" class="cleardata"></span>
+			</li>
+		</ul>
+		</div>
+	</form>
+        </div>
+        <div class="btn-box">
+			<a class="btn" onclick="uploadFileAndUserFile();">开始上传</a>
+		</div>
+   </div>
+<!-- 弹出层-新增信息 结束 -->
+
+<!-- 弹出层-下载档案 开始 -->
+<div class="pop hr_pop_1 popdown" style="width:380px;margin:0 auto; z-index:10; position:fixed; display:none">
+	<h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>下载档案</h3>
+	<div class="pop_con">
+		<div class="pop-con-bd clearfix">
+			<h5 class="pop_h5">确认下载档案？</h5>
+		</div>
+	</div>
+	<div class="btn-box">
+		<a id="downloadButton" href="#" class="sure-btn mr-20 a_right">确定</a>
+		<a href="#" class="sure-btn1 cancelButton">取消</a>       
+	</div>
+</div>
+<!-- 弹出层-下载档案 结束 -->
+  
+<!-- 弹出层-预览档案 开始 -->
+<div class="pop hr_pop_3 popsee" style="width:805px; margin:0 auto; z-index:10; position:fixed;">
+	<h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>预览档案</h3>
+	<div class="pop_con">
+		 <div class="pop-con-bd clearfix">
+			  <img src="../../static/images/base/pic_offce.jpg" alt="" />
+		 </div>
+	</div>
+</div>
+<!-- 弹出层-预览档案 结束 -->
+ 
+<!-- 删除 -->
+<div class="pop hr_pop_1 poprest" style="width:360px;margin:0 auto; z-index:10; position:fixed;">
+	<h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>提示</h3>
+	<div class="pop_con">
+		<div class="pop-con-bd clearfix">
+			<h5 class="pop_h5">删除此影像信息？</h5><br/><br/>
+		</div>
+	</div>
+	<div class="btn-box">
+		<a id="deleteButton" href="#" class="sure-btn mr-20">确定</a>
+		<a href="#" class="sure-btn1 cancelButton">取消</a>
+	</div>
+</div>
+<!-- 删除 -->

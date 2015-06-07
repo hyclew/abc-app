@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/theme_color" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="我要开店"
+            android:textColor="@color/white_color"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/im_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/im_return" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="真实姓名:"
+            android:textColor="@color/typeface_color"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_register_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="10"
+            android:textColor="@color/typeface_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="身份证："
+            android:textColor="@color/typeface_color"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_register_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="10"
+            android:textColor="@color/typeface_color" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="电子邮件："
+            android:textColor="@color/typeface_color"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_register_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="10"
+            android:textColor="@color/typeface_color" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="手机号："
+            android:textColor="@color/typeface_color"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_register_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="10"
+            android:textColor="@color/typeface_color" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="地址："
+            android:textColor="@color/typeface_color"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/et_register_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:ems="10"
+            android:textColor="@color/typeface_color" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:text="服务项目："
+            android:gravity="center"
+            android:textColor="@color/typeface_color"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/tjsq" />
+    
+</LinearLayout>

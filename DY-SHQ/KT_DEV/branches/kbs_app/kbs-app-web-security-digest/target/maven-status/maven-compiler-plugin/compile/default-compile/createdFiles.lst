@@ -1,0 +1,3 @@
+org/kbs/app/web/security/sample/digest/AjaxDigestAuthenticationEntryPoint$UnauthorizedHttpResponse.class
+org/kbs/app/web/security/sample/digest/UserController.class
+org/kbs/app/web/security/sample/digest/AjaxDigestAuthenticationEntryPoint.class

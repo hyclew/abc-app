@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>填写新邮箱</title>
+#parse("common/include.html")
+<link href="${ctx}/static/css/base/main.css" rel="stylesheet" type="text/css"/>
+<link href="${ctx}/static/js/pub/jquery/jquery-validation/1.11.1/validate.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+
+	<!--网页 内容 开始-->
+	<div class="main">
+		<div class="agr-bread-crumb">
+			<a href="${ctx}/base/userCenter" class="stress">用户首页</a>
+			<em class="arr-symbol">&gt;</em>
+			<a href="${ctx}/base/account/personInfo">我的信息</a>
+			<em class="arr-symbol">&gt;</em>
+			<span>更换绑定邮箱</span>
+		</div>
+		<div class="main_con mb40">
+			<h1 class="hr_h1 hr_ten_l">更换绑定邮箱</h1>
+	    	<div class="wrap">
+	    	
+	    		<form id="rebindingEmailForm" method="post" action="${ctx}/emailValidate/sendEmail">
+	    		<div class="zhr_change_bund zhr_16">
+	    			#if(${emailChecked} != "0")
+	    			<ul class="zhr_pl_270">
+	                	<li><label class="zhr_bund_lab">原邮箱：</label><span class="vb" id="oldEmail">${originalEmail}</span></li>
+	                    <li><label class="zhr_bund_lab">新邮箱：</label><input name="email" id="newEmail" class="hr_inp mr10" type="text" value="" /></li>
+	                </ul>
+	    			#else
+	    			<span class="zhr_16 zhr_cole78143 zhr_pl_270">
+	           			原邮箱尚未激活，请先激活原邮箱。
+	           		</span>
+	           		#end
+	            </div>
+	            <p class="hr_ten_c mt20">
+	            #if(${emailChecked} != "0")
+	            	<a class="hr_btn" id="nextStep" href="javascript:void()">下一步</a>
+	            #else
+	            	<a class="hr_btn" id="nextStep" href="${ctx}/base/account/personInfo">返回</a>
+	            #end
+	            </p>
+	            </form>
+	            
+	    	</div>
+		</div>
+	</div>
+	
+	<!--网页 内容 结束-->
+
+	<!-- 页脚 开始 -->
+	<script type="text/javascript" src="${ctx}/static/js/base/emailValidate/rebindingEmail.js"></script>
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+</body>
+</html>

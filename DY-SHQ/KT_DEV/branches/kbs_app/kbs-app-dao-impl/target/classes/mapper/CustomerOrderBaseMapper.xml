@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CustomerOrderBase">
+
+	<resultMap id="customerOrderBaseMap"
+		type="com.kingteller.bs.domain.order.CustomerOrderBase">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="ordernumber" property="orderNumber" jdbcType="VARCHAR" />
+		<result column="totalcash" property="totalCash" jdbcType="FLOAT" />
+		<result column="totalnumbers" property="totalNumbers" jdbcType="INTEGER" />
+		<result column="orderaduit" property="orderAduit" jdbcType="CHAR" />
+		<result column="updatetime" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="detailedaduit" property="detailedAduit"
+			jdbcType="CHAR" />
+		<result column="status" property="status" jdbcType="CHAR" />
+		<result column="userbaseid" property="userBaseId" jdbcType="BIGINT" />
+		<result column="orderaddressid" property="orderAddressId"
+			jdbcType="BIGINT" />
+		<result column="isinvoice" property="isInvoice" jdbcType="CHAR" />
+		<result column="isclub" property="isClub" jdbcType="CHAR" />
+		<result column="invoicetitle" property="invoiceTitle" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<select id="queryOrderBaseByUserIdAndAduit" parameterType="com.kingteller.bs.domain.order.CustomerOrderBase"
+		resultMap="customerOrderBaseMap">
+		select * from customerorderbase where
+		userbaseid=#{userBaseId, jdbcType=BIGINT} and status=#{status,
+		jdbcType=CHAR} and detailedaduit=#{detailedAduit, jdbcType=CHAR}
+	</select>
+
+	<select id="queryOrderBaseById" parameterType="java.lang.Long"
+		resultMap="customerOrderBaseMap">
+		select * from customerorderbase where id=#{id,
+		jdbcType=BIGINT}
+	</select>
+
+	<insert id="insertCustomerOrderBase" parameterType="com.kingteller.bs.domain.order.CustomerOrderBase"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into customerorderbase(
+			ordernumber, 
+			totalcash, 
+			totalnumbers, 
+			orderaduit, 
+			updatetime, 
+			detailedaduit, 
+			status, 
+			userbaseid, 
+			orderaddressid, 
+			isinvoice, 
+			isclub, 
+			invoicetitle
+		) 
+		values(
+			#{orderNumber, jdbcType=VARCHAR}, 
+			#{totalCash, jdbcType=FLOAT}, 
+			#{totalNumbers, jdbcType=INTEGER}, 
+			#{orderAduit, jdbcType=CHAR}, 
+			#{updateTime, jdbcType=TIMESTAMP}, 
+			#{detailedAduit, jdbcType=CHAR}, 
+			#{status, jdbcType=CHAR}, 
+			#{userBaseId, jdbcType=BIGINT}, 
+			#{orderAddressId, jdbcType=BIGINT}, 
+			#{isInvoice, jdbcType=CHAR}, 
+			#{isClub, jdbcType=CHAR}, 
+			#{invoiceTitle, jdbcType=VARCHAR}
+		)
+		<selectKey resultType="Long" keyProperty="id">
+			select @@identity as inserted
+		</selectKey>
+	</insert>
+	
+	<update id="updateCustomerOrderBase2Disabled" parameterType="com.kingteller.bs.domain.order.CustomerOrderBase">
+		update customerorderbase set status=#{status, jdbcType=CHAR} where id=#{id, jdbcType=BIGINT}
+	</update>
+
+</mapper>

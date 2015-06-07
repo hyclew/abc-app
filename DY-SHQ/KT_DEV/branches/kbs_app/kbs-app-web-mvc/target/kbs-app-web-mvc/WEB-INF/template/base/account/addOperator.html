@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页-我的信息-基本信息</title> #parse("common/include.html")
+<link href="${ctx}/static/css/base/main.css" rel="stylesheet" type="text/css" />
+<link href="${ctx}/static/css/base/login.css" rel="stylesheet" type="text/css" />
+<link href="${ctx}/static/css/base/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+label.error {
+	margin-left: 10px;
+	color: red;
+	border: 0px;
+	width: 180px !important;
+	text-align: left !important;
+}
+.double_check {
+	margin-left : 200px;
+	margin-top : 13px;
+}
+.com_select{
+float:none!important;
+vertical-align:middle;
+display:inline-block;
+}
+
+.com_select_open{
+margin-top:0px!important;
+margin-left:212px;
+}
+</style>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+	<!--网页 内容 开始-->
+	<div class="main">
+		<p class="main_intl">
+			<a class="tab_grn" href="../index_用户.html">首页</a> > 我的信息 > 权限分配
+		</p>
+		<div class="main_con mb40">
+			<h1 class="hr_h1">新增操作员</h1>
+			<form id="addOperatorForm" method="post" class="cmxform" role="form">
+				<div class="wrap">
+					<div class="content">
+						<h3 class="hr_h3 hr_ten_l">操作员基本信息</h3>
+						<div class="info">
+							<ul>
+								<li><label class="lab lab_tel pr10" for="mobile">手机号:</label><input class="inp" type="text" value="" name="mobile" id="mobile" />
+								#if($error != ""&& $error=='2') <label class="error">该手机号已经被注册</label> #end
+								</li>
+								<li><label class="lab lab_tel pr10" for="email">电子邮箱:</label><input class="inp" type="text" value="" name="email" id="email" />
+								#if($error != ""&& $error=='3') <label class="error">该电子邮箱已经被注册</label> #end
+								</li>
+								<li><label class="lab lab_tel pr10" for="pwd">密码:</label><input class="inp" type="password" value="" name="pwd" id="pwd" /><a
+									class="mov vm" id="showPwd" style="cursor:pointer">显示</a></li>
+								<li><label class="lab lab_tel pr10" for="name">姓名:</label><input class="inp" type="text" value="" name="name" id="name" /></li>
+								<li><label class="lab lab_tel pr10" for="identNo">身份证号:</label><input class="inp" type="text" value="" name="identNo" id="identNo" /></li>
+								<li><label class="lab lab_tel pr10">公司岗位:</label>#ComSelect($codeList, "positionCode", "operator", 175, false)</li>
+								<li><div class="com_check_off double_check" type="check" group="reCheckFlag_group" data="1"></div><input type="hidden" name="reCheckFlag" value=""/> <label class="">该操作员是否需要复核</label></li>
+								<li><label class="lab lab_tel"></label> <label class="">提示：需要复核的操作包括：贷款申请，融资申请，账户消费，账户提现。</label></li>
+							</ul>
+						</div>
+						<div class="hr_ten_c hr_pid mb15">
+							<a class="hr_btn mr20" id="operatorSaveBtn" style="cursor:pointer">确定</a> <a class="hr_bgn" href="${ctx}/base/account/permissionAssignment" style="cursor:pointer">返回</a>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--网页 内容 结束-->
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<script type="text/javascript" src="${ctx}/static/js/base/account/permission-assignment.js"></script>
+	<script type="text/javascript" src="${ctx}/static/js/base/idCardNumber.js"></script>
+
+	<!-- 页脚 结束 -->
+</body>
+</html>

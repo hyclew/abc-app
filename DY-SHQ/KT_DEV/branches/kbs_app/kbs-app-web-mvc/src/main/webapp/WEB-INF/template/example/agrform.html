@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模块-子模块</title> 
+#parse("common/include.html")
+<!-- 模块 样式 -->
+<link rel="stylesheet" type="text/css" href="${ctx}/static/css/base/main.css" />
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+	<!-- 内容 开始 -->
+	<div class="main">
+		<div class="content hr_conten_bg wrap">
+					<h4 class="h4-style1 hr_pad">
+						<a id="person_modify" class="hr_xmo tab_blu ui-person_modify" style="cursor: pointer;">修改</a>
+					</h4>
+					<div class="info-container clearfix">
+						<form id="agrform" class="form-horizontal" method="post" action="${ctx}/example/updateAgrform">
+						    <ul class="hr_inf1">
+                	  <li>
+                	    <label class="hr_lab hr_infowid hr_ten_r">姓名：</label>
+                	    <span id="person_Name" class="span-text ui-text">$!{person.name}</span> 
+										  <span class="span-input" style="display: none;"> 
+										    <input class="hr_inp ml10 ui-input" type="text"  name="name" value="$!{person.name}" />
+										  </span>
+                	  </li>
+                    <li>
+                      <label class="hr_lab hr_infowid hr_ten_r">手机：</label>
+                      <span id="userAccount_Mobile" class="span-text">$!{person.userAccount.mobile}</span> 
+                    </li>
+                    <li>
+                      <label class="hr_lab hr_infowid hr_ten_r">邮箱：</label>
+                      <span id="userAccount_Email" class="span-text">$!{person.userAccount.email}</span> 
+                     </li>
+                    <li>
+                      <label class="hr_lab hr_infowid hr_ten_r">身份证号：</label>
+                      <span id="person_identNo" class="span-text ui-text">$!{person.identNo}</span> 
+									    <span class="span-input" style="display: none;"> 
+									       <input class="hr_inp ml10 ui-input" type="text" name="identNo" value="$!{person.identNo}" />
+									    </span> 
+                      <span class="hr_icon_peobg"></span>
+                    </li>
+                    <li>
+                    	<label class="hr_lab hr_infowid hr_ten_r">性别：</label>
+                      <span id="person_Gender" class="span-text ui-text" val="$!{person.gender}"></span> 
+											<span class="span-input" style="display: none;"> 
+										     <select class="hr_inp ml10 ui-select" type="text" name="gender" value="$!{person.gender}" >
+										      #foreach($it in $!{genders} )
+										       <option value="$!{it.configCode}">$!{it.configName}</option>
+										       #end
+										     </select>
+								      </span>
+                    </li>
+                    <li>
+                      <label class="hr_lab hr_infowid hr_ten_r">年龄：</label>
+                      <span id="person_Age" class="span-text ui-text">$!{person.age}</span> 
+									    <span class="span-input" style="display: none;"> 
+									      <input class="hr_inp ml10 ui-input" type="text" name="age" value="$!{person.age}" />
+									    </span>
+                     </li>
+                </ul>
+						</form>
+					</div>
+					<div class="tex_center hr_pid mb20">
+							<input id="submit" type="button" data-dismiss="modal" aria-hidden="true" value="保存" style="display:none;" class="ui-btn hr_btn hr_btn_aw mr30"/> 
+							<input id="cancel" type="button" data-dismiss="modal" aria-hidden="true" value="取消" style="display:none;" class="ui-btn hr_bgn hr_btn_aw" />
+					</div>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+	<!-- 模块 脚本 -->
+	<script type="text/javascript" src="${ctx}/static/js/example/agrform.js"></script>
+</body>
+</html>

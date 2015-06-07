@@ -1,0 +1,246 @@
+/*== Add ==*/
+.login_checkbox { height:15px !important; line-height:15px !important; padding-left:0px !important; margin-top:7px; width:15px !important;} 
+.login_reg_inds { height:15px !important; line-height:15px !important; padding-left:0px !important; width:15px !important; display:inline-block !important; border:0px !important; border-radius:0px !important;} 
+
+/* 头部 */
+.head-login-con .fl {
+    background: url("../../images/base/logo02.png") no-repeat scroll 2px 50% rgba(0, 0, 0, 0);
+    display: block;
+    height: 58px;
+    width: 50%;
+}
+.head-login-con {
+    margin: 0 auto;
+    width: 1000px;
+}
+.head-login-con .a-register {
+    color: #E78143;
+}
+.head-login-con .fr {
+    font-size: 16px;
+    margin: 20px 0 0;
+    text-decoration: underline;
+}
+
+/*中间内容*/
+.login {
+    background: url("../../images/base/login.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    min-height: 400px;
+}
+.main-cont {
+    margin: 0 auto;
+    width: 1000px;
+}
+/*注册框*/
+.loginR {
+    border: 1px solid #E7DFDE;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 55px;
+    padding: 20px 9px 0;
+    width: 324px;
+}
+/*== mod ==*/
+.login h3 {
+    background: url("../../images/base/login_title.png") 0 0 no-repeat;
+    height: 56px;
+}
+.login ul {
+    padding: 15px 10px;
+}
+.login li {
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+}
+.login li.hover .inp-user {
+    background-position: 97% -80px;
+}
+.login li.hover input, .login li .btn {
+    border: 1px solid #61C8A8;
+}
+.login li input, .register li input {
+    font-size: 14px;
+    padding: 0 10px;
+    vertical-align: middle;
+    width: 282px;
+}
+.login li input, .login li .btn, .register li input, .register li span, .register li .btn {
+    border: 1px solid #E7DFDE;
+    border-radius: 5px;
+    color: #B3B3B3;
+    height: 40px;
+    line-height: 40px;
+}
+.login li .inp-user, .login li .inp-pwd {
+    background: url("../../images/base/icon_login.png") no-repeat scroll 97% 0 rgba(0, 0, 0, 0);
+}
+.login li .inp-pwd {
+    background-position: 97% -40px;
+}
+.login li.special, .login li.special a {
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    text-align: left;
+    text-decoration: underline;
+}
+.icon-checked {
+    background-position: -13px 0;
+}
+.icon-check, .icon-checked {
+    background: url("../../images/base/icon_check02.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 13px;
+    vertical-align: middle;
+    width: 13px;
+}
+.login li {
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+}
+.btn {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border: 1px solid #66D27D;
+    color: #61C8A8 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 25px;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.login li .btn, .register li .btn {
+    background: none repeat scroll 0 0 #FFFFFF;
+    font-size: 16px;
+    height: 28px;
+    line-height: 28px;
+    margin: 15px 0 45px;
+    width: 65px;
+}
+.login li.hover input, .login li .btn {
+    border: 1px solid #61C8A8;
+}
+.login li .btn:hover {
+    background: none repeat scroll 0 0 #61C8A8; color:#FFFFFF !important;
+}
+.login span.tel {
+    height: 58px;
+    line-height: 58px;
+}
+.login span {
+    border-top: 1px solid #F1ECEB;
+    display: block;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 10px;
+}
+.login span em.icon-phone, .login a.icon-sina, .login a.icon-qq, .login a.icon-nh {
+    background: url("../../images/base/icon_phone.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 24px;
+    margin-right: 10px;
+    width: 24px;
+}
+.login span em, .login span a {
+    display: inline-block;
+    vertical-align: middle;
+}
+.fz-20 {
+    font-size: 20px !important;
+}
+.c-green {
+    color: #61C8A8 !important;
+}
+.login span em.icon-phone, .login a.icon-sina, .login a.icon-qq, .login a.icon-nh {
+    background: url("../../images/base/icon_phone.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 24px;
+    margin-right: 10px;
+    width: 24px;
+}
+.login a.icon-sina {
+    background: url("../../images/base/icon_sina.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.login a.icon-qq {
+    background: url("../../images/base/icon_qq.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.login a.icon-nh {
+    background: url("../../images/base/icon_nh.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+/*----- 注册 -----*/
+.register{ margin-bottom:25px; border:1px solid #e7dfde; -moz-border-radius:5px 5px 0 0; -webkit-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0;}
+.register ul{ padding:35px 300px;}
+.register li{ height:58px; line-height:58px;}
+	.register li label{ display:inline-block; padding-right:15px; width:100px; text-align:right; font-size:16px; vertical-align:middle;}
+	.register li input{ width:240px;}
+	.register li input.hover,.register li span,.register li .btn{ border:1px solid #61c8a8;}
+	.register li span{ display:inline-table; width:260px; font-size:16px; vertical-align:middle;}	
+	.register li span em{ display:inline-block; width:86px; text-align:center; color:#3a3a3a;}
+	.register li img{ padding-left:10px; vertical-align:middle;}
+	.register li.special{ height:38px; line-height:38px; font-size:14px;}
+	.register li.special a{ text-decoration:underline;}
+	.register li span em.current{ background:#61c8a8; color:#fff;}
+	.register li .btn{ margin:25px 0 0 35px;}
+.btn:hover{background:#66d27d!important; color:#fff!important;}
+
+/*----- 2013.11.17 张慧荣增加-我要借款-银行贷款-找回密码-弹出层 -----*/
+.hr_pop_width{ width:107px; display:inline-block; vertical-align:middle;}
+.hr_findnum{ padding:36px 0;}
+.hr_findnum li{ line-height:42px; height:42px;}
+.hr_findnum .hr_numinp{ width:150px; height:25px; line-height:25px; border:1px solid #e6e6e3; display:inline-block; vertical-align:middle; font-size:12px; padding:0 10px; color:#7c7c6b;}
+.hr_btn_width{ width:126px;}
+
+
+/*----- 11月30日修改-注册页面 -----*/
+.head-login-con .zhr_cole9894f{ color:#e9894f;}
+.head-login-con .nounderlin{ text-decoration:none;}
+.register li .zhr_icongreen{ display:inline-block; vertical-align:middle; background:url(../../images/base/icon_green_radio.png) 0 0 no-repeat; width:13px; height:13px; border:none;}
+.register li .zhr_iconwrit{ display:inline-block; vertical-align:middle; background:url(../../images/base/icon_green_radio.png) -14px 0 no-repeat; width:13px; height:13px; border:none;}
+.register li .zhr_radio_wid{ display:inline-block; vertical-align:middle; width:96px; text-align:left;}
+.zhr_padlf115{ padding-left:115px;}
+
+
+.w-btn1{display:inline-block;*display:inline;*zoom:1;width:82px;height:36px;text-align:center;color:#61C8A8;line-height:36px;border:1px solid #66D27D;font-size:16px;background:#F9F9F9}
+.w-btn1{font-size:14px;}
+.w-btn1:hover{background:#66D27D; color:#fff;}
+/*----- pop -----*/
+.pop{border:5px solid #545353;-moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;  background:#f2f2f2; margin:0 auto;}
+.pop_h3{height:34px; line-height:34px; background:#414141; font-size:14px; font-weight:bold; color:#fff; padding-left:10px;}
+.pop_con{padding:0 15px 15px;}
+.pop_h3 .icon_pop_close{float:right; *display:inline; margin-right:10px; margin-top:7px;}
+.pop .page,.pop .page_con,.pop .page_left,.pop .page_right{height:31px;}
+.pop .page_bg{height:31px; line-height:31px;}
+.icon_pop_close {background: url(../../images/icon_pop_close.jpg) 0 0 no-repeat;width: 18px;height: 18px;display: inline-block;}
+
+.pop .pop-con-bd{background:#fff;margin-top:20px}
+.pop .pop-con-bd .p-style1{color:#3b3b3b;font-size:14px;line-height:36px;padding:40px 0 40px 85px }
+.pop .pop-con-bd .p-style2{color:#3b3b3b;font-size:14px;line-height:36px;padding:40px 0 40px 0px;text-align:center }
+.pop .pop-con-bd .p-style1  span{color:#e77519}
+.pop .pop-con-bd .pop-con-li{margin-top:10px; text-align:center;}
+.pop .pop-con-bd .pop-con-li li{height:28px; line-height:28px; font-size:14px;}
+.pop-con-li li .pop-con-li-inp{border:1px solid #e5e5e1; height:18px; padding:5px 10px; font-size:14px; color:#5b5b3c;}
+.pop .btn-box {text-align:center;padding-bottom:25px;margin-top:15px}
+.pop .btn-box .sure-btn{display:inline-block;*display:inline;*zoom:1;width:82px;height:36px;text-align:center;color:#61C8A8;line-height:36px;border:1px solid #66D27D;font-size:16px;background:#F9F9F9}
+.pop .btn-box .sure-btn:hover{background:#66D27D;color:#fff}
+.pop .btn-box .cancel-btn{display:inline-block;*display:inline;*zoom:1;width:82px;height36px;text-align:center;color:#3B3B3B;line-height:36px;border:1px solid #737373;font-size:16px;background:#fff}
+.pop .btn-box1{text-align:left;padding-left:159px}
+.pop .btn-box1 .share{color:#3b3b3b;text-decoration:underline;font-size:14px;margin-left:18px;vertical-align:bottom}
+.pop .pop-con-bd h5{font-size:14px;color:#3b3b3b;padding-top:30px;text-align:center}
+.pop .pop-con-bd .info-list li{font-size:14px;color:#3b3b3b;line-height:22px;padding-left:81px}
+.pop .pop-con-bd .info-list{padding-bottom:40px;margin-top:11px}
+.pop .pop-con-bd .info-box{padding:60px 0 }
+
+/* 对齐 */
+.align-center{text-align:center !important}
+.align-left{text-align:left !important}
+.align-right{text-align:right !important}
+.w-btn1{display:inline-block;*display:inline;*zoom:1;width:82px;height:36px;text-align:center;color:#61C8A8;line-height:36px;border:1px solid #66D27D;font-size:16px;background:#F9F9F9}
+.w-btn1{font-size:14px;}
+.w-btn1:hover{background:#66D27D; color:#fff;}
+
+
+

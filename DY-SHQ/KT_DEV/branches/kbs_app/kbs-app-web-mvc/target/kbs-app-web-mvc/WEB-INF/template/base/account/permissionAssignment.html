@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页-我的信息-基本信息</title> #parse("common/include.html")
+<link href="${ctx}/static/css/base/main.css" rel="stylesheet" type="text/css" />
+<link href="${ctx}/static/css/base/login.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+	<!-- 内容 开始 -->
+	<div class="main">
+		<div class="layout-box">
+			<p class="main_intl">
+				<a class="tab_grn" href="${ctx}/base/userCenter">用户首页</a> > 我的信息
+			</p>
+			<div class="main-bd clearfix">
+				<div class="top-nav">
+					<a href="${ctx}/base/account/personInfo">基本信息</a> <a href="${ctx}/base/account/enterpriseInfo" class="line-bg">经营信息</a> <a
+						href="首页-我的信息-贷款信息.html" class="line-bg">贷款信息</a> <a href="首页-我的信息-补充信息.html" class="line-bg">补充信息</a> <a
+						href="${ctx}/base/account/permissionAssignment" class="active">员工信息</a>
+				</div>
+				<div class="wrap">
+					<div class="permission-box">
+						<p class=" align-right">
+							<a class="hr_btn" style="width: 87px; height: 31px; line-height: 31px;" href="${ctx}/base/account/permissionAssignment/addOperator">添加操作员</a>
+						</p>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="w-table3 mt-20">
+							<tr>
+								<th>手机号码</th>
+								<th>电子邮箱</th>
+								<th>姓名</th>
+								<th>公司岗位</th>
+								<th>需要复核</th>
+								<th>操作</th>
+							</tr>
+							#foreach($person in $!{persons})
+							<tr>
+								<td>$!{person.mobile}</td>
+								<td>$!{person.email}</td>
+								<td>$!{person.name}</td>
+								<td>$!{person.positionName}</td>
+								<td>#if($person.recheckFlag=='1') 需要  #else 不需要  #end</td>
+								<td><a href="#" class="a-style5 btnreset">修改</a><span class="line">|</span><a href="#" class="delete btndel">删除 </a><input type="hidden" name="userNo" value="$!{person.userNo}"></input></td>
+							</tr>
+							#end
+						</table>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	  	<!-- 确定删除开始 -->
+	<!-- <form id="deleteOperatorForm" method="post" class="cmxform" role="form">    
+	<div class="pop popdel" style="width:360px;margin:0 auto; position:fixed; z-index:10;">
+        <h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>提示</h3>
+        <div class="pop_con">
+             <div class="pop-con-bd clearfix">
+             	<h5>请确认是否删除用户</h5><br/><input type="hidden" id="userNoToBeDelete" name="userNo"></input><br/>
+             </div>
+        </div>
+        <div class="btn-box">
+        	<a class="sure-btn mr-20" id="comfirmDeleteOperatorBtn" style="cursor:pointer">确定</a>
+            <a class="cancel-btn" style="cursor:pointer">取消</a>
+        </div>
+    </div>
+    </form> -->
+    <!-- 确定删除结果 -->
+    
+    <!-- 确认删除 -->    
+	<div class="pop popdel" style="width:460px;margin:0 auto; position:fixed; z-index:10; display:none">
+	<h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>确认删除</h3>
+	<div class="pop_con">
+		<div class="pop-con-bd clearfix">
+        	<ul class="pop-con-li">
+            	<li style="text-align:left"><label>被删除人：</label><span id="nameToDelSpan"></span><input type="hidden" id="mobileToDel"/><input type="hidden" id="pageIndex" value="1"/></li>
+            	<li><label>手机验证码：</label><input class="inp" id="code" style="width:100px;" type="text" value="" /><a class="cy_an14_lv2 hr_sendcode" id="sendCodeBtn" href="#">获手机验证码</a></li>
+            	<li class="ac"><span class="pop_span_delete delete_success"></span></li>
+            </ul>
+		</div>
+	</div>
+	<div class="btn-box">
+		<a href="#" class="sure-btn mr-20" id="delOperatorBtn">确定</a>
+		<a class="sure-btn1 icon_pop_close">取消</a>
+	</div>
+</div>
+<!-- 确认删除 -->
+
+<!-- 确认删除成功 -->    
+<div class="pop pop_sure" style="width:460px;margin:0 auto; position:fixed; z-index:10; display:none">
+	<h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>确认删除成功</h3>
+	<div class="pop_con">
+		<div class="pop-con-bd clearfix">
+        	<ul class="pop-con-li">
+            	<li><label>被删除人：</label><span>马化腾</span></li>
+            	<li><label>手机验证码：</label><input class="inp" style="width:100px;" type="text" value="1231" /><a class="cy_an14_lv2" href="#">获手机验证码</a></li>
+            	<li class="ac"><span class="pop_span_delete">删除操作马化腾成功</span></li>
+            </ul>
+		</div>
+	</div>
+	<div class="btn-box">
+		<a href="首页-我的信息-权限分配.html" class="sure-btn2 mr-20">确定</a>
+		<a href="首页-我的信息-权限分配.html" class="sure-btn1">取消</a>
+	</div>
+</div>
+<!-- 确认删除成功 -->
+	<!-- 内容 结束 -->
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<script type="text/javascript" src="${ctx}/static/js/base/account/permission-assignment.js"></script>
+	<script type="text/javascript" src="${ctx}/static/js/pub/common/pub_select.js"></script>
+	<script type="text/javascript" src="${ctx}/static/js/base/phoneValidate/phoneValidate.js"></script>
+	<!-- 页脚 结束 -->
+</body>
+</html>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ShoppingCart">
+
+	<resultMap id="shoppingCartMap" type="com.kingteller.bs.domain.cart.ShoppingCart">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="userbaseid" property="userBaseId" jdbcType="BIGINT" />
+		<result column="businessproductid" property="businessProductId" jdbcType="BIGINT" />
+		<result column="count" property="count" jdbcType="INTEGER" />
+		<result column="isordered" property="isOrdered" jdbcType="CHAR" />
+		<result column="orderbaseid" property="orderBaseid" jdbcType="BIGINT" />
+		<result column="status" property="status" jdbcType="CHAR" />
+		<result column="updatetime" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+
+	<insert id="insertShoppingCart" parameterType="com.kingteller.bs.domain.cart.ShoppingCart"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into shoppingcart(
+			userbaseid, 
+			businessproductid, 
+			count,
+			isordered, 
+			orderbaseid, 
+			status, 
+			updatetime
+		) values(
+			#{userBaseId,jdbcType=BIGINT}, 
+			#{businessProductId,jdbcType=BIGINT},
+			#{count,jdbcType=INTEGER},
+			#{isOrdered,jdbcType=CHAR}, 
+			#{orderBaseid,jdbcType=BIGINT}, 
+			#{status,jdbcType=CHAR}, 
+			CURRENT_TIMESTAMP
+		)
+	</insert>
+	
+	<update id="updateCart4Count" parameterType="com.kingteller.bs.domain.cart.ShoppingCart">
+		update shoppingcart 
+		set 
+			count=count+#{count,jdbcType=INTEGER}, 
+			updatetime=CURRENT_TIMESTAMP 
+		where 
+			userbaseid=#{userBaseId,jdbcType=BIGINT} 
+		and 
+			businessproductid=#{businessProductId,jdbcType=BIGINT} 
+		and 
+			status=#{status,jdbcType=CHAR} 
+		and 
+			isordered=#{isOrdered,jdbcType=CHAR}
+	</update>
+	
+	<select id="queryCartCount" parameterType="com.kingteller.bs.domain.cart.ShoppingCart" resultType="int">
+		select count from shoppingcart 
+		where 
+			userbaseid=#{userBaseId,jdbcType=BIGINT} 
+		and 
+			businessproductid=#{businessProductId,jdbcType=BIGINT} 
+		and 
+			status=#{status,jdbcType=CHAR} 
+		and 
+			isordered=#{isOrdered,jdbcType=CHAR}
+	</select>
+	
+	<update id="updateCartCountById" parameterType="com.kingteller.bs.domain.cart.ShoppingCart">
+		update shoppingcart set count=#{count,jdbcType=INTEGER},updatetime=CURRENT_TIMESTAMP where id=#{id,jdbcType=BIGINT}
+	</update>
+	
+	<select id="queryCartsByUserId" parameterType="com.kingteller.bs.domain.cart.ShoppingCart" resultMap="shoppingCartMap">
+		select 
+			* 
+		from 
+			shoppingcart 
+		where 
+			userbaseid=#{userBaseId,jdbcType=BIGINT} 
+		and 
+			isordered=#{isOrdered,jdbcType=CHAR} 
+		and 
+			status=#{status,jdbcType=CHAR} 
+		order by 
+			updatetime desc
+	</select>
+	
+	<update id="updateCart2Disabled" parameterType="com.kingteller.bs.domain.cart.ShoppingCart">
+		update shoppingcart set status=#{status,jdbcType=CHAR} where id=#{id,jdbcType=BIGINT}
+	</update>
+	
+</mapper>

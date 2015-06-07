@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>邮箱验证详情</title>
+#parse("common/include.html")
+
+<link href="${ctx}/static/css/base/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+
+	<!--网页 内容 开始-->
+	<div class="main">
+		<div class="agr-bread-crumb">
+			<a href="${ctx}/base/userCenter" class="stress">用户首页</a>
+			<em class="arr-symbol">&gt;</em>
+			<a href="${ctx}/base/account/personInfo">我的信息</a>
+			<em class="arr-symbol">&gt;</em>
+			<span>
+			#if(${result} == 'activateEmail')
+			验证邮箱
+			#elseif(${result} == 'changeEmail')
+			重新绑定邮箱
+			#end
+			</span>
+		</div>
+		<div class="main_con mb40 mt20">
+			<h1 class="hr_h1 hr_ten_l">验证邮箱</h1>
+	    	<div class="wrap">
+	    		<div class="zhr_change_bund zhr_14">
+	            	<ul class="zhr_pl_270">
+	                	<li><span class="zhr_16">邮件已经发送到您的邮箱 : ${email}</span></li>
+	                    <li><span class="zhr_16 zhr_col999999">如果没有收到邮件，请先检查是否在垃圾邮件中。</span></li>
+	                </ul>
+	                <!-- 目前暂不提供这种功能
+	                <p class="hr_ten_c"><a class="hr_btn hr_btn_sw" href="#">立即查收邮件</a></p>
+	                 -->
+	            </div>
+	            <div class="zhr_change_bund zhr_14">
+	            	<ul class="hr_ten_c">
+	                	<li><span class="zhr_16 zhr_col999999">如果还没有，请点击</span></li>
+	                </ul>
+	                <p class="hr_ten_c"><a class="hr_btn hr_btn_sw" href="${ctx}/emailValidate/sendEmail?email=${email}" target="_self">重新发送邮件</a></p>
+	            </div>
+	            <p class="hr_ten_c mt20">
+	            	<a class="hr_bgn" href="${ctx}/base/account/personInfo">返回</a>
+	            </p>
+	    	</div>
+		</div>
+	</div>
+	<!--网页 内容 结束-->
+
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+</body>
+</html>

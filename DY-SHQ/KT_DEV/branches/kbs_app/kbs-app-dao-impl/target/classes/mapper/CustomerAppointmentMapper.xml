@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="CustomerAppointment">
+
+	<resultMap id="customerAppointmentMap" type="com.kingteller.bs.domain.appointment.CustomerAppointment">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="productcatalogid" property="productCatalogId" jdbcType="BIGINT" />
+		<result column="appointcomment" property="appointComment" jdbcType="VARCHAR" />
+		<result column="appointtime" property="appointTime" jdbcType="TIMESTAMP" />
+		<result column="appointstarttime" property="appointStartTime" jdbcType="TIMESTAMP" />
+		<result column="appointendtime" property="appointEndTime" jdbcType="TIMESTAMP" />
+		<result column="appointaddressid" property="appointAddressId" jdbcType="BIGINT" />
+		<result column="userid" property="userId" jdbcType="BIGINT" />
+	</resultMap>
+
+	<insert id="insertCustomerAppointment" parameterType="com.kingteller.bs.domain.appointment.CustomerAppointment" keyProperty="id" useGeneratedKeys="true">
+		insert into customerappointment(
+			productcatalogid, 
+			appointcomment, 
+			appointtime, 
+			appointstarttime, 
+			appointendtime, 
+			appointaddressid, 
+			userid
+		) 
+		values(
+			#{productCatalogId, jdbcType=BIGINT}, 
+			#{appointComment, jdbcType=VARCHAR}, 
+			#{appointTime, jdbcType=TIMESTAMP}, 
+			#{appointStartTime, jdbcType=TIMESTAMP}, 
+			#{appointEndTime, jdbcType=TIMESTAMP}, 
+			#{appointAddressId, jdbcType=BIGINT}, 
+			#{userId, jdbcType=BIGINT} 
+		)
+		<selectKey resultType="Long" keyProperty="id">
+			select @@identity as inserted
+		</selectKey>
+	</insert>
+	
+	<select id="queryCustomerAppointmentByUserId" parameterType="com.kingteller.bs.domain.appointment.CustomerAppointment" resultMap="customerAppointmentMap">
+		select * from customerappointment where userid=#{userId, jdbcType=BIGINT}
+	
+	
+	</select>
+	
+	
+</mapper>

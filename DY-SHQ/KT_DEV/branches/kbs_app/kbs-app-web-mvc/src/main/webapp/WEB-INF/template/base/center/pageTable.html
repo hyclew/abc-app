@@ -1,0 +1,70 @@
+<div class="nav_menu_content zhr_selectro">
+	<ul>
+		<li>查询结果: 共<span id="totalCountSpan">$pager.totalCount</span>条
+		</li>
+	</ul>
+	
+	<div class="nav_menu_content_sea">
+		<input type="text" id="queryContent" class="black-input" value="$!{queryContent}" placeholder="输入要搜索消息内容"/><a href="#" id="search"></a>
+	</div>
+	<a class="nav_menu_content_del mr10" href="#">删除</a>
+</div>
+
+<div class="index-search-box">
+	<div id="grid">
+
+		<div class="table-box">
+
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="w-table2">
+				<tr class="index_user_tr">
+					<th><span class=" ml-125">消息标题</span></th>
+					<th class="align-center">消息时间</th>
+				</tr>
+				#if($pager.result.size()>0) #foreach($map in $!{pager.result}) #if($velocityCount%2==0) #* 判断处理*#
+
+				<tr class="even index_user_tr">
+					<td class="index_user_td"><div class="com_check_off" type="check" group="delete_group" data="$!{map.recNo}"></div>
+						<p>
+							$!{map.msgSubject} <a href="#" class=" ml10 a-style4 msg-detail">点击查看详情</a>
+						</p>
+					</td>
+					<td class="align-right index_user_td"><span class="data">$!{map.tomqTime}</span></td>
+				</tr>
+				#else
+				<tr class="index_user_tr">
+					<td class="index_user_td"><div class="com_check_off" type="check" group="delete_group" data="$!{map.recNo}"></div>
+						<p>
+							$!{map.msgSubject}<a href="#" class=" ml10 a-style4 msg-detail">点击查看详情</a>
+						</p></td>
+					<td class="align-right index_user_td"><span class="data">$!{map.tomqTime}</span></td>
+				</tr>
+				#end #end #else
+				<tr>
+					<td colspan="2" align="center">暂无数据！</td>
+				</tr>
+				#end
+				<tr>
+					<td colspan="2" class="pd-0">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="w-table2 w-table2-s">
+							<tr class="even index_user_tr">
+								<td width="20%" class="even index_user_td">
+									<div class="com_check_off" type="check" group="delete_group">
+										<p style="padding-left:20px">全选</p>
+								</td>
+								<td width="80%" class="even index_user_td">#pagination($pager, 2)</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+	</div>
+
+	<a style="position: absolute; top: 100px; left: 292px; width: 73px; height: 14px;" href="#"></a> <a
+		style="position: absolute; top: 239px; left: 167px; width: 73px; height: 14px;" href="#"></a>
+</div>
+
+
+
+

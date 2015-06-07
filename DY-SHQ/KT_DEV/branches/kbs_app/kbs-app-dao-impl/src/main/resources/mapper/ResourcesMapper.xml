@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Resources">
+
+	<resultMap id="resourcesMap"
+		type="com.kingteller.bs.domain.resources.Resources">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="resourceurl" property="resourceURL" jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<!-- 查找 -->
+	<select id="getResourceById" resultMap="resourcesMap" parameterType="java.lang.Long">
+		select * from resources where id = #{resourceId}
+	</select>
+	
+	<insert id="insertResource" parameterType="com.kingteller.bs.domain.resources.Resources" keyProperty="id" useGeneratedKeys="true">
+		insert into resources(
+			resourceurl,
+			name
+		) 
+		values(
+			#{resourceURL,jdbcType=VARCHAR},
+			#{name,jdbcType=VARCHAR}
+		)
+		
+		<selectKey resultType="Long" keyProperty="id">
+			select @@identity as inserted
+		</selectKey>
+	</insert>
+	
+	<delete id="deleteResourceById" parameterType="java.lang.Long">
+		delete from resources where id=#{id, jdbcType=BIGINT}
+	</delete>
+	
+</mapper>

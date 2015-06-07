@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:sec="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+ 	<global-method-security  pre-post-annotations="enabled" /> 
+ 	<!-- 此目录下不需要过滤 --> 
+   	<http pattern="/resources/**" security="none"/>
+   	<http pattern="/guest/**" security="none"/>
+
+   <http entry-point-ref="digestEntryPoint" >
+	  <custom-filter ref="digestFilter" position="BASIC_AUTH_FILTER"/>
+      <intercept-url pattern="/user/**" access="ROLE_USER"/>
+   </http>
+   
+	<beans:bean id="digestFilter" 
+		class="org.springframework.security.web.authentication.www.DigestAuthenticationFilter">
+	  <beans:property name="userDetailsService" ref="inMemoryUserService"/>
+	  <beans:property name="authenticationEntryPoint" ref="digestEntryPoint"/>
+	</beans:bean>
+	
+	<beans:bean id="digestEntryPoint" 
+		class="org.kbs.app.web.security.sample.digest.AjaxDigestAuthenticationEntryPoint">
+		  <beans:property name="realmName" value="REST-Realm"/>
+		  <beans:property name="key" value="testNonce"/>
+		  <beans:property name="nonceValiditySeconds" value="10000"/>
+	</beans:bean>
+
+
+   <authentication-manager alias="authenticationManager">
+      <authentication-provider ref="inMemoryAuthenticationProvider"/>
+   </authentication-manager>
+   
+
+</beans:beans>

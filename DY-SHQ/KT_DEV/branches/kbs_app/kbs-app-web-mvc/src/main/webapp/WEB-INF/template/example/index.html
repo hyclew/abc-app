@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>代码样例列表</title>
+#parse("common/include.html")
+
+<style type="text/css">
+.list {
+	display : block;
+	margin-top : 5px;
+	margin-left : 10px;
+	font-size: 16px;
+	font-family: 'Microsoft Yahei';
+}
+.list div {
+	width: 600px;
+	margin-left : 100px;
+	border: 1px solid rgb(217, 217, 217);
+}
+</style>
+</head>
+<body>
+<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+<div>
+	<span class="list">
+		<a href="${ctx}/example/tableExample.html" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（1）、velocity样例&nbsp;&nbsp;&lt;--点击我</a>
+ 		 	<div>
+			<pre>
+				页面:		 tableExample.html,pageTable.html
+				页面js:	table.js
+				controller:	ExampleController.java
+			</pre>
+	</div>
+	</span>
+	<span class="list">
+		<a href="${ctx}/example/ueditorExample.html" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（2）、富文本框样例&nbsp;&nbsp;&lt;--点击我</a>
+		<div>
+				<pre>
+					页面:		ueditorExample.html
+					页面js:		无
+					controller:	ExampleController.java
+				</pre>
+		</div>
+	</span>
+	<span class="list">
+		<a href="${ctx}/example/mainPageExample.html" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（3）、复选框、单选框、下拉列表样例&nbsp;&nbsp;&lt;--点击我</a>
+ 		<div>
+			<pre>
+				页面:		 mainPageExample.html
+				页面js:	mainPageExample.js
+				controller:	ExampleController.java
+			</pre>
+	</div>
+	</span>
+	<span class="list">
+		<a href="${ctx}/example/agrform.html" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（4）、表单数据提交&nbsp;&nbsp;&lt;--点击我</a>
+		<div>
+			<pre>
+				页面:		  agrform.html
+				页面js:		agrform.js
+				controller:	ExampleController.java
+			</pre>
+	</div>
+	</span>
+	<span class="list">
+		<a href="${ctx}/example/keypad.html" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（5）、软键盘&nbsp;&nbsp;&lt;--点击我</a>
+		<div>
+			<pre>
+				页面:		  keypad.html
+				页面js:		keypad.js
+				controller:	ExampleController.java
+			</pre>
+	</div>
+	</span>
+	<span class="list">
+	<a href="${ctx}/example/fileUpload.html" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（6）、文件上传&nbsp;&nbsp;&lt;--点击我</a>
+		<div>
+			<pre>
+				页面:		 fileupload.html
+				页面js:	 fileupload.js
+				controller:	ExampleController.java
+			</pre>
+	</div>
+	</span>
+	
+	<span class="list">
+	<a href="${ctx}/phoneAuthCode/example" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（7）、手机验证码&nbsp;&nbsp;&lt;--点击我</a>
+		<div>
+			<pre>
+				页面:		 phoneValidate.html
+				页面js:	 phoneValidate.js
+				controller:	PhoneAuthCodeController.java
+				工具类：PhoneAuthCodeUtil.java
+			</pre>
+	</div>
+	</span>
+	<span class="list">
+	<a href="${ctx}/example/floatdiv.html" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（8）、浮动提示层、消息提示框、确认框等&nbsp;&nbsp;&lt;--点击我</a>
+		<div>
+			<pre>
+				页面:		 floatdiv.html
+				页面js:	 ibank.common.js,jquery.powerFloat.min.js
+				controller:	ExampleController.java
+			</pre>
+	</div>
+	</span>
+	<span class="list">
+	<a href="${ctx}/example/rcarousel.html" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（9）、图片轮播&nbsp;&nbsp;&lt;--点击我</a>
+		<div>
+			<pre>
+				页面:		 rcarousel.html
+				页面js:	 rcarousel.js,jquery.ui.rcarousel.min.js
+				controller:	ExampleController.java
+			</pre>
+	</div>
+	</span>
+	<span class="list">
+	<a href="${ctx}/example/validateform" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（10）、表单验证&nbsp;&nbsp;&lt;--点击我</a>
+		<div>
+			<pre>
+				页面:		 validateform.html
+				页面js:	 validateform.js
+				controller:	ExampleController.java
+			</pre>
+	</div>
+	<span class="list">
+	<a href="${ctx}/example/formatcurrency.html" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（11）、金额格式化、金额转大写（支持小数点两位）&nbsp;&nbsp;&lt;--点击我</a>
+		<div>
+			<pre>
+				页面:		 formatcurrency.html
+				页面js:	 formatcurrency.js,jquery-ui-formatCurrency.min.js
+				controller:	ExampleController.java
+			</pre>
+	</div>
+	</span>
+	<span class="list">
+	<a href="${ctx}/example/splitpage.html" target="_blank" style="cursor: pointer;" onmouseover="this.style.background='#E9E9E9';this.style.fontSize='30px';" onmouseout="this.style.background='#FFFFFF';this.style.fontSize='16px';">（12）、分页、跳转（POST）&nbsp;&nbsp;&lt;--点击我</a>
+		<div>
+			<pre>
+				页面:		 splitpage.html
+				页面js:	 splitpage.js
+				controller:	ExampleController.java
+			</pre>
+	</div>
+	</span>
+</div>
+
+#* 页脚 开始 *#
+ #parse("common/footer.html")
+#* 页脚 结束 *#
+</body>
+</html>

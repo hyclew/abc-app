@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="LoginUser">
+
+	<resultMap id="loginUserMap" type="com.kingteller.bs.domain.user.LoginUser">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="userid" property="userId" jdbcType="BIGINT" />
+		<result column="businessid" property="businessId" jdbcType="BIGINT" />
+		<result column="status" property="status" jdbcType="CHAR" />
+		<result column="updatetime" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="online" property="online" jdbcType="CHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<insert id="insertLoginUser" parameterType="com.kingteller.bs.domain.user.LoginUser"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into loginuser(
+			userid, 
+			businessid, 
+			status, 
+			updatetime, 
+			online, 
+			username, 
+			password
+		)values(
+			#{userId,jdbcType=BIGINT},
+			#{businessId,jdbcType=BIGINT},
+			#{status,jdbcType=CHAR},
+			CURRENT_TIMESTAMP,
+			#{online,jdbcType=CHAR},
+			#{username,jdbcType=VARCHAR},
+			#{password,jdbcType=VARCHAR}
+		)
+	</insert>
+	
+	<!-- 根据账号和密码查找 -->
+	<select id="queryUserByNameAndPwd" parameterType="map"
+		resultMap="loginUserMap">
+		select * from loginuser where username=#{username,jdbcType=VARCHAR} and password=#{password,jdbcType=VARCHAR}
+	</select>
+	
+	<!-- 根据账号和密码查找 -->
+	<select id="queryUserByUserIdAndPwd" parameterType="map"
+		resultMap="loginUserMap">
+		select * from loginuser where userid=#{userBaseId,jdbcType=BIGINT} and password=#{password,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="queryUserCountByUsername" parameterType="java.lang.String" resultType="int">
+		select count(id) from loginuser where username=#{username,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="queryLoginUserByUsername" parameterType="java.lang.String" resultMap="loginUserMap">
+		select * from loginuser where username=#{username,jdbcType=VARCHAR}
+	</select>
+
+</mapper>

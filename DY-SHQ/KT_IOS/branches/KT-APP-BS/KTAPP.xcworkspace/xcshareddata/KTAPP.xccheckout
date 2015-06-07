@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9E6420DA-DBBF-4F9E-A9F5-F0B439EE9EDD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>KTAPP</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>d6804d72-0a82-4539-950a-fa78594a732b</key>
+		<string>svn://192.168.0.200/project</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DY-SHQ/KT_IOS/branches/KT-APP-BS/KTAPP.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>d6804d72-0a82-4539-950a-fa78594a732b</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>d6804d72-0a82-4539-950a-fa78594a732b</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>d6804d72-0a82-4539-950a-fa78594a732b</string>
+			<key>IDESourceControlWCCName</key>
+			<string>project</string>
+		</dict>
+	</array>
+</dict>
+</plist>

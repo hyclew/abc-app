@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模块-子模块</title> #parse("common/include.html")
+<!-- 模块 样式 -->
+<link rel="stylesheet" type="text/css" href="${ctx}/static/css/base/main.css" />
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+	<!-- 内容开始 -->
+	<form id="EntPay" method="post" class="cmxform" role="form">
+		<div class="main">
+			<div class="main-cont register">
+				<ul>
+				  <li>
+					    <label for="showflag" class="label1">是否显示</label> 
+					    <input class="hover disap" name="showflag" id="showflag" value="1" type="text" />
+					</li>
+					<li>
+					    <label for="msgno" class="label1">报文编号</label> 
+					    <input class="hover disap" name="msgno" id="msgno" value="01" type="text" />
+					</li>
+					<li>
+					  <label for="msgname" class="label1"> 数据1:</label> 
+					  <input class="hover disap" name="account" id="accountValueId" value="10214" type="text" />
+					 </li>
+					 
+					<li>
+					  <label for="msgval" class="label1">数据2:</label> 
+					  <input class="hover disap" name="amount" id="amountValueId" value="10102" type="text" />
+					 </li>
+					 <li>
+					  <label for="result" class="label1">数据3:</label> 
+					  <input class="hover disap" name="description" id="descriptionValueId" value="12322" type="text" /> </label>
+					  </li>
+					<li>
+					  <label for="signeddata" class="label1">签名结果</label> 
+					  <input class="hover disap" name="signeddata" id="signeddata" value="" type="text" /> 
+					</li>
+					<li>
+					<a class="btn" id="verifySign">签名</a></li>
+				</ul>
+			</div>
+		</div>
+	</form>
+	<!-- 内容 结束 -->
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+	<script type="text/javascript" src="${ctx}/static/js/base/sign/sign.js"></script>
+</body>
+</html>

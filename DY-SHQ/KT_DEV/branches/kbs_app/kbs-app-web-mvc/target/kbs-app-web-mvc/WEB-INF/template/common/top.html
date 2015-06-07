@@ -1,0 +1,23 @@
+#if($shiro.isUser() == true)
+<div id="head">
+	<div class="head_con">
+    	<a class="logo fl" href="${base}/base/index.html"></a>
+        <div class="head_login clearfix">
+        	<a href="${ctx}/base/account/personInfo"><img class="fr" src="${base}/static/images/pic1.png" style="margin-top:4px;"/></a>            <div class="head_login_p fr">
+            	<p><em>$shiro.getPrincipal()</em><span>公司管理员</span></p>
+                <a href="${ctx}/logout">退出登录</a>
+            </div>
+        </div>
+    </div>
+</div>
+#else
+<div id="index_head">
+	<div class="index_head_con">
+    	<a class="logo fl" href="#"></a>
+        <p class="head_login clearfix">
+        	<a class="index_register" href="${ctx}/base/register">注册</a>
+            <a class="index_login" href="${ctx}/base/login">登录</a>
+        </p>
+    </div>
+</div>
+#end

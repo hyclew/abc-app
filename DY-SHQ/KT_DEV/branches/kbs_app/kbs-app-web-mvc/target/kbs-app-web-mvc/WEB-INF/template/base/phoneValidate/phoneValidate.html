@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>手机验证码样例-发送</title>
+#parse("common/include.html")
+<link href="${ctx}/static/css/base/main.css" rel="stylesheet" type="text/css" />
+<!-- 
+<link href="${ctx}/static/css/base/phoneAuthCode.css" rel="stylesheet" type="text/css" />
+ -->
+<style>
+.inputclass{
+	border : 2px solid green;
+}
+</style>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+	
+	
+	
+	<!-- 内容 开始 -->
+	<br />
+	<form action="${ctx}/phoneAuthCode/validate" method="post">
+		<span>手机号码：</span>
+		<input type="text" class="inputclass" value="" id="mobilePhone" name="mobileNo" />
+	    <a class="hr_verify hr_mouseover" onclick="sendPhoneAuthCodeCaller();" id="sendCodeBtn" href="#">获取验证码</a></li>
+	    <br />
+	    <span>手机验证码：</span><input type="text" class="inputclass" name="phoneAuthCode" />
+	    <br />
+	    <br />
+	    <input type="submit" value="提交" />
+    </form>
+    <br />
+    <!-- 内容 结束 -->
+    
+    
+    
+    <!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+	
+    <script type="text/javascript" src="${ctx}/static/js/base/phoneValidate/phoneValidate.js"></script>
+	<script type="text/javascript" src="${ctx}/static/js/base/phoneValidate/example.js"></script>
+</body>
+</html>

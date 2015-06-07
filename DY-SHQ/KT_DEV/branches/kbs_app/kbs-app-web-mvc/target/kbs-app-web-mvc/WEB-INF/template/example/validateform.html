@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模块-子模块</title> 
+#parse("common/include.html")
+<!-- 模块 样式 -->
+<link rel="stylesheet" type="text/css" href="${ctx}/static/css/base/main.css" />
+
+<style type="text/css">
+.open_div ul li {
+    margin-top: 0px;
+}
+table tr {
+    background: none;
+    border: 1px solid #DCDCD4;
+    line-height: 0px;
+}
+
+</style>
+
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+	<!-- 内容 开始 -->
+	<div class="main" nav="base">
+		<div class="content hr_conten_bg wrap">
+					<div class="info-container clearfix">
+						<form id="form1" class="form-horizontal" method="post" action="${ctx}/example/validateform/save">
+						    <ul class="hr_inf1">
+                	  <li>
+                	    <label class="hr_lab hr_infowid hr_ten_r">姓名：</label>
+						  <span class="span-input"> 
+						    <input class="hr_inp ml10 ui-input" type="text"  name="name" value="" />
+						  </span>
+                	  </li>
+                    <li>
+                      <label class="hr_lab hr_infowid hr_ten_r">手机：</label>
+                      <span class="span-input"> 
+						    <input class="hr_inp ml10 ui-input" type="text"  name="phoneNo" value="" />
+						  </span>
+                    </li>
+                    <li>
+                      <label class="hr_lab hr_infowid hr_ten_r">邮箱：</label>
+                      <span class="span-input"> 
+						    <input class="hr_inp ml10 ui-input" type="text"  name="email" value="" />
+						  </span>
+                     </li>
+                    <li>
+                      <label class="hr_lab hr_infowid hr_ten_r">身份证号：</label>
+                       <span class="span-input"> 
+					       <input class="hr_inp ml10 ui-input" type="text" name="identNo" value="" />
+					    </span> 
+									   
+                      <span class="hr_icon_peobg"></span>
+                    </li>
+                    <li>
+                      <label class="hr_lab hr_infowid hr_ten_r">日期：</label>
+                       <span class="span-input"> 
+					       <input class="hr_inp ml10 ui-input" type="text" name="inputDate" value="" />
+					    </span> 
+									   
+                      <span class="hr_icon_peobg"></span>
+                    </li>
+                    <li>
+                    	<label class="hr_lab hr_infowid hr_ten_r" style="float:left;">性别：</label>
+                    	<div class="open_div" style="float:left; width:235px; margin-left:13px;">
+                    		#ComSelect($genders, "sex", "", 180, true)
+                    	</div>
+                    	<div style="float:left; margin-top:4px;"></div>
+                    	<div style="height:30px; width:1px;"></div>
+                    </li>
+                    <li>
+                    	<label class="hr_lab hr_infowid hr_ten_r" style="float:left;">多选测试：</label>
+                    	<div class="open_div" style="float:left; width:236px; height: 30px; margin-left:13px; margin-top:3px;">
+                    		<span class="com_check_off" type="check" group="ck_group1" data="1"></span><input type="hidden" name="checkboxname1" value=""/><div style="float:left; margin-right:10px;">选择1</div>
+							<span class="com_check_off" type="check" group="ck_group1" data="2"></span><div style="float:left; margin-right:10px;">选择2</div>
+							<span class="com_check_off" type="check" group="ck_group1" data="3"></span><div style="float:left; margin-right:10px;">选择3</div>
+                    	</div>
+                    	<div style="float:left; margin-top:1px;"></div>
+                    	<div style="height:30px; width:1px;"></div>
+                    </li>
+                </ul>
+</form>
+					</div>
+					<div class="tex_center hr_pid mb20">
+							<input id="submit" type="button" data-dismiss="modal" aria-hidden="true" value="保存" class="ui-btn hr_btn hr_btn_aw mr30"/>
+					</div>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+	<!-- 模块 脚本 -->
+	<script type="text/javascript" src="${ctx}/static/js/example/validateform.js"></script>
+	
+</body>
+</html>

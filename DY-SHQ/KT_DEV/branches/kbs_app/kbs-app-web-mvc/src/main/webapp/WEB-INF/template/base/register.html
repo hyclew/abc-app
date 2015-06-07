@@ -1,0 +1,125 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dth">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title> #parse("common/include.html")
+
+
+<script type="text/javascript" src="${ctx}/static/js/pub/common/pub_select.js"></script>
+<script type="text/javascript" src="${ctx}/static/js/base/idCardNumber.js"></script>
+
+<link href="${ctx}/static/css/base/main.css" rel="stylesheet" type="text/css" />
+<link href="${ctx}/static/css/base/login.css" rel="stylesheet" type="text/css" />
+<link href="${ctx}/static/css/base/register/register.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.cy_an14_lv2 {
+	padding: 0 15px;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 5px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.hr_verify {
+	margin-left: 10px;
+}
+
+.hr_verify2 {
+	width: 110px;
+	height: 25px;
+	background: #f9f9f9;
+	border: 1px solid #71d587;
+	line-height: 25px;
+	text-align: left;
+	color: #61c8a8;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+label.error {
+	margin-left: 10px;
+	color: red;
+	border: 0px;
+	width: 180px !important;
+	text-align: left !important;
+}
+
+#agree {
+	width: 20px !important;
+}
+
+.register li input {
+	color: #000000 !important;
+}
+
+li {
+	width: 800px;
+}
+
+span {
+	cursor: pointer;
+}
+
+.regist_check {
+	margin-left: 100px;
+	margin-top: 13px;
+}
+</style>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div id="head-login">
+		<div class="head-login-con clearfix">
+			<a class="logo fl" href="#"></a> <a class="fr a-login" href="${ctx}/base/login">登录</a>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+	<!-- 内容 开始 -->
+	<form id="registerForm" method="post" class="cmxform" role="form">
+		<div class="main">
+			<div class="main-cont register">
+				<ul>
+				<!-- <li class="zhr_padlf115"><span class="zhr_icongreen mr10"></span><em class="fz-14 zhr_radio_wid">无激活码</em><span class="zhr_iconwrit mr10"></span><em class="fz-14 zhr_radio_wid">我有激活码</em></li> -->
+				
+				<div class="zhr_padlf115"><span class="mr10 com_radio_on activation-radio" type="radio" group="activationGroup" data="1"></span><input type="hidden" name="hasActivateCode" value="1"/><span style="float:left">无激活码</span>
+				<span class="mr10 com_radio_off activation-radio" type="radio" group="activationGroup" data="2"></span><span style="float:left">我有激活码</span>
+				<br/><input type="hidden" name="showCode" id="showCode" value="$!{showCode}"/>
+				</div>
+					<li><label for="userName" class="label1">用户名</label><input class="hover disap" name="userName" id="userName" type="text"
+						placeholder="请输入用户名" autofocus /> #if($error != ""&& $error=='1') <label class="error">该用户名已经被注册</label> #end</li>
+					<li><label for="mobile" class="label1">手机号</label><input name="mobile" id="mobile" type="text" placeholder="请输入手机号码" class="disap" /><a
+						class="cy_an14_lv2 ml10" id="sendCodeBtn" href="#">获取验证码</a></li>
+					<li><label for="mobileCode" class="label1">手机验证码</label><input name="mobileCode" id="mobileCode" type="text" placeholder="请输入手机验证码"
+						class="disap" /> #if($error != ""&& $error=='3') <label class="error">手机验证码错误</label> #end</li>
+					<li class="login_pos"><label for="pwd" class="label1">输入密码</label><input name="pwd" id="pwd" type="password" placeholder="请输入密码"
+						class="disap" /></li>
+					<li><label for="pwdAgain" class="label1">重复密码</label><input name="pwdAgain" id="pwdAgain" type="password" placeholder="请再次输入密码"
+						class="disap" /></li>
+					<li class="special">
+						<div class="com_check_off regist_check" type="check" group="agree_group" data="1"></div>
+						<input type="hidden" name="agree" value="" /> 我已阅读并同意<a href="#" class="ml10">《农银通服务协议》</a><label for="agree" class="error"></label>
+					</li>
+					<li><label>我最感兴趣</label><span><em ind="4">借款</em><em class="current" ind="2">投资</em><em ind="1">网购</em></span><label class="error"
+						style="display: none" id="interestError">最感兴趣必选至少一项</label></li>
+						 <li class="hide-activate" style="display:none"><label for="activateCode" class="label1">输入激活码</label><input name="activateCode" id="activateCode" type="text" placeholder="请输入激活码" disabled="disabled" class="disap"/>#if($error != ""&& $error=='5') <label class="error">激活码不正确</label> #elseif($error != ""&& $error=='6')<label class="error">激活码已经被激活</label>  #end</li>
+          			  <li class="hide-activate" style="display:none"><label for="orgCode" class="label1">组织机构代码</label><input name="orgCode" id="orgCode" type="text" placeholder="请输入组织机构代码" disabled="disabled" class="disap"/>#if($error != ""&& $error=='4') <label class="error">组织机构代码不存在</label> #end</li>
+					<li><label></label><a class="btn" id="register">注册</a></li>
+					<input name="interest" id="interest" type="hidden" />
+					<input name="pwdLevel" id="pwdLevel" type="hidden" />
+				</ul>
+			</div>
+		</div>
+	</form>
+	<!-- 内容 结束 --> 
+	<!-- 页脚 开始 -->
+	<script type="text/javascript" src="${ctx}/static/js/base/register/pwdStrength.js"></script>
+	<script type="text/javascript" src="${ctx}/static/js/base/register/form-validate.js"></script>
+	<script type="text/javascript" src="${ctx}/static/js/base/register/register.js"></script>
+	<script type="text/javascript" src="${ctx}/static/js/base/phoneValidate/phoneValidate.js"></script>
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+</body>
+</html>

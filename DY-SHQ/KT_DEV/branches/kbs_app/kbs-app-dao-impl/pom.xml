@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.kingteller</groupId>
+    <artifactId>app</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>kbs-app-dao-impl</artifactId>
+  <name>kbs-app-dao-impl</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <dependencies>
+  
+     <dependency>
+		<groupId>com.kingteller</groupId>
+		<artifactId>kbs-app-domains</artifactId>
+		<version>${app.version}</version>
+	</dependency>  
+
+     <dependency>
+		<groupId>com.kingteller</groupId>
+		<artifactId>kbs-app-service-core</artifactId>
+		<version>${app.version}</version>
+	</dependency> 
+	
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>${mysql.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis-spring</artifactId>
+		<version>${mybatis-spring.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.mybatis</groupId>
+		<artifactId>mybatis</artifactId>
+		<version>${mybatis.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>commons-dbcp</groupId>
+		<artifactId>commons-dbcp</artifactId>
+		<version>${commons-dbcp.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>commons-beanutils</groupId>
+		<artifactId>commons-beanutils</artifactId>
+		<version>${commons-beanutils.version}</version>
+	</dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
+      <scope>provided</scope>
+    </dependency> 
+  </dependencies>
+</project>

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模块-子模块</title> #parse("common/include.html")
+<!-- 模块 样式 -->
+<link rel="stylesheet" type="text/css" href="${ctx}/static/css/base/main.css" />
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+	<!-- 内容 开始 -->
+	<div class="main">
+	    <br/>
+	  	<div class="pop_con">
+			  <label class="label-text">档案路径：</label><span id="fileUpload" type="file" fileName="" fileNail=""></span> 
+			</div>
+			<div class="btn-box">
+				<a class="btn" onclick="return ajaxFileUpload('fileUpload','doc,docx,xls,xlsx,jpg',2000,fileUploadCallback,'150,150');">开始上传</a>
+				<a class="btn" href="${ctx}/base/file/download/4071067d2ffc478e885e0e447d5de86099000001"  target="_blank">开始下载</a>
+			</div>
+		</form>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+	<!-- 模块 脚本 -->
+	<script type="text/javascript" src="${ctx}/static/js/example/fileupload.js"></script>
+</body>
+</html>

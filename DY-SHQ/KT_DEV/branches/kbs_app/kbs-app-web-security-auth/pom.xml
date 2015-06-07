@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <!--  -->
+  <parent>
+    <groupId>com.kingteller</groupId>
+    <artifactId>app</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>kbs-app-web-security-auth</artifactId>
+  <packaging>war</packaging>
+  <name>kbs-app-web-security-auth</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+  		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	
+		<hibernate.version>4.3.1.Final</hibernate.version>
+
+	</properties>
+	<build>
+	 	<finalName>${project.artifactId}</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.eclipse.jetty</groupId>
+					<artifactId>jetty-maven-plugin</artifactId>
+					<version>9.2.6.v20141205</version>
+					<configuration>
+						<webApp>
+							<contextPath>/${application.name}</contextPath>
+						</webApp>
+						<httpConnector>
+							<port>8080</port>
+							<idleTimeout>60000</idleTimeout>
+						</httpConnector>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+				<executions>
+					<execution>
+						<id>default-war</id>
+						<phase>package</phase>
+						<goals>
+							<goal>war</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<dependencies>
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring-security-web.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring-security-web.version}</version>
+		</dependency>
+		
+		<dependency>
+        	<groupId>org.springframework.session</groupId>
+        	<artifactId>spring-session</artifactId>
+        	<version>${spring-session.version}</version>
+   		</dependency>
+    
+        <dependency>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+            <version>${spring-session.version}</version>
+        </dependency>
+		<!-- 
+     	<dependency>
+     		<groupId>org.springframework.session</groupId>
+        	<artifactId>spring-embedded-redis</artifactId>
+        	<version>${spring-session.version}</version>
+     	</dependency>
+     	 -->
+     	<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+			<version>${spring-data-commons.version}</version>
+		</dependency>
+		
+     	<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+			<version>${spring-redis-data.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring-data-jpa.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>${jedis.version}</version>
+		</dependency>
+		<!--  
+		<dependency>
+			<groupId>redis.embedded</groupId>
+			<artifactId>redis.embedded</artifactId>
+			<version>${redis.embedded.version}</version>
+		</dependency>
+		-->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson-databind.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${javax.servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.taglibs</groupId>
+			<artifactId>taglibs-standard-impl</artifactId>
+			<version>${taglibs-standard-impl.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+			<version>${commons-pool2.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${commons-fileupload.version}</version>
+		</dependency>
+
+	</dependencies>
+</project>
+

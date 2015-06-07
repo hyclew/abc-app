@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/theme_color" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="发表活动"
+            android:textColor="@color/white_color"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/im_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/im_return" />
+
+        <ImageView
+            android:id="@+id/iv_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/fabu" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/typeface_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/typeface_color"
+            android:text="开始时间：" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:textSize="13sp"
+            android:textColor="@color/typeface_color"
+            android:hint="请输入开始时间" >
+
+        </EditText>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/typeface_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/typeface_color"
+            android:text="结束时间：" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+             android:layout_marginLeft="10dp"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:textSize="13sp"
+            android:textColor="@color/typeface_color"
+            android:hint="请输入结算时间" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/typeface_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white_color" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/typeface_color"
+            android:text="活动地址：" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:background="@null"
+             android:layout_marginLeft="10dp"
+             android:textSize="13sp"
+            android:textColor="@color/typeface_color"
+            android:hint="请输入活动地址" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd"
+	default-lazy-init="true">
+
+	<description>Shiro安全配置</description>
+	
+	<!-- 使用默认的WebSecurityManager -->
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<!-- realm认证和授权,从数据库读取资源 -->
+		<property name="realm" ref="shiroDbRealm" />
+		<!-- cacheManager,集合spring缓存工厂 -->
+		<property name="cacheManager" ref="shiroMemCachedManager" />
+	</bean>
+	
+	<!-- 自定义shiro的realm数据库身份验证 -->
+	<bean id="shiroDbRealm" class="com.abchina.ibank.base.shiro.ShiroDbRealm">
+		<property name="defaultPermissionString" value="security:change-password,security:index" />
+		<property name="authorizationCacheName" value="shiroAuthorizationCache" />
+	</bean>
+
+	<!-- 用户授权信息Cache, 采用MemCached -->
+	<bean id="shiroMemCachedManager" class="com.abchina.ibank.common.MemcachedManagerForShiro">
+		<property name="group" value="mclient1" />
+		<property name="cacheClient" ref="cacheClient" />
+	</bean>
+
+	<!-- 将shiro与spring集合 -->
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+		<!-- shiro的核心安全接口 -->
+		<property name="securityManager" ref="securityManager" />
+		<!-- 要求登录时的链接 -->
+		<property name="loginUrl" value="/base/login" />
+		<!-- 登陆成功后要跳转的连接 -->
+		<property name="successUrl" value="/base/userCenter.html" />
+		<!-- 没有权限要跳转的链接 -->
+		<property name="unauthorizedUrl" value="/base/index.html" />
+		<!-- shiro连接约束配置,在这里使用自定义的动态获取资源类 -->
+		<property name="filterChainDefinitionMap" ref="chainDefinitionSectionMetaSource" />
+	</bean>
+
+	<!-- 自定义对 shiro的连接约束,结合shiroSecurityFilter实现动态获取资源 -->
+	<bean id="chainDefinitionSectionMetaSource"
+		class="com.abchina.ibank.base.shiro.ChainDefinitionSectionMetaSource">
+		<!-- 默认的连接配置 -->
+		<property name="filterChainDefinitions">
+			<value>
+				/base/login = authc
+				/logout = logout
+				/base/account/** = authc
+				/** = anon
+			</value>
+		</property>
+	</bean>
+</beans>

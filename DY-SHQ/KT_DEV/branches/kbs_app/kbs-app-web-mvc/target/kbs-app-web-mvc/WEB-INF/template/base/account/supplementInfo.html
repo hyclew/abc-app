@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页-我的信息-补充信息</title>
+#parse("common/include.html")
+<link href="${ctx}/static/css/base/main.css" rel="stylesheet" type="text/css" />
+</head>
+ 
+<body>
+<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+<!-- 内容 开始 -->
+<div class="main">
+	<div class="layout-box">
+		<p class="main_intl"><a class="tab_grn" href="${ctx}/base/userCenter">首页</a> > 我的信息 </p>
+        <div class="main-bd clearfix">
+        	<div class="top-nav">
+        		#if($shiro.hasPermission("personInfo:view"))
+				<a href="${ctx}/base/account/personInfo" class="line-bg">基本信息</a>
+				#end 
+				#if($shiro.hasPermission("enterpriseInfo:view"))
+				<a href="${ctx}/base/account/enterpriseInfo" class="line-bg">经营信息</a>
+				#end
+				<a href="首页-我的信息-贷款信息.html" class="line-bg">贷款信息</a>
+				#if($shiro.hasPermission("supplementInfo:view"))					 
+				<a href="${ctx}/base/account/userFile/supplementInfo" class="active">补充信息</a>
+				#end
+				#if($shiro.hasPermission("permissionAssignment:view"))
+				<a href="${ctx}/base/account/permissionAssignment">员工信息</a>
+				#end
+            </div>
+            <div class="page-bd clearfix">
+            	<ul class="download-pic">
+            		#foreach($it in $!{supplementFiles})
+                	<li class="hr_icon_poz">
+                    	<div class="pic-box">
+                        	<img src="$!{it.filePath}" alt="" width="104" height="79" />
+                            <p class="hr_cor_gre">$!{it.fileName}</p>
+                        </div>
+                        <a href="#" class="a-style1" value="${ctx}/base/account/userFile/download/$!{it.fileNo}">下载</a>
+                        <a href="#" class="hr_arong"></a>
+                    </li>
+                    #end
+                    #if($shiro.hasPermission("userFile:upload"))
+                    <li id="newUpload">
+                    	<div class="pic-box">
+                        	<a href="#" class="hr_info"><div class="add-more"><h4>新增资料</h4></div></a>
+                             <p class="hr_cor_gre">新建上传</p>
+                        </div>
+                    </li>
+                    #end
+                </ul>
+            </div>
+        </div>
+    </div>
+  </div>
+<!-- 内容 结束 -->
+ 
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<script type="text/javascript" src="${ctx}/static/js/base/account/supplementInfo.js"></script>
+	<script type="text/javascript" src="${ctx}/static/js/pub/common/ajaxfileupload.js"></script>
+	<script type="text/javascript" src="${ctx}/static/js/pub/common/ibank-common.js"></script>
+	<!-- 页脚 结束 -->
+  <!-- 弹出层-下载档案 开始 -->
+ 
+	<div class="pop hr_pop_1" style="width:380px;margin:0 auto; z-index:10; position:fixed;">
+        <h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>下载档案</h3>
+        <div class="pop_con">
+             <div class="pop-con-bd clearfix">
+             	  <div class="info-box">
+                  	<h5 class="pt-0">确认想下载档案</h5>
+                  
+                  </div>
+             </div>
+        </div>
+        <div class="btn-box">
+        	<a id="downloadButton" href="#" class="sure-btn mr-20 a_right">确定</a>
+            <a href="#" class="cancel-btn">取消</a>       
+        </div>
+    </div>
+ 
+  <!-- 弹出层-下载档案 结束 -->
+  
+   <!-- 弹出层-新增信息 开始 -->
+ 
+	<div class="pop hr_pop_2" style="width:750px; margin:0 auto; z-index:10; position:fixed;">
+        <h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>新增信息</h3>
+        <div class="pop_con">
+        	<form id="agrform" class="form-horizontal" method="post" action="${ctx}/base/account/userFile/upload">
+        	<input type="hidden" name="userNo" value="$!{person.userNo}" />
+        	<input type="hidden" name="entNo" value="$!{person.entNo}" />
+             	  <div class="form-field-box clearfix mt-30">
+                    	<ul>
+                        <li>
+                        	<label class="label-text">档案类别：</label>
+                        	#if(${person.entNo})
+                        	<span id="fileType" class="span-text">$!{entFileType.configName}</span>
+                        	<input type="hidden" name="fileType" value="$!{entFileType.configCode}" />
+                        	#else
+                        	<span id="fileType" class="span-text">$!{userFileType.configName}</span>
+                        	<input type="hidden" name="fileType" value="$!{userFileType.configCode}" />
+                        	#end 
+                        </li>
+                        <li>
+                        	<label class="label-text">档案名称：</label>
+                            <input type="text" class="input-text cleardata" name="fileName"></input>
+                        </li>
+                        <li>
+                        	<label class="label-text">文件年份：</label>
+                            <input type="text" class="input-text cleardata" name="fileYear"></input>
+                        </li>
+                        <li>
+                        	<label class="label-text vt line-h-24">内容摘要：</label>
+                            <textarea style="width:470px;height:60px" class="cleardata" name="description"></textarea>
+                            <p class="describe-text">(最多可输入120个英文字符或60个中文字符)</p>
+                        </li>
+                        <li>
+                        	<label class="label-text">档案路径：</label><span id="fileUpload" type="file" ></span>
+                        </li>
+                    </ul>
+             </div>
+             </form>
+        </div>
+        <div class="btn-box">
+			<a class="btn" onclick="uploadFileAndUserFile();">开始上传</a>
+		</div>
+    </div>
+ 
+  <!-- 弹出层-新增信息 结束 -->
+ 
+  <!-- 弹出层-预览档案 开始 -->
+ 
+	<div class="pop hr_pop_3" style="width:805px;margin:0 auto; z-index:10; position:fixed;">
+        <h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>下载档案</h3>
+        <div class="pop_con">
+             <div class="pop-con-bd clearfix">
+             	  <img src="../images/zhr/pic_offce.jpg" alt="" />
+             </div>
+        </div>
+    </div>
+ 
+  <!-- 弹出层-预览档案 结束 -->
+  
+</body>
+</html>

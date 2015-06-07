@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="UserBase">
+
+	<resultMap id="userBaseMap" type="com.kingteller.bs.domain.user.UserBase">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="telephone" property="telephone" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="CHAR" />
+		<result column="updatetime" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="usertype" property="userType" jdbcType="CHAR" />
+		<result column="resourceid" property="resourceId" jdbcType="BIGINT"/>
+	</resultMap>
+
+	<insert id="insertUserBase" parameterType="com.kingteller.bs.domain.user.UserBase"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into userbase(
+			name, 
+			address, 
+			phone, 
+			telephone, 
+			status, 
+			updatetime, 
+			usertype
+		) values(
+			#{name,jdbcType=VARCHAR}, 
+			#{address,jdbcType=VARCHAR}, 
+			#{phone,jdbcType=VARCHAR}, 
+			#{telephone,jdbcType=VARCHAR}, 
+			#{status,jdbcType=CHAR}, 
+			CURRENT_TIMESTAMP, 
+			#{userType,jdbcType=CHAR}
+		)
+		<selectKey resultType="Long" keyProperty="id">
+			select @@identity as inserted
+		</selectKey>
+	</insert>
+	
+	<!-- 根据电话号码查找 -->
+	<select id="queryUserBaseByPhone" parameterType="java.lang.String"
+		resultMap="userBaseMap">
+		select * from userbase where phone=#{phone,jdbcType=VARCHAR} and usertype=#{userType,jdbcType=CHAR}
+	</select>
+	
+	<select id="queryUserBaseCountByPhone" parameterType="java.lang.String" resultType="int">
+		select count(id) from userbase where phone=#{phone,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="queryByUserId" parameterType="map" resultMap="userBaseMap">
+		select * from userbase where id=#{id,jdbcType=BIGINT}
+	</select>
+	
+	<update id="updateResorceIdByUserId" parameterType="map">
+		update userbase set resourceid=#{resourceId} where id=#{id,jdbcType=BIGINT}
+	</update>
+	
+	<!-- 根据电话号码查找 -->
+	<select id="queryUserBaseByName" parameterType="java.lang.String"
+		resultMap="userBaseMap">
+		select * from userbase where name=#{name,jdbcType=VARCHAR} and usertype=#{userType,jdbcType=CHAR}
+	</select>
+
+</mapper>

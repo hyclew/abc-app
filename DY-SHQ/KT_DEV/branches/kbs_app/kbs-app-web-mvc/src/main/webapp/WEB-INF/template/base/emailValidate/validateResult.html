@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>邮箱激活结果</title>
+#parse("common/include.html")
+<link href="${ctx}/static/css/base/main.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+	
+	<!--网页 内容 开始-->
+	<div class="main">
+		<div class="agr-bread-crumb">
+			<a href="${ctx}/base/userCenter" class="stress">用户首页</a>
+			<em class="arr-symbol">&gt;</em>
+			<a href="${ctx}/base/account/personInfo">我的信息</a>
+			<em class="arr-symbol">&gt;</em>
+			<span>邮箱激活结果</span>
+		</div>
+		<div class="main_con mb40 mt-20">
+			<h1 class="hr_h1 hr_ten_l">邮箱激活结果</h1>
+	    	<div class="wrap">
+	    		<div class="zhr_change_bund zhr_14" style="border-bottom:none; padding:50px 0;">
+	            	<ul class="hr_ten_c">
+	                	<li>
+	                		<span class="zhr_16 zhr_cole78143">
+	                			#if(${validateResult} == 'right' || ${validateResult} == 'hasActivated')
+	                				恭喜您，邮箱激活成功！
+	                			#elseif(${validateResult} == 'illegal')
+	                				对不起，您的激活链接无效，请重新激活邮箱！
+	                			#elseif(${validateResult} == 'expired')
+	                				对不起，您的激活链接已经失效（24小时），请重新激活邮箱！
+	                			#end
+	                		</span>
+	                	</li>
+	                </ul>
+	                <p class="hr_ten_c mt20">
+	                    <a class="hr_bgn" href="${ctx}/base/userCenter">返回用户首页</a>
+	                </p>
+	            </div>
+	    	</div>
+		</div>
+	</div>
+	<!--网页 内容 结束-->
+
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+</body>
+</html>
+ 

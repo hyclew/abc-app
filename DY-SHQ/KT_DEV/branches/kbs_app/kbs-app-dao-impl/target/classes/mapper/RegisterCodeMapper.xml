@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="RegisterCode">
+
+	<resultMap id="registerCodeMap" type="com.kingteller.bs.domain.user.RegisterCode">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="checkcode" property="checkCode" jdbcType="VARCHAR" />
+		<result column="updatetime" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="status" property="status" jdbcType="CHAR" />
+	</resultMap>
+
+	<insert id="insertRegisterCode" parameterType="com.kingteller.bs.domain.user.RegisterCode"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into registercode(
+		phone,
+		checkcode,
+		updatetime,
+		status
+		) values(
+		#{phone, jdbcType=VARCHAR},
+		#{checkCode, jdbcType=VARCHAR},
+		#{updateTime, jdbcType=TIMESTAMP},
+		#{status, jdbcType=CHAR}
+		)
+		<selectKey resultType="Long" keyProperty="id">
+			select @@identity as inserted
+		</selectKey>
+	</insert>
+	
+	<select id="queryCodeById" parameterType="com.kingteller.bs.domain.user.RegisterCode" resultMap="registerCodeMap">
+		select * from registercode where id=#{id, jdbcType=BIGINT}
+	</select>
+	
+	<update id="updateCodeByPhone" parameterType="com.kingteller.bs.domain.user.RegisterCode">
+		update registercode set status=#{status, jdbcType=CHAR} where phone = #{phone, jdbcType=VARCHAR}
+	</update>
+
+</mapper>

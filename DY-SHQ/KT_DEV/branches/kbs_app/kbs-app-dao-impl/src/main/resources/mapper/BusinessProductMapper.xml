@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BusinessProduct">
+
+	<resultMap id="businessProductMap"
+		type="com.kingteller.bs.domain.business.BusinessProduct">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="productcatalogueid" property="productCatalogueId" jdbcType="BIGINT" />
+		<result column="productbaseid" property="productBaseId" jdbcType="BIGINT" />
+		<result column="businessname" property="businessName" jdbcType="VARCHAR" />
+		<result column="numbers" property="numbers" jdbcType="INTEGER" />
+		<result column="unitPrice" property="unitPrice" jdbcType="FLOAT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="introduce" property="introduce" jdbcType="VARCHAR" />
+		<result column="publishTime" property="publishTime" jdbcType="TIMESTAMP"/>
+		<result column="updateTime" property="updateTime" jdbcType="TIMESTAMP"/>
+		<result column="warmprompt" property="warmPrompt" jdbcType="VARCHAR"/>
+		<result column="prasie" property="prasie" jdbcType="VARCHAR"/>
+		<result column="status" property="status" jdbcType="CHAR" />
+		<result column="preferprice" property="preferPrice" jdbcType="FLOAT" />
+		<result column="salePrice" property="salePrice" jdbcType="REAL" />
+		<result column="saleStartTime" property="saleStartTime" jdbcType="TIMESTAMP" />
+		<result column="saleOverTime" property="saleOverTime" jdbcType="TIMESTAMP" />
+		<result column="businessId" property="businessId" jdbcType="BIGINT" />
+		<result column="businessProductAduit" property="businessProductAduit" jdbcType="BIGINT" />
+		<result column="isSale" property="isSale" jdbcType="CHAR" />
+		<result column="resourceid" property="resourceId" jdbcType="BIGINT" />
+		<result column="resourceids" property="resourceIds" jdbcType="VARCHAR" />
+		<result column="onSale" property="onSale" jdbcType="CHAR" />
+		<result column="order" property="order" jdbcType="BIGINT" />
+		<result column="productid" property="productId" jdbcType="BIGINT" />
+	</resultMap>
+
+	<!-- 查找 -->
+	<select id="getBusinessproductBycatalogid" parameterType="java.lang.Long"
+		resultMap="businessProductMap">
+		select id, businessname, resourceid, introduce, businessid, name, 
+		unitprice, preferprice, saleprice, publishtime from businessproduct where
+		productcatalogueid=#{productcatalogueid} and id > #{maxId} limit 0,#{dataCount}
+	</select>
+	
+	<select id="getBusinessProductById" parameterType="java.lang.Long" resultMap="businessProductMap">
+		select id, productcatalogueid, businessid, businessname, resourceid, resourceids, name, introduce, numbers, unitprice, preferprice, saleprice, warmprompt from businessproduct where id=#{businessProductId}
+	</select>
+	
+	<select id="getBusinessProductByAll" parameterType="map" resultMap="businessProductMap">
+		select * from businessproduct where businessid=#{businessid}
+		<if test="name != null">
+     	 	and	name = #{name} 
+     	</if>
+     	 and status=1 order by id limit #{page},#{rows}
+	</select>
+	
+	<!-- 查询商家产品信息 -->
+	<select id="getBusinessProductAll" parameterType="map" resultType="int">
+		select COUNT(*) from businessproduct where businessid=#{businessid} and status=1
+		<if test="name != null">
+     	 	and	name = #{name} 
+     	</if>
+	</select>
+
+</mapper>

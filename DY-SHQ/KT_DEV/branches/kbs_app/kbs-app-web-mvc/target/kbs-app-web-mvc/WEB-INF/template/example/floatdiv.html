@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模块-子模块</title> #parse("common/include.html")
+<!-- 模块 样式 -->
+<link rel="stylesheet" type="text/css" href="${ctx}/static/css/base/main.css" />
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+	<!-- 内容 开始 -->
+	<div class="main">
+		<br />
+		<div class="pop_con">
+			<label class="label-text">（1）、用户：</label><input type="text" class="hr_inp" value="" onfocus="ibank.showTip($(this),'提示：“用户名”为必输项！');" onblur="ibank.hideTip();" style="width: 200px" />
+		</div>
+		<div class="pop_con">
+			<label class="label-text">（2）、按钮：</label><a href="#" onclick="ibank.showMsg('提交成功！提交成功！');" class="btn">提交</a><a href="#" onclick="ibank.showMsg('刷新成功！');" class="btn">刷新</a>
+		</div>
+		<div class="pop_con">
+			<label class="label-text">（3）、确定框：</label><a href="#" onclick="ibank.alert('操作成功！操作成功！','确认',function(){alert('您点击了确定按钮！')});" class="btn">确定</a>
+		</div>
+		<div class="pop_con">
+			<label class="label-text">（4）、确认框：</label><a href="#" onclick="ibank.confirm('您确定要提交该信息吗？','提交确认',function(){alert('您点击了确定按钮！')});" class="btn">确认</a>
+		</div>
+		<div class="pop_con">
+			<label class="label-text">（5）、对话框：</label><a href="#" onclick="ibank.openDialog('dialogContentId','操作',550,'2','1231',function(){alert('您点击了确定按钮！')},'6767',function(){alert('您点击了取消按钮！')});" class="btn">确认</a>
+			<div id="dialogContentId" style="display: none;">
+				<table width="100%">
+					<thead>
+						<tr>
+							<th>期次</th>
+							<th>还款日期</th>
+							<th>应还本息（元）</th>
+							<th>应还本金（元）</th>
+							<th>应还利息（元）</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>2013-12-11</td>
+							<td>85,288.54</td>
+							<td>81,955.21</td>
+							<td>3,333.33</td>
+						</tr>
+						<tr class="space">
+							<td>2</td>
+							<td>2014-1-11</td>
+							<td>85,288.54</td>
+							<td>82,501.58</td>
+							<td>2,786.97</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>2014-2-11</td>
+							<td>85,288.54</td>
+							<td>83,051.59</td>
+							<td>2,236.95</td>
+						</tr>
+						<tr class="space">
+							<td>4</td>
+							<td>2014-1-11</td>
+							<td>85,288.54</td>
+							<td>82,501.58</td>
+							<td>2,786.97</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td>2014-2-11</td>
+							<td>85,288.54</td>
+							<td>83,051.59</td>
+							<td>2,236.95</td>
+						</tr>
+						<tr class="space">
+							<td>6</td>
+							<td>2014-1-11</td>
+							<td>85,288.54</td>
+							<td>82,501.58</td>
+							<td>2,786.97</td>
+						</tr>
+						<tr>
+							<td colspan="2">合计</td>
+							<td class=" td_red">51,1731.24</td>
+							<td class=" td_red">510,000.00</td>
+							<td class=" td_red">11,731.26</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- 内容 结束 -->
+	<!-- 页脚 开始 -->
+	#parse("common/footer.html")
+	<!-- 页脚 结束 -->
+	<!-- 模块 脚本 -->
+	<script type="text/javascript" src="${ctx}/static/js/pub/common/ibank-common.js"></script>
+</body>
+</html>

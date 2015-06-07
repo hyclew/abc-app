@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我要借款-银行贷款-待审核项目</title>
+#parse("common/include.html")
+
+<link href="${ctx}/static/css/loan/loan.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="${ctx}/static/js/pub/common/pub_select.js"></script>
+<script type="text/javascript" src="${ctx}/static/js/example/table.js"></script>
+</head>
+
+
+<body>
+#* 头部 开始 *#
+ #parse("common/top.html")
+#* 头部 结束 *#
+
+#* 导航 开始 *#
+ #parse("common/topnav.html")
+#* 导航 结束 *#
+
+#* 内容 开始 *#
+<div class="main">
+	<div class="layout-box">
+		<p class="main_intl"><a class="tab_grn" href="我要借款-银行贷款.html">我要借款</a> > 银行贷款</p>
+        <div class="main-bd clearfix apply-loan">
+        	<h3 class="h3-style1"><div class="link"><a href="我要借款-银行贷款.html" class="a-style4 fz-12">推荐产品</a><a href="我要借款-银行贷款-自定义贷款.html" class="a-style5 fz-12 ml-7">自定义产品</a></div><b>申请银行贷款</b></h3>
+            <div class="apply-loan-inner">
+            	<div class="loan-style-box clearfix">
+           	  <ul>
+              #**  
+               * 遍历List循环  获取list中的每个对象
+               * $loanList  在TableExampleController中设置model.addAttribute("loanList", biznatureList);
+               * 			前端通过key:loanList获取。【$】为velocity中的变量前缀
+               **#
+                 #foreach($loanBean in $loanList)
+                	<li>
+                    	<h4>$!{loanBean.name}</h4>
+                        <div class="limit-day">贷款期限<br /><span>${loanBean.dateRate}天</span></div>
+                        <p class="pay-style w-186" >
+                        	还款方式: <em>一次性还本付息</em><br />
+							预计利率:<span>$math.roundTo("2", $loanBean.rate)%</span>#*四舍五入保留2位小数*#
+                        </p>
+                        <div class="box">
+                        	<a href="我要借款-银行贷款-申请贷款-step1基本信息查看及修改.html" class="w-btn1">申请</a>
+                        </div>
+                    </li>
+                 #end
+                </ul>
+                <a class="left-btn"></a>
+                <a class="right-btn"></a>
+            
+            </div>
+                <div class="option-box clearfix mt-0" style="height:10px">
+                    #*<div class="fl">
+                        <label>状态：</label>
+                        <div class="select_bord"><a class="select_bord_a" href="#" style="width:193px;">全部状态</a></div>
+                    </div>
+                    <div class="fr">
+                        <span class="label-text">时间：</span>
+                        <input type="text" class="input-text" />
+                        <span class="vm">至</span>
+                        <input type="text" class="input-text" />
+                        <a href="#" class="w-btn">查询</a>
+    
+                    </div> *#
+                
+                </div>
+                <div class="top-nav">
+                    <a href="我要借款-银行贷款-进行中项目.html">进行中项目</a>
+                     <a href="我要借款-银行贷款-待审核项目.html" class="active">待审核项目</a>
+                    <a href="我要借款-银行贷款-已完成项目.html">已完成项目</a>
+                </div>
+                <div id="grid">
+                #parse("example/table/pageTable.html")
+                </div>
+                <div>
+                #ComSelect($codeList, "selectName", "code_1", 140, true)
+                </div>
+            </div>
+      </div>
+        </div>
+    </div>
+	
+	#* 确定提前还款 *#
+    
+	<div class="pop popfe" style="width:480px;margin:0 auto; position:fixed; z-index:10; display:none;">
+        <h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>确定提前还款</h3>
+        <div class="pop_con">
+             <div class="pop-con-bd clearfix">
+             	<h5>确定提前还款？</h5>
+                <ul class="info-list">
+                	<li class="pl-100">账户当前余额：<span class="cf7824a">220,000.00</span>元</li>
+                    <li class="pl-100">本笔贷款余额：<span class="cf7824a">220,000.00</span>元</li>
+                    <li class="pl-100">应还本息合计：<span class="cf7824a">220,000.00</span>元<a href="#" class="text-d-under ml10">余额不足请充值</a></li>
+                </ul>
+             </div>
+        </div>
+        <div class="btn-box">
+        	<a href="我要借款-银行贷款-进行中项目.html" class="sure-btn mr-20">确定</a>
+            <a href="#" class="cancel-btn">取消</a>
+        
+        </div>
+    </div>
+    
+    #* 确定提前还款 *#
+ 
+    #* 确定逾期还款 *#
+    
+	<div class="pop popne pop_hr_overduepay" style="width:480px;margin:0 auto; position:fixed; z-index:10; display:none;">
+        <h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>提示</h3>
+        <div class="pop_con">
+             <div class="pop-con-bd clearfix">
+             	<h5>确定逾期还款？</h5>
+                <ul class="info-list">
+                	<li class="pl-100">账户当前余额：<span class="cf7824a">220,000.00</span>元</li>
+                    <li class="pl-100">本笔贷款余额：<span class="cf7824a">220,000.00</span>元</li>
+                    <li class="pl-100">应还本息合计：<span class="cf7824a">220,000.00</span>元<a href="#" class="text-d-under ml10">余额不足请充值</a></li>
+                </ul>
+             </div>
+        </div>
+        <div class="btn-box">
+        	<a href="我要借款-银行贷款-进行中项目.html" class="sure-btn mr-20">确定</a>
+            <a href="#" class="cancel-btn">取消</a>
+        
+        </div>
+    </div>
+    
+    #* 确定逾期还款 *#
+    #* 分享 *#
+    
+	<div class="pop popShare" style="width:670px;margin:0 auto; position:fixed; z-index:10; display:none;">
+    	<h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>分享</h3>
+       <div class="pop-share-box clearfix">
+			<div class="inner-box">
+				<div class="input-box">
+					<textarea>我刚在农银通成功申请了“xxx贷款产品”http://nyt.abc.3123</textarea>
+					<p>40 / 70</p>
+				</div>
+			</div>
+			<div class="share-operate clearfix">
+				<a href="我要借款-银行贷款-进行中项目.html" class="share-btn">分享</a>
+				<span class="input-checkbox input-checkbox-c"></span><img src="../images/wmh/share-icon_03.png"><span class="span-text">农行网银</span>
+				<span class="input-checkbox input-checkbox-c"></span><img src="../images/wmh/share-icon_05.png"><span class="span-text">新浪微博</span>
+				<span class="input-checkbox input-checkbox-c"></span><img src="../images/wmh/share-icon_07.png"><span class="span-text">腾讯微博</span>
+				<span class="input-checkbox input-checkbox-c"></span><img src="../images/wmh/share-icon_09.png"><span class="span-text">微信</span>
+			
+			</div>
+	   </div>
+    </div>
+	
+	
+	#* 分享 *#
+    
+    #* 弹出层 评价列表  开始2013年11月17日张慧荣增加 *#
+    <div class="pop popne pop_estimate_list" style="width:687px; margin:0 auto; position:fixed; z-index:10; display:none;">
+        <h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>全部评价</h3>
+        <div class="pop_con">
+             <div class="pop-con-bd clearfix">
+             	<ul class="hr_pop_content">
+                	<li class="clearfix">
+                    	<div class="hr_pop_face align-center">
+                        	<img src="../images/wmh/pop_face1.jpg" alt="" />
+                            <p>adc1</p>
+                        </div>
+                        <div class="hr_face_info fz-14 pl10">
+                        	 <p><label class="mr10">产品星级:</label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label></p>
+                             <p><label class="mr10">评&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价:</label><label>贷款利率合理，很好</label></p>
+                             <p><label class="mr10">日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期:</label><label>2013-10-12</label></p>
+                        </div>
+                    
+                    </li>
+                    <li class="clearfix">
+                    	<div class="hr_pop_face align-center">
+                        	<img src="../images/wmh/pop_face2.jpg" alt="" />
+                            <p>adc2</p>
+                        </div>
+                        <div class="hr_face_info fz-14 pl10">
+                        	 <p><label class="mr10">产品星级:</label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label></p>
+                             <p><label class="mr10">评&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价:</label><label>贷款利率合理，很好</label></p>
+                             <p><label class="mr10">日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期:</label><label>2013-10-12</label></p>
+                        </div>
+                    
+                    </li>
+                    <li class="clearfix">
+                    	<div class="hr_pop_face align-center">
+                        	<img src="../images/wmh/pop_face3.jpg" alt="" />
+                            <p>adc3</p>
+                        </div>
+                        <div class="hr_face_info fz-14 pl10">
+                        	 <p><label class="mr10">产品星级:</label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label></p>
+                             <p><label class="mr10">评&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价:</label><label>贷款利率合理，很好</label></p>
+                             <p><label class="mr10">日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期:</label><label>2013-10-12</label></p>
+                        </div>
+                    
+                    </li>
+                    <li class="clearfix border0">
+                    	<div class="hr_pop_face align-center">
+                        	<img src="../images/wmh/pop_face4.jpg" alt="" />
+                            <p>adc4</p>
+                        </div>
+                        <div class="hr_face_info fz-14 pl10">
+                        	 <p><label class="mr10">产品星级:</label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label><label class="hr_star"></label></p>
+                             <p><label class="mr10">评&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价:</label><label>贷款利率合理，很好</label></p>
+                             <p><label class="mr10">日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;期:</label><label>2013-10-12</label></p>
+                        </div>
+                    
+                    </li>
+                </ul>
+             </div>
+        </div>
+        <div class="btn-box">
+        	<a class="fz-14" href="#">查看更多>></a>
+        </div>
+    </div>
+    #*  弹出层 评价列表  开始2013年11月17日张慧荣结束 *#
+	
+	
+
+
+</div>
+#* 内容 结束 *#
+
+#* 页脚 开始 *#
+ #parse("common/footer.html")
+#* 页脚 结束 *#
+</body>
+</html>

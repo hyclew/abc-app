@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+#parse("common/include.html")
+<link href="${ctx}/static/css/base/main.css" rel="stylesheet" type="text/css" />
+<link href="${ctx}/static/css/base/login.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="${ctx}/static/js/base/login.js"></script>
+<script type="text/javascript" src="${ctx}/static/js/pub/common/pub_select.js"></script>
+
+<script type="text/javascript" src="${ctx}/static/js/base/idCardNumber.js"></script>
+<script type="text/javascript" src="${ctx}/static/js/base/pwd-strength.js"></script>
+
+<script type="text/javascript">
+</script>
+<style type="text/css">
+.liContainer .error{
+padding-left:166px!important
+}
+
+.liContainer2 .error{
+padding-left:110px!important
+}
+
+label.error {
+	color: red;
+	border: 0px;
+	padding-left: 10px;
+	margin-top: -10px;
+	height: 20px !important;
+	line-height : 20px !important;
+	text-align: left !important;
+}
+.login_error {
+	color: red;
+	border: 0px;
+	padding-left: 10px;
+	margin-top: -10px;
+	height: 20px !important;
+	line-height : 20px !important;
+	text-align: center !important;
+}
+.login_worn {
+	color: red;
+	border: 0px;
+	padding-left: 10px;
+	margin-bottom: -10px;
+	height: 20px !important;
+	line-height : 20px !important;
+	text-align: left !important;
+}
+.hr_verify2{ width:110px; height:25px; background:#f9f9f9; border:1px solid #71d587; line-height:25px; text-align: left; color:#61c8a8; display:inline-block; vertical-align:middle;}
+
+label.error {
+	color: red;
+	border: 0px;
+	padding-left: 10px;
+	margin-top: -10px;
+	height: 20px !important;
+	line-height: 20px !important;
+	text-align: left !important;
+}
+.check_margin {
+	margin-top : 8px;
+	margin-right : 8px;
+}
+.hr_btn_width{
+width:126px;
+}
+</style>
+</head>
+<body>
+	<!-- 头部 开始 -->
+	<div id="head-login">
+		<div class="head-login-con clearfix">
+			<a class="logo fl" href="#"></a><a class="fr a-register"
+				href="${ctx}/base/register">注册</a>
+		</div>
+	</div>
+	<!-- 头部 结束 -->
+
+	<!-- 内容 开始 -->
+	<form id="loginForm" method="post" action="${ctx}/base/login" class="cmxform" role="form">
+		<div class="main">
+			<div class="main-cont login clearfix">
+				<div class="fr loginR">
+					<h3></h3>
+					<ul>
+						<li class="hover"><input id="username" class="inp-user hover disap"
+							name="username" type="text" placeholder="请输入用户名/邮箱/手机号码" /></li>
+						<li><input id="password" class="inp-pwd disap" name="password"
+							type="password" placeholder="请输入密码" /></li>
+						#if($error != "")
+						<li class="login_error">
+							登录失败:$!{error}
+						</li>
+						#end
+						<li class="special clearfix">
+						<div class="com_check_off check_margin" type="check" group="rememberMe_group" data="true"></div><input type="hidden" name="rememberMe" value=""/>
+						记住用户名
+							<a class="fr get_password" href="#">找回密码</a></li>
+						<!-- <li><a><input class="btn" type="submit" id="login" value="登录"/></a></li> -->
+						<li><a href="#" onclick="do_submit();" id="login" class="btn">登录</a></li>
+					</ul>
+					<span class="tel"><em class="icon-phone"></em><em>服务热线：</em><em
+						class="c-green fz-20">95599</em></span> <span><em
+						class="c-green fz-14 mr15">第三方帐号登录</em><a href="第三方账号sina.html"
+						class="icon-sina"></a><a href="第三方账号qq.html" class="icon-qq"></a><a
+						href="第三方账号nh.html" class="icon-nh"></a></span>
+				</div>
+			</div>
+		</div>
+	</form>
+	<!-- 内容 结束 -->
+<!-- 弹出层 找回密码  开始2013年11月17日张慧荣增加 -->
+<form id="inputMobileCodeForm" method="post" class="cmxform" role="form">
+    <div class="pop popne pop_estimate_list hr_findpassword" style="width:450px; margin:0 auto; position:fixed; z-index:10;display:none">
+        <h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>找回密码</h3>
+        <div class="pop_con">
+             <div class="pop-con-bd clearfix">
+             	<ul class="hr_findnum fz-14">
+                	<li><label class="hr_pop_width align-right">手机号码：</label><input class="hr_numinp mr10" type="text" id="mobile" name="mobile" value="" /><a class="hr_verify hr_mouseover hr_sendcode" id="sendCodeBtn" href="#">发送验证码</a></li>
+                    <li><label class="hr_pop_width align-right">验证码：</label><input class="hr_numinp mr10" type="text" id="code" name="code" value="" /><label class="codeError" style="color:#ff0000"></label></li>
+                </ul>
+             </div>
+        </div>
+        <div class="btn-box">
+        	<a class="w-btn1 hr_btn_width" id="findPwdBtn" style="cursor:pointer">找回密码</a>
+        </div>
+    </div>
+</form>
+    <form id="resetPwdForm" method="post" class="cmxform" role="form">
+    <div class="pop popne pop_estimate_list hr_resetpassword" style="width:450px;margin:0 auto; z-index:10; position:fixed;display:none">
+        <h3 class="pop_h3"><a class="icon_pop_close" href="#"></a>找回密码</h3>
+        <div class="pop_con">
+             <div class="pop-con-bd clearfix">
+             	<ul class="hr_findnum fz-14">
+                	<li><label class="hr_pop_width hr_pop_newidth align-right">登陆密码：</label><input class="hr_numinp mr10" type="password" id="pwd" name="pwd" value="" /></li>
+                    <li><label class="hr_pop_width hr_pop_newidth align-right">确认密码：</label><input class="hr_numinp" type="password" id="pwdAgain" name="pwdAgain" value="" /><input type="hidden" id="mobile2" name="mobile2" /></li>
+                </ul>
+             </div>
+        </div>
+        <div class="btn-box">
+        	<a class="w-btn1 hr_btn_width" id="savePwdnLoginBtn" style="cursor:pointer">保存并登陆</a>
+        </div>
+    </div>
+    </form>
+    
+    <script type="text/javascript" src="${ctx}/static/js/base/login/form-validate.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/base/phoneValidate/phoneValidate.js"></script>
+	#* 页脚 开始 *#
+ 	#parse("common/footer.html")
+	#* 页脚 结束 *#
+</body>
+</html>

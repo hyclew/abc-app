@@ -1,0 +1,57 @@
+<div class="table-box clearfix">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-20 w-table1 w-table1-s">
+    <tr>
+      <th class="align-center">序号</th>
+      <th class="align-center">项目编号</th>
+      <th class="align-center">贷款产品</th>
+      <th class="align-center">期限</th>
+      <th class="align-center">利率</th>
+      <th class="align-center">贷款金额（元）</th>
+      <th class="align-center">申请日期</th>
+      <th class="align-center">操作员</th>
+      <th class="align-center">操作</th>
+    </tr>
+ #if($pager.result.size()>0)
+#foreach($map in $!{pager.result})
+  #if($velocityCount%2==0) #* 判断处理*#
+ <tr>
+      <td class="align-center">$!{map.id}</td>
+      <td class="align-center">$!{map.no}</td>
+      <td class="align-center">$!{map.productName}</td>
+      <td class="align-center">$!{map.dateRate}个月</td>
+      #*number.format数字格式化  可用值[currency:金额, integer:整数,number:千分位(默认),percent:百分数]*#
+      <td class="align-center">$number.format("percent",$!{map.rate})</td>
+      #*math.roundTo保留小数位数*#
+      <td class="align-right">$number.format("currency", $math.roundTo("2", $map.money))</td>#*先四舍五入保留2位小数，再千分位格式化*#
+      #*date.format日期格式化*#
+      <td class="align-center">$date.format("yyyy-MM-dd", $map.time)</td>#*date.format日期格式化*#
+      <td class="align-center">$!{map.optName}</td>
+      <td class="align-center"><a href="我要借款-银行贷款-待审核项目-审核贷款申请详情.html" class="a-sign">通过</a><span class="line">|</span><a href="#" class="a-pay">驳回</a></td>
+    </tr>
+    #else
+       <tr>
+            <td class="align-center">$!{map.id}</td>
+		    <td class="align-center">$!{map.no}</td>
+		    <td class="align-center">$!{map.productName}</td>
+		    <td class="align-center">$!{map.dateRate}个月</td>
+            <td class="align-center">$number.format("percent",$!{map.rate})</td>
+            <td class="align-right">$number.format($math.roundTo("2", $map.money))</td>
+            <td class="align-center">$date.get('yyyy-MM-dd')</td>
+            <td class="align-center">$!{map.optName}</td>
+            <td class="align-center"><a href="我要借款-银行贷款-待审核项目-审核贷款申请详情.html" class="a-sign">通过</a><span class="line">|</span><a href="#" class="a-pay">驳回</a></td>
+          </tr>
+    #end
+  #end
+ #else
+<tr>
+  <td colspan="8" align="center">暂无数据！</td>
+    </tr>
+ #end 
+</table>       
+</div>
+#**
+ * 分页条
+ * $pager 为com.abchina.pancloud.paginator.vo.Page对象 page中需要pageNo(当前页码), pageSize(每页条数), totalCount(记录总条数)
+ * 6 为分页条页码个数
+ **# 
+#pagination($pager, 10)

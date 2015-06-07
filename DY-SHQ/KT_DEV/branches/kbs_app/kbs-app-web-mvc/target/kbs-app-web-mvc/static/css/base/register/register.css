@@ -1,0 +1,7 @@
+#pwdstrength{color:#999;line-height:22px;clear: both;float: none;position:absolute; top:17px; left:380px;}
+#pwdstrength b{float:left;width:104px;height:13px;overflow:hidden;margin-top:5px;*margin-top:3px;}
+.strengthA b{background:url(pwdstrength.gif) no-repeat 0 0;}
+.strengthB b{background:url(pwdstrength.gif) no-repeat 0 -13px;}
+.strengthC b{background:url(pwdstrength.gif) no-repeat 0 -26px;}
+.login_pos{position:relative;}
+.register ul .login_pos span{ border:none;}

@@ -1,0 +1,36 @@
+<div class="table-box clearfix">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0" class="mt-20 w-table1 w-table1-s">
+		<tr>
+			<td class="align-center">主键</td>
+			<td class="align-center">归属产品代码</td>
+			<td class="align-center">消息模板代码</td>
+			<td class="align-center">发布人编码</td>
+			<td class="align-center">发布人</td>
+			<td class="align-center">发布人手机号码</td>
+			<td class="align-center">消息主题</td>
+			<td class="align-center">金额列（格式化测试）</td>
+			<td class="align-center">操作</td>
+		</tr>
+		#if($pager.result.size()>0) 
+		   #foreach($it in $!{pager.result})
+				<tr>
+					<td class="align-center">$!{it.recNo}</td>
+					<td class="align-center">$!{it.productCode}</td>
+					<td class="align-center">$!{it.templateCode}</td>
+					<td class="align-center">$!{it.senderNo}</td>
+					<td class="align-center">$!{it.sender}</td>
+					<td class="align-center">$!{it.senderMobile}</td>
+					<td class="align-left">$!{it.msgSubject}</td>
+					<td class="align-left"><span class="ui-currency">12412412</span></td>
+				 	<td class="align-center"><a class="btn ui-msg-list-view" data="$!{it.recNo}" href="#">查看</a></td>
+				</tr>
+		   #end 
+		#else
+		<tr>
+			<td colspan="3" align="center">暂无数据！</td>
+		</tr>
+		#end
+	</table>
+</div>
+#pagination($pager, 10)
+	

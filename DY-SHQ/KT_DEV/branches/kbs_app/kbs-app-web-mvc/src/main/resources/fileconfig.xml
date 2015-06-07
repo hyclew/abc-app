@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+	<remoteAddress>http://10.233.94.26:9082/FSS/BA_FMS/FileServiceSimple?wsdl</remoteAddress>
+	<accessInfo>
+		<applicationId>APP99001</applicationId>
+		<checkCode>CD1C6A6B33D48C0A539CDBC4418D1DDB</checkCode>
+		<branchId>120000095</branchId>
+		<userNumber>csw</userNumber>
+		<userRole>11</userRole>
+	</accessInfo>
+</configurations>

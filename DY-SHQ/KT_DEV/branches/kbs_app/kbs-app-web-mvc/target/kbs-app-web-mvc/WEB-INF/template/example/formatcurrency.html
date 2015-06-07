@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模块-子模块</title> #parse("common/include.html")
+<!-- 模块 样式 -->
+<link rel="stylesheet" type="text/css" href="${ctx}/static/css/base/main.css" />
+</head>
+<body>
+	<!-- 头部 开始 -->
+	#parse("common/top.html")
+	<!-- 头部 结束 -->
+	<!-- 导航 开始 -->
+	#parse("common/topnav.html")
+	<!-- 导航 结束 -->
+	<!-- 内容 开始 -->
+	<div class="main">
+		<div class="content hr_conten_bg wrap">
+			<div class="info-container clearfix">
+					<ul class="hr_inf1">
+						<li>
+						 <label class="hr_lab hr_infowid hr_ten_r">金额1：</label> 
+						   <span class="span-input"> <input class="hr_inp ml10 ui-input currency" type="text" name="currency1" value="" />
+						 </span>
+						</li>
+						<li>
+						 <label class="hr_lab hr_infowid hr_ten_r">金额2：</label> 
+						   <span class="span-input"> <input class="hr_inp ml10 ui-input currency" type="text" name="currency2" value="" />
+						 </span>
+						</li>
+							<li>
+						 <label class="hr_lab hr_infowid hr_ten_r">金额3：</label> 
+						   <span class="span-input"> 
+						   <input class="hr_inp ml10 ui-input currencyCN" type="text" name="currency3" value="" maxlength="16" />
+						      转大写:&nbsp;&nbsp;&nbsp;&nbsp;<span id="upperCaseCurrencyId"></span>
+						   
+						 </span>
+						</li>
+					</ul>
+			</div>
+		</div>
+	</div>	
+			<!-- 内容 结束 -->
+			<!-- 页脚 开始 -->
+			#parse("common/footer.html")
+			<!-- 页脚 结束 -->
+			<!-- 模块 脚本 -->
+			<script type="text/javascript" src="${ctx}/static/js/example/formatcurrency.js"></script>
+</body>
+</html>

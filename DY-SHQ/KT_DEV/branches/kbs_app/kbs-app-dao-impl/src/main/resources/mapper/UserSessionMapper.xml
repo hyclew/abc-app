@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="UserSession">
+
+	<resultMap id="userSessionMap" type="com.kingteller.bs.domain.user.UserSession">
+		<id column="sessionid" property="sessionId" jdbcType="VARCHAR" />
+		<result column="username" property="username" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="CHAR" />
+	</resultMap>
+
+	<insert id="insertUserSession" parameterType="com.kingteller.bs.domain.user.UserSession"
+		keyProperty="sessionid" useGeneratedKeys="false">
+		insert into usersession(
+		sessionid,
+		username,
+		status
+		) values(
+		#{sessionId,jdbcType=VARCHAR},
+		#{username,jdbcType=VARCHAR},
+		#{status,jdbcType=CHAR}
+		)
+	</insert>
+	
+	<select id="queryBySessionId" parameterType="java.lang.String" resultMap="userSessionMap">
+		select * from usersession where sessionid=#{sessionId,jdbcType=VARCHAR}
+	</select>
+
+	<update id="updateStatusByUsername" parameterType="com.kingteller.bs.domain.user.UserSession">
+		update usersession set status = #{status} where username=#{username}
+	</update>
+</mapper>

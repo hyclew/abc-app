@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BusinessBase">
+
+	<resultMap id="businessBaseMap" type="com.kingteller.bs.domain.business.BusinessBase">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="address" property="address" jdbcType="VARCHAR" />
+		<result column="geo" property="geo" jdbcType="VARCHAR" />
+		<result column="status" property="status" jdbcType="CHAR" />
+		<result column="updatetime" property="updateTime" jdbcType="TIMESTAMP" />
+		<result column="productcatalogueid" property="productcatalogueid" jdbcType="BIGINT" />
+		<result column="paytool" property="paytool" jdbcType="VARCHAR" />
+		<result column="userid" property="userid" jdbcType="BIGINT"/>
+		<result column="contractname" property="contractname" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<!-- 商家信息录入 -->
+	<insert id="insertBusinessBase" parameterType="com.kingteller.bs.domain.business.BusinessBase"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into businessbase(
+			name, 
+			address, 
+			geo, 
+			status, 
+			updatetime, 
+			productcatalogueid,
+			paytool,
+			userid,
+			contractname
+		) values(
+			#{name,jdbcType=VARCHAR}, 
+			#{address,jdbcType=VARCHAR}, 
+			#{geo,jdbcType=VARCHAR}, 
+			#{status,jdbcType=CHAR}, 
+			CURRENT_TIMESTAMP,
+			#{productcatalogueid,jdbcType=BIGINT}, 
+			#{paytool,jdbcType=VARCHAR}, 
+			#{userid,jdbcType=BIGINT},
+			#{contractname,jdbcType=VARCHAR}
+		)
+		<selectKey resultType="Long" keyProperty="id">
+			select @@identity as inserted
+		</selectKey>
+	</insert>
+	
+
+	<!-- 根据用户ID查找 -->
+	<select id="queryBusinessBaseByUserId" parameterType="java.lang.String"
+		resultMap="businessBaseMap">
+		select * from businessbase where userid=#{userid,jdbcType=BIGINT}
+	</select>
+	
+	<!-- 根据商家名称查找 -->
+	<select id="queryBusinessBaseByName" parameterType="java.lang.String"
+		resultMap="businessBaseMap">
+		select * from businessbase where name=#{name,jdbcType=BIGINT}
+	</select>
+	
+	<select id="queryBusinessById" parameterType="java.lang.Long" resultMap="businessBaseMap">
+		select * from businessbase where id=#{id, jdbcType=BIGINT}
+	</select>
+	
+	<!-- 更新商家状态 -->
+	<update id="updateBusinessBaseBStatus" parameterType="map">
+		update businessbase set status=#{status} where id=#{id,jdbcType=BIGINT}
+	</update>
+	
+	
+	<select id="queryBusinessBaseByAll" resultMap="businessBaseMap" parameterType="map" >
+   		select * from businessbase where status=0
+    	<if test="contractname != ''">
+     	 	and	contractname = #{contractname,jdbcType=VARCHAR} 
+     	</if>
+    	<if test="name != ''">
+     		and	name = #{name,jdbcType=VARCHAR} 
+     	</if>
+  </select>
+  
+  <!-- 更新商家状态 -->
+	<update id="updateBusinessBase" parameterType="map">
+		update businessbase set name=#{name},address=#{address},contractname=#{contractname} where id=#{id,jdbcType=BIGINT}
+	</update>
+	
+	
+	
+</mapper>

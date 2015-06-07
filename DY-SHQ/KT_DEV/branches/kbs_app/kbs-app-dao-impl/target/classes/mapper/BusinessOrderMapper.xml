@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BusinessOrder">
+
+	<resultMap id="businessOrderMap" type="com.kingteller.bs.domain.order.BusinessOrder">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="orderbaseid" property="orderBaseId" jdbcType="BIGINT" />
+		<result column="businessid" property="businessId" jdbcType="BIGINT" />
+		<result column="ordernumber" property="orderNumber" jdbcType="VARCHAR" />
+		<result column="count" property="count" jdbcType="INTEGER" />
+		<result column="totalcash" property="totalCash" jdbcType="FLOAT" />
+		<result column="detailedaduit" property="detailedAduit" jdbcType="CHAR" />
+		<result column="status" property="status" jdbcType="CHAR" />
+		<result column="updatetime" property="updateTime" jdbcType="TIMESTAMP" />
+	</resultMap>
+	
+	<select id="getBusinessOrderByOrderBaseId" parameterType="java.lang.Long" resultMap="businessOrderMap">
+		select * from businessorder where orderbaseid=#{orderBaseId, jdbcType=BIGINT}
+	</select>
+	
+	<insert id="insertBusinessOrder" parameterType="com.kingteller.bs.domain.order.BusinessOrder"
+		keyProperty="id" useGeneratedKeys="true">
+		insert into businessorder(
+			orderbaseid, 
+			businessid, 
+			ordernumber, 
+			count, 
+			totalcash, 
+			detailedaduit, 
+			status, 
+			updatetime
+		) values(
+			#{orderBaseId, jdbcType=BIGINT}, 
+			#{businessId, jdbcType=BIGINT}, 
+			#{orderNumber, jdbcType=VARCHAR}, 
+			#{count, jdbcType=INTEGER}, 
+			#{totalCash, jdbcType=FLOAT}, 
+			#{detailedAduit, jdbcType=CHAR}, 
+			#{status, jdbcType=CHAR}, 
+			#{updateTime, jdbcType=TIMESTAMP}
+		)
+		<selectKey resultType="Long" keyProperty="id">
+			select @@identity as inserted
+		</selectKey>
+	</insert>
+
+</mapper>

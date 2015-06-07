@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/theme_color" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="我的订单"
+            android:textColor="@color/white_color"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/im_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/im_return" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <ImageView
+            android:id="@+id/iv_stay_ayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/hui_stay_ayment" />
+
+        <ImageView
+            android:id="@+id/iv_stay_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/bai_stay_pay" />
+
+        <ImageView
+            android:id="@+id/iv_stay_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/bai_stay_finish" />
+    </LinearLayout>
+
+    <View 
+        android:layout_width="match_parent"
+		android:layout_height="0.5dp"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp"
+		android:background="#adadaf"
+        />
+
+    <ListView
+        android:id="@+id/lv_myorder_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

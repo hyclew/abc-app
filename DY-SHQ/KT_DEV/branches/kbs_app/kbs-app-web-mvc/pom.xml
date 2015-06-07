@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.kingteller</groupId>
+		<artifactId>app</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>kbs-app-web-mvc</artifactId>
+	<name>kbs-app-web-mvc</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+	 	<finalName>${project.artifactId}</finalName>
+		
+	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.kingteller</groupId>
+			<artifactId>kbs-app-domains</artifactId>
+			<version>${app.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.kingteller</groupId>
+			<artifactId>kbs-app-service-core</artifactId>
+			<version>${app.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.kingteller</groupId>
+			<artifactId>kbs-app-service-apis</artifactId>
+			<version>${app.version}</version><!-- appversion -->
+		</dependency>
+
+		<dependency>
+			<groupId>com.kingteller</groupId>
+			<artifactId>kbs-app-service-impl</artifactId>
+			<version>${app.version}</version><!-- appversion -->
+		</dependency>
+		<dependency>
+			<groupId>velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>${velocity.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>velocity-tools</groupId> 
+			<artifactId>velocity-tools</artifactId>
+			<version>${velocity-tools.version}</version>
+		</dependency> 
+		
+		<dependency>
+			<groupId>commons-lang</groupId>
+		  	<artifactId>commons-lang</artifactId>
+		  	<version>${commons-lang.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+		  	<artifactId>commons-collections</artifactId>
+		  	<version>3.2.1</version>
+		</dependency>
+				
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson-mapper-asl.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+			  
+		   	<scope>provided</scope>
+		   	
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>${jsp-api.version}</version>
+			 
+		   	<scope>provided</scope>
+		   
+		</dependency>
+		<dependency>
+			<groupId>jstl</groupId> 
+		   <artifactId>jstl</artifactId>
+		   <version>1.2</version> 
+		   <!--  
+		   	<scope>provided</scope>
+		   -->
+		 </dependency> 
+		
+		<dependency> 
+			<groupId>taglibs</groupId> 
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+			<!--   
+			<scope>provided</scope>
+			-->
+		</dependency> 
+	</dependencies>
+	<packaging>war</packaging>
+
+</project>
