@@ -22,7 +22,7 @@
 
 #pragma mark --登录
 
-+ (NSURLSessionDataTask *)getValidateCodeWithBlock:(void (^)(NSDictionary *info, NSError *error))block and:(NSDictionary *)parameters{
++ (AFHTTPRequestOperation *)getValidateCodeWithBlock:(void (^)(NSDictionary *info, NSError *error))block and:(NSDictionary *)parameters{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer=[AFJSONRequestSerializer serializer];
     //设置返回格式
@@ -56,7 +56,7 @@
 
 #pragma mark --注册
 
-+ (NSURLSessionDataTask *)inputValidateCodeWithBlock:(void (^)(NSDictionary *infoDic, NSError *error))block and:(NSDictionary *)parameters{
++ (AFHTTPRequestOperation *)inputValidateCodeWithBlock:(void (^)(NSDictionary *infoDic, NSError *error))block and:(NSDictionary *)parameters{
     
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -66,9 +66,9 @@
 
     NSString *url = Regist_url;
     
-    NSURL *urls = [NSURL URLWithString:url];
+    //NSURL *urls = [NSURL URLWithString:url];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:urls];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:urls];
     //申明返回的结果是json类型
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     //申明请求的数据是json类型
@@ -90,7 +90,7 @@
   }
 
 #pragma mark --头像上传
-+ (NSURLSessionDataTask *)upPhotoWithBlock:(void (^)(NSDictionary *infoDic, NSError *error))block and:(NSDictionary *)parameters{
++ (AFHTTPRequestOperation *)upPhotoWithBlock:(void (^)(NSDictionary *infoDic, NSError *error))block and:(NSDictionary *)parameters{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer=[AFJSONRequestSerializer serializer];
     //设置返回格式
@@ -100,7 +100,7 @@
     
     NSURL *urls = [NSURL URLWithString:url];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:urls];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:urls];
     //申明返回的结果是json类型
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     //申明请求的数据是json类型
@@ -123,7 +123,7 @@
 }
 
 #pragma mark--我的订单
-+ (NSURLSessionDataTask *)myOrderWithBlock:(void (^)(NSDictionary *infoDic, NSError *error))block and:(NSDictionary *)parameters{
++ (AFHTTPRequestOperation *)myOrderWithBlock:(void (^)(NSDictionary *infoDic, NSError *error))block and:(NSDictionary *)parameters{
     NSUserDefaults *userDefaults=[NSUserDefaults standardUserDefaults];
     NSString *sessionId = [userDefaults objectForKey:@"sessionId"];
     NSLog(@"会话id为：%@",sessionId);
@@ -138,7 +138,7 @@
     NSString *url =[NSString stringWithFormat:@"http://192.168.2.103:8090/order/userorderbases/%@/%@",session,detailedAduit];
     NSURL *urls = [NSURL URLWithString:url];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:urls];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:urls];
   //  申明返回的结果是json类型
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
   //  申明请求的数据是json类型
@@ -158,7 +158,7 @@
     }];
 }
 #pragma mark --验证码接口
-+ (NSURLSessionDataTask *)validateCodeWithBlock:(void (^)(NSDictionary *infoDic, NSError *error))block and:(NSDictionary *)parameters{
++ (AFHTTPRequestOperation *)validateCodeWithBlock:(void (^)(NSDictionary *infoDic, NSError *error))block and:(NSDictionary *)parameters{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer=[AFJSONRequestSerializer serializer];
     //设置返回格式
@@ -168,7 +168,7 @@
     
     NSURL *urls = [NSURL URLWithString:url];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:urls];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:urls];
     //申明返回的结果是json类型
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     //申明请求的数据是json类型
@@ -189,7 +189,7 @@
     }];
 }
 #pragma mark--订单详情
-+ (NSURLSessionDataTask *)orderDetailWithBlock:(void (^)(NSDictionary *infoDic, NSError *error))block and:(NSDictionary *)parameters{
++ (AFHTTPRequestOperation *)orderDetailWithBlock:(void (^)(NSDictionary *infoDic, NSError *error))block and:(NSDictionary *)parameters{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer=[AFJSONRequestSerializer serializer];
     //设置返回格式
@@ -200,7 +200,7 @@
     
     NSURL *urls = [NSURL URLWithString:url];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:urls];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:urls];
     //申明返回的结果是json类型
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     //申明请求的数据是json类型
