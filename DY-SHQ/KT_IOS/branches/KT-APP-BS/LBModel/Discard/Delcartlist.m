@@ -11,7 +11,9 @@
 @implementation Delcartlist
 
 
-
++ (void)postWithUrl:(NSString *)url params:(NSDictionary *)params :(successBlock)success failure:(failureBlock)failure{
+    
+}
 
 - (void)postWithUrl:(NSString *)url params:(NSDictionary *)params success:(successBlock)success failure:(failureBlock)failure
 {

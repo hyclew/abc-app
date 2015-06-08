@@ -241,7 +241,7 @@
                 _goodDic2 = [[NSDictionary alloc]init];
                 _goodDic2 = [obj valueForKeyPath:@"customerOrderDetailed"];
                 goodModel.salesPrice = _goodDic2[@"salePrice"];
-                goodModel.numbers = _goodDic2[@"numbers"];
+                goodModel.numbers = [_goodDic2[@"numbers"] intValue];
                 goodModel.total = _goodDic2[@"total"];
             }];
             [_orderDetailArray addObject:orderDetailOne];

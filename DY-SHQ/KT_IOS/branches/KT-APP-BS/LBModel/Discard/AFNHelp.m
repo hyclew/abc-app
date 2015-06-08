@@ -30,9 +30,9 @@
     
     NSString *url = Login_url;
     
-    NSURL *urls = [NSURL URLWithString:url];
+    //NSURL *urls = [NSURL URLWithString:url];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:urls];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:urls];
     //申明返回的结果是json类型
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     //申明请求的数据是json类型
@@ -98,7 +98,7 @@
     
     NSString *url = UpHeadImage_url;
     
-    NSURL *urls = [NSURL URLWithString:url];
+    //NSURL *urls = [NSURL URLWithString:url];
     
     //NSURLRequest *request = [NSURLRequest requestWithURL:urls];
     //申明返回的结果是json类型
@@ -136,7 +136,7 @@
     NSString *detailedAduit = @"1";
    // NSString *url =[NSString stringWithFormat:@"http://192.168.2.103:8090/order/userorderbases/%@/%@",sessionId,detailedAduit];
     NSString *url =[NSString stringWithFormat:@"http://192.168.2.103:8090/order/userorderbases/%@/%@",session,detailedAduit];
-    NSURL *urls = [NSURL URLWithString:url];
+    //NSURL *urls = [NSURL URLWithString:url];
     
     //NSURLRequest *request = [NSURLRequest requestWithURL:urls];
   //  申明返回的结果是json类型
@@ -166,7 +166,7 @@
     
     NSString *url = Validate_url;
     
-    NSURL *urls = [NSURL URLWithString:url];
+    //NSURL *urls = [NSURL URLWithString:url];
     
     //NSURLRequest *request = [NSURLRequest requestWithURL:urls];
     //申明返回的结果是json类型
@@ -198,7 +198,7 @@
     NSString *url = [NSString stringWithFormat:@"http://192.168.2.103:8090/order/orderdetaileds/%@",orderBaseId];
    // NSString *url1 = OrderDetail_url;
     
-    NSURL *urls = [NSURL URLWithString:url];
+    //NSURL *urls = [NSURL URLWithString:url];
     
     //NSURLRequest *request = [NSURLRequest requestWithURL:urls];
     //申明返回的结果是json类型
