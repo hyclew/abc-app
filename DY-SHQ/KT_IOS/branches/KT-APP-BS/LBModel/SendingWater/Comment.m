@@ -18,7 +18,7 @@
         return nil;
     }
     
-    self.id = (NSUInteger)[[dic valueForKeyPath:@"id"] integerValue];
+    self.id = [[dic valueForKeyPath:@"id"] intValue];
     self.username = [dic valueForKeyPath:@"username"];
     self.comment = [dic valueForKeyPath:@"comment"];
     

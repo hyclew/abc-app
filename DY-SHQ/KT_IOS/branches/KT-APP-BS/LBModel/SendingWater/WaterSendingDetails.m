@@ -45,7 +45,8 @@
                  blockArray:(void (^)(WaterSendingDetails * waterSendingDetails,NSError *error,ErrorMessage *errorMessage))block
 {
     
-    NSString *pathparam = [NSString stringWithFormat:@"%d/%d/%d", (int)waterSending.id,maxId,dataCount];
+    NSString *pathparam = [NSString stringWithFormat:@"%d/%ld/%d",
+                           waterSending.id,maxId,dataCount];
     NSLog(@"pathparam:%@", pathparam);
     
     NSString *url=[[Conf urlWaterDetailComment]  stringByAppendingString:pathparam];
@@ -58,7 +59,7 @@
         if ([[result objectForKey:@"errorCode"] isEqualToString:@"0000"]) {
             NSArray *resultArr = [responseObject objectForKey:@"responseBody"];
            for (NSDictionary *dict in resultArr) {
-               Comment *commLocal = [Comment commentWithDic:dict];
+               
                [waterSendingDetails.comments addObject: [Comment commentWithDic:dict]];
                waterSendingDetails.firstComment= [Comment commentWithDic:dict];
            }
