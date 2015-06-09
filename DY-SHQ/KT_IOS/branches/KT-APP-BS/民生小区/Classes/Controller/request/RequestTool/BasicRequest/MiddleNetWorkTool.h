@@ -19,7 +19,7 @@ typedef void (^failureBlock)(NSError *error);
 
 @interface MiddleNetWorkTool : NSObject
 
-#warning 需要预先对404等进行预先处理
+//#warning 需要预先对404等进行预先处理
 
 SingletonH(BasicNetWork)
 
