@@ -152,6 +152,16 @@
 		0ECED4701B0F0B5200737354 /* OrderDetailOneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ECED46E1B0F0B5200737354 /* OrderDetailOneCell.xib */; };
 		0ECED4781B0F639600737354 /* ljzf(1).png in Resources */ = {isa = PBXBuildFile; fileRef = 0ECED4771B0F639600737354 /* ljzf(1).png */; };
 		41543090D3579329EE15FC76 /* libPods-BSTransfer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E2EE8D108CE037F8FAF7AD /* libPods-BSTransfer.a */; };
+		843324261B26DE4800BA9AAC /* ErrorMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 843324241B26DE4800BA9AAC /* ErrorMessage.h */; };
+		843324271B26DE4800BA9AAC /* ErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 843324251B26DE4800BA9AAC /* ErrorMessage.m */; };
+		843324301B26DE6800BA9AAC /* MyOrderModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 843324281B26DE6800BA9AAC /* MyOrderModel.h */; };
+		843324311B26DE6800BA9AAC /* MyOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 843324291B26DE6800BA9AAC /* MyOrderModel.m */; };
+		843324321B26DE6800BA9AAC /* orderDetailModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8433242A1B26DE6800BA9AAC /* orderDetailModel.h */; };
+		843324331B26DE6800BA9AAC /* orderDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433242B1B26DE6800BA9AAC /* orderDetailModel.m */; };
+		843324341B26DE6800BA9AAC /* orderDetailOneModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8433242C1B26DE6800BA9AAC /* orderDetailOneModel.h */; };
+		843324351B26DE6800BA9AAC /* orderDetailOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433242D1B26DE6800BA9AAC /* orderDetailOneModel.m */; };
+		843324361B26DE6800BA9AAC /* RegistModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8433242E1B26DE6800BA9AAC /* RegistModel.h */; };
+		843324371B26DE6800BA9AAC /* RegistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8433242F1B26DE6800BA9AAC /* RegistModel.m */; };
 		843DA8781B21D56200924AE6 /* CopyConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843DA8521B21D56200924AE6 /* CopyConnection.framework */; };
 		843DA8791B21D56300924AE6 /* FacebookConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843DA8531B21D56200924AE6 /* FacebookConnection.framework */; };
 		843DA87A1B21D56300924AE6 /* MailConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843DA8541B21D56200924AE6 /* MailConnection.framework */; };
@@ -199,8 +209,6 @@
 		849D9C1A1B223F0100D4D59E /* LBControl.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 849D9C021B223F0000D4D59E /* LBControl.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		849D9C241B2240B700D4D59E /* Conf.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C221B2240B700D4D59E /* Conf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		849D9C251B2240B700D4D59E /* Conf.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C231B2240B700D4D59E /* Conf.m */; };
-		849D9C291B2240C000D4D59E /* ErrorMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C271B2240C000D4D59E /* ErrorMessage.h */; };
-		849D9C2A1B2240C000D4D59E /* ErrorMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C281B2240C000D4D59E /* ErrorMessage.m */; };
 		849D9C361B2240D200D4D59E /* AFAppDotNetAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C2D1B2240D200D4D59E /* AFAppDotNetAPIClient.h */; };
 		849D9C371B2240D200D4D59E /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C2E1B2240D200D4D59E /* AFAppDotNetAPIClient.m */; };
 		849D9C381B2240D200D4D59E /* AFNHelp.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C2F1B2240D200D4D59E /* AFNHelp.h */; };
@@ -210,12 +218,6 @@
 		849D9C3C1B2240D200D4D59E /* LoginMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C331B2240D200D4D59E /* LoginMessage.h */; };
 		849D9C3D1B2240D200D4D59E /* SendMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C341B2240D200D4D59E /* SendMessage.h */; };
 		849D9C3E1B2240D200D4D59E /* ValidateMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C351B2240D200D4D59E /* ValidateMessage.h */; };
-		849D9C461B2240DB00D4D59E /* MyOrderModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C401B2240DB00D4D59E /* MyOrderModel.h */; };
-		849D9C471B2240DB00D4D59E /* MyOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C411B2240DB00D4D59E /* MyOrderModel.m */; };
-		849D9C481B2240DB00D4D59E /* orderDetailModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C421B2240DB00D4D59E /* orderDetailModel.h */; };
-		849D9C491B2240DB00D4D59E /* orderDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C431B2240DB00D4D59E /* orderDetailModel.m */; };
-		849D9C4A1B2240DB00D4D59E /* orderDetailOneModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C441B2240DB00D4D59E /* orderDetailOneModel.h */; };
-		849D9C4B1B2240DB00D4D59E /* orderDetailOneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C451B2240DB00D4D59E /* orderDetailOneModel.m */; };
 		849D9C561B2240F200D4D59E /* Comment.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C4F1B2240F200D4D59E /* Comment.h */; };
 		849D9C571B2240F200D4D59E /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D9C501B2240F200D4D59E /* Comment.m */; };
 		849D9C581B2240F200D4D59E /* WaterSending.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D9C521B2240F200D4D59E /* WaterSending.h */; };
@@ -581,6 +583,16 @@
 		68078520C3A270F91A4F8CF0 /* libPods-LBModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LBModel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6813D6EB19C57E4F8318DE85 /* Pods-LBModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LBModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LBModel/Pods-LBModel.debug.xcconfig"; sourceTree = "<group>"; };
 		6D5EDE42CF9D9F0A52EA2193 /* libPods-BSControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BSControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		843324241B26DE4800BA9AAC /* ErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorMessage.h; sourceTree = "<group>"; };
+		843324251B26DE4800BA9AAC /* ErrorMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorMessage.m; sourceTree = "<group>"; };
+		843324281B26DE6800BA9AAC /* MyOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderModel.h; sourceTree = "<group>"; };
+		843324291B26DE6800BA9AAC /* MyOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderModel.m; sourceTree = "<group>"; };
+		8433242A1B26DE6800BA9AAC /* orderDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderDetailModel.h; sourceTree = "<group>"; };
+		8433242B1B26DE6800BA9AAC /* orderDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderDetailModel.m; sourceTree = "<group>"; };
+		8433242C1B26DE6800BA9AAC /* orderDetailOneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderDetailOneModel.h; sourceTree = "<group>"; };
+		8433242D1B26DE6800BA9AAC /* orderDetailOneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderDetailOneModel.m; sourceTree = "<group>"; };
+		8433242E1B26DE6800BA9AAC /* RegistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistModel.h; sourceTree = "<group>"; };
+		8433242F1B26DE6800BA9AAC /* RegistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistModel.m; sourceTree = "<group>"; };
 		843DA8521B21D56200924AE6 /* CopyConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CopyConnection.framework; sourceTree = "<group>"; };
 		843DA8531B21D56200924AE6 /* FacebookConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookConnection.framework; sourceTree = "<group>"; };
 		843DA8541B21D56200924AE6 /* MailConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MailConnection.framework; sourceTree = "<group>"; };
@@ -636,8 +648,6 @@
 		849D9C151B223F0100D4D59E /* LBControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LBControlTests.m; sourceTree = "<group>"; };
 		849D9C221B2240B700D4D59E /* Conf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conf.h; sourceTree = "<group>"; };
 		849D9C231B2240B700D4D59E /* Conf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conf.m; sourceTree = "<group>"; };
-		849D9C271B2240C000D4D59E /* ErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorMessage.h; path = ../Business/ErrorMessage.h; sourceTree = "<group>"; };
-		849D9C281B2240C000D4D59E /* ErrorMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ErrorMessage.m; path = ../Business/ErrorMessage.m; sourceTree = "<group>"; };
 		849D9C2D1B2240D200D4D59E /* AFAppDotNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAppDotNetAPIClient.h; sourceTree = "<group>"; };
 		849D9C2E1B2240D200D4D59E /* AFAppDotNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAppDotNetAPIClient.m; sourceTree = "<group>"; };
 		849D9C2F1B2240D200D4D59E /* AFNHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNHelp.h; sourceTree = "<group>"; };
@@ -647,12 +657,6 @@
 		849D9C331B2240D200D4D59E /* LoginMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginMessage.h; sourceTree = "<group>"; };
 		849D9C341B2240D200D4D59E /* SendMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendMessage.h; sourceTree = "<group>"; };
 		849D9C351B2240D200D4D59E /* ValidateMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateMessage.h; sourceTree = "<group>"; };
-		849D9C401B2240DB00D4D59E /* MyOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyOrderModel.h; sourceTree = "<group>"; };
-		849D9C411B2240DB00D4D59E /* MyOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyOrderModel.m; sourceTree = "<group>"; };
-		849D9C421B2240DB00D4D59E /* orderDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderDetailModel.h; sourceTree = "<group>"; };
-		849D9C431B2240DB00D4D59E /* orderDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderDetailModel.m; sourceTree = "<group>"; };
-		849D9C441B2240DB00D4D59E /* orderDetailOneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderDetailOneModel.h; sourceTree = "<group>"; };
-		849D9C451B2240DB00D4D59E /* orderDetailOneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderDetailOneModel.m; sourceTree = "<group>"; };
 		849D9C4F1B2240F200D4D59E /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		849D9C501B2240F200D4D59E /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
 		849D9C521B2240F200D4D59E /* WaterSending.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterSending.h; sourceTree = "<group>"; };
@@ -1457,8 +1461,8 @@
 		849D9C211B2240B700D4D59E /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				849D9C271B2240C000D4D59E /* ErrorMessage.h */,
-				849D9C281B2240C000D4D59E /* ErrorMessage.m */,
+				843324241B26DE4800BA9AAC /* ErrorMessage.h */,
+				843324251B26DE4800BA9AAC /* ErrorMessage.m */,
 				849D9C221B2240B700D4D59E /* Conf.h */,
 				849D9C231B2240B700D4D59E /* Conf.m */,
 			);
@@ -1482,6 +1486,14 @@
 		849D9C2C1B2240D200D4D59E /* Discard */ = {
 			isa = PBXGroup;
 			children = (
+				843324281B26DE6800BA9AAC /* MyOrderModel.h */,
+				843324291B26DE6800BA9AAC /* MyOrderModel.m */,
+				8433242A1B26DE6800BA9AAC /* orderDetailModel.h */,
+				8433242B1B26DE6800BA9AAC /* orderDetailModel.m */,
+				8433242C1B26DE6800BA9AAC /* orderDetailOneModel.h */,
+				8433242D1B26DE6800BA9AAC /* orderDetailOneModel.m */,
+				8433242E1B26DE6800BA9AAC /* RegistModel.h */,
+				8433242F1B26DE6800BA9AAC /* RegistModel.m */,
 				849D9C2D1B2240D200D4D59E /* AFAppDotNetAPIClient.h */,
 				849D9C2E1B2240D200D4D59E /* AFAppDotNetAPIClient.m */,
 				849D9C2F1B2240D200D4D59E /* AFNHelp.h */,
@@ -1498,12 +1510,6 @@
 		849D9C3F1B2240DB00D4D59E /* OrderItem */ = {
 			isa = PBXGroup;
 			children = (
-				849D9C401B2240DB00D4D59E /* MyOrderModel.h */,
-				849D9C411B2240DB00D4D59E /* MyOrderModel.m */,
-				849D9C421B2240DB00D4D59E /* orderDetailModel.h */,
-				849D9C431B2240DB00D4D59E /* orderDetailModel.m */,
-				849D9C441B2240DB00D4D59E /* orderDetailOneModel.h */,
-				849D9C451B2240DB00D4D59E /* orderDetailOneModel.m */,
 			);
 			path = OrderItem;
 			sourceTree = "<group>";
@@ -2155,23 +2161,24 @@
 			files = (
 				849D9C6A1B22410200D4D59E /* RegistModel.h in Headers */,
 				849D9C381B2240D200D4D59E /* AFNHelp.h in Headers */,
-				849D9C291B2240C000D4D59E /* ErrorMessage.h in Headers */,
 				849D9C3D1B2240D200D4D59E /* SendMessage.h in Headers */,
 				849D9C3A1B2240D200D4D59E /* Delcartlist.h in Headers */,
 				849D9C561B2240F200D4D59E /* Comment.h in Headers */,
+				843324341B26DE6800BA9AAC /* orderDetailOneModel.h in Headers */,
 				849D9C581B2240F200D4D59E /* WaterSending.h in Headers */,
+				843324301B26DE6800BA9AAC /* MyOrderModel.h in Headers */,
 				849D9C611B2240F900D4D59E /* CartList.h in Headers */,
 				849D9C241B2240B700D4D59E /* Conf.h in Headers */,
-				849D9C4A1B2240DB00D4D59E /* orderDetailOneModel.h in Headers */,
 				849D9C631B2240F900D4D59E /* ShoppingCart.h in Headers */,
 				849D9BE31B223ED600D4D59E /* LBModel.h in Headers */,
-				849D9C481B2240DB00D4D59E /* orderDetailModel.h in Headers */,
 				849D9C6C1B22410200D4D59E /* User.h in Headers */,
+				843324321B26DE6800BA9AAC /* orderDetailModel.h in Headers */,
+				843324261B26DE4800BA9AAC /* ErrorMessage.h in Headers */,
 				849D9C3C1B2240D200D4D59E /* LoginMessage.h in Headers */,
 				849D9C3E1B2240D200D4D59E /* ValidateMessage.h in Headers */,
 				849D9C5A1B2240F200D4D59E /* WaterSendingDetails.h in Headers */,
+				843324361B26DE6800BA9AAC /* RegistModel.h in Headers */,
 				849D9C361B2240D200D4D59E /* AFAppDotNetAPIClient.h in Headers */,
-				849D9C461B2240DB00D4D59E /* MyOrderModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2759,13 +2766,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				843324271B26DE4800BA9AAC /* ErrorMessage.m in Sources */,
+				843324311B26DE6800BA9AAC /* MyOrderModel.m in Sources */,
 				849D9C641B2240F900D4D59E /* ShoppingCart.m in Sources */,
-				849D9C471B2240DB00D4D59E /* MyOrderModel.m in Sources */,
 				849D9C5B1B2240F200D4D59E /* WaterSendingDetails.m in Sources */,
-				849D9C2A1B2240C000D4D59E /* ErrorMessage.m in Sources */,
 				849D9C591B2240F200D4D59E /* WaterSending.m in Sources */,
+				843324351B26DE6800BA9AAC /* orderDetailOneModel.m in Sources */,
 				849D9C6D1B22410200D4D59E /* User.m in Sources */,
-				849D9C4B1B2240DB00D4D59E /* orderDetailOneModel.m in Sources */,
+				843324371B26DE6800BA9AAC /* RegistModel.m in Sources */,
 				849D9C3B1B2240D200D4D59E /* Delcartlist.m in Sources */,
 				849D9C6B1B22410200D4D59E /* RegistModel.m in Sources */,
 				849D9C371B2240D200D4D59E /* AFAppDotNetAPIClient.m in Sources */,
@@ -2773,7 +2781,7 @@
 				849D9C391B2240D200D4D59E /* AFNHelp.m in Sources */,
 				849D9C251B2240B700D4D59E /* Conf.m in Sources */,
 				849D9C571B2240F200D4D59E /* Comment.m in Sources */,
-				849D9C491B2240DB00D4D59E /* orderDetailModel.m in Sources */,
+				843324331B26DE6800BA9AAC /* orderDetailModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
